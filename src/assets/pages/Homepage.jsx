@@ -60,9 +60,9 @@ export const Homepage = () => {
                 fadeEffect={{
                     crossfade: true
                 }}
-            // autoplay={{
-            //     delay: 2500
-            // }}
+            autoplay={{
+                delay: 2500
+            }}
             >
                 <SwiperSlide className='w-full min-h-fit lg:h-full bg-heroBg bg-cover bg-center bg-no-repeat'>
                     <div className='w-full lg:w-4/5 mx-auto min-h-fit lg:h-full flex flex-col items-center relative'>
