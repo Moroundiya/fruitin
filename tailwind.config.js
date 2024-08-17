@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'heroBg': "url('/src/assets/images/hero-bg.jpg')"
+        'heroBg': "url('/src/assets/images/hero-bg.jpg')",
+        'aboutBg': "url('/src/assets/images/about_underlay.png')",
+        'orangeUnderlay': "url('/src/assets/images/hero_shape_2_1.png')"
       },
       fontFamily: {
         'lobster': ["Lobster", "sans-serif"],

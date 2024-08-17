@@ -22,8 +22,9 @@ body {
 
 .swiper-pagination-bullet {
   background: #FF9C00;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
+  /* border: 2px solid red2 */
 }
 
 .swiper-pagination-bullet-active {
