@@ -36,3 +36,8 @@ body {
 .swiper-vertical>.swiper-pagination-bullets {
   left: 20px;
 }
+
+.parent-swiper .swiper-wrapper {
+  /* transform: translate3d(0px, 0px, 0px) !important; */
+  
+}

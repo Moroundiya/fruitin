@@ -9,7 +9,9 @@ export default {
       backgroundImage: {
         'heroBg': "url('/src/assets/images/hero-bg.jpg')",
         'aboutBg': "url('/src/assets/images/about_underlay.png')",
-        'orangeUnderlay': "url('/src/assets/images/hero_shape_2_1.png')"
+        'orangeUnderlay': "url('/src/assets/images/hero_shape_2_1.png')",
+        'cardBg': "url('/src/assets/images/card-bg.png')",
+        'circleBg': "url('/src/assets/images/circle-bg.png')"
       },
       fontFamily: {
         'lobster': ["Lobster", "sans-serif"],

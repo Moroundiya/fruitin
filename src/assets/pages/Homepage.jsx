@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import logoWhite from '../images/logo-white.svg';
 import titleIcon from '../images//title_icon.svg'
 import heroImg1 from '../images/hero_2_1.png'
@@ -6,6 +6,14 @@ import heroImg2 from '../images/hero_2_2.png'
 import heroImg3 from '../images/hero_2_3.png'
 import aboutBg from '../images/about_img.png'
 import bullet from '../images/bullet.svg'
+import cardBg from '../images/card-bg.png'
+import vegetable from '../images/vegetable.svg'
+import circleBg from '../images/circle-bg.png';
+import fruits from '../images/fruit.svg'
+import productsImg from '../images/product.svg';
+import tea from '../images/tea.svg';
+import meat from '../images/meat.svg';
+
 
 import heroImg4 from '../images/hero_1_1.png'
 import heroImg5 from '../images/hero_1_2.png'
@@ -28,6 +36,9 @@ import "swiper/css/navigation";
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 
 export const Homepage = () => {
+
+    const slideRef = useRef();
+
     return (
         <>
             <nav className='flex justify-between items-center w-full absolute z-10 top-0 left-0 px-3 py-4 lg:py-5 lg:px-12 2xl:py-10 xl:px-40 font-lexend'>
@@ -60,9 +71,9 @@ export const Homepage = () => {
                 fadeEffect={{
                     crossfade: true
                 }}
-            autoplay={{
-                delay: 2500
-            }}
+                autoplay={{
+                    delay: 2500
+                }}
             >
                 <SwiperSlide className='w-full min-h-fit lg:h-full bg-heroBg bg-cover bg-center bg-no-repeat'>
                     <div className='w-full lg:w-4/5 mx-auto min-h-fit lg:h-full flex flex-col items-center relative'>
@@ -213,20 +224,144 @@ export const Homepage = () => {
             </div>
 
 
-            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend py-10 bg-aboutBg lg:py-16 lg:bg-transparent bg-center bg-cover bg-no-repeat'>
+            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend py-10 bg-abojutBg lg:py-16 lg:bg-transparent bg-center bg-cover bg-no-repeat'>
                 <div className='flex items-center justify-center lg:justify-start'>
                     <img src={titleIcon} className='h-5 lg:h-7' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Food Category</p>
                 </div>
-                <h1 className='mt-2 mb-8 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5'>What We’re Offering</h1>
+                <h1 className='mt-2 mb-3 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>What We’re Offering</h1>
 
-                <div className='w-full px-3'>
-                    {/* Carousel */}
 
-                </div>
-            </div>
+                <Swiper
+                    slidesPerView={5}
+                    // centeredSlides={true}
+                    spaceBetween={20}
+                    // navigation={true}
+                    ref={slideRef}
+                    loop={true}
+                    // autoplay={{
+                    //     delay: 1000
+                    // }}
+                    modules={[Pagination, Navigation, Autoplay]}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
+                        // 640: {
+                        //     slidesPerView: 1,
+                        //     spaceBetween: 20,
+                        // },
+                        // 768: {
+                        //     slidesPerView: 4,
+                        //     spaceBetween: 40,
+                        // },
+                        // 1024: {
+                        //     slidesPerView: 5,
+                        //     spaceBetween: 50,
+                        // },
+                    }}
 
+                    className="mySwiper w-full min-h-fit py-5 px-3 lg:w-4/5"
+                >
+                    <SwiperSlide>
+                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                            <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
+                            <div className='p-5 lg:p-6 rounded-full relative mb-5'>
+                                <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
+                                <img src={vegetable} className='h-10 lg:h-full relative z-10 left-0 top-0 group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' alt="" />
+                            </div>
+                            <p className='text-[#54595F] mb-2 text-[0.9rem] lg:text-[0.98rem] group-hover:text-gray-300 transition-all duration-700 ease-in-out'>Product (01)</p>
+                            <p className='text-[1.1rem] lg:text-[1.18rem] font-semibold text-black group-hover:text-white transition-all duration-700 ease-in-out'>Fresh Vegetable</p>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                            <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
+                            <div className='p-5 lg:p-6 rounded-full relative mb-5'>
+                                <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
+                                <img src={fruits} className='h-10 lg:h-full relative z-10 left-0 top-0 group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' alt="" />
+                            </div>
+                            <p className='text-[#54595F] mb-2 text-[0.9rem] lg:text-[0.98rem] group-hover:text-gray-300 transition-all duration-700 ease-in-out'>Product (02)</p>
+                            <p className='text-[1.1rem] lg:text-[1.18rem] font-semibold text-black group-hover:text-white transition-all duration-700 ease-in-out'>Natural Fruits</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                            <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
+                            <div className='p-5 lg:p-6 rounded-full relative mb-5'>
+                                <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
+                                <img src={productsImg} className='h-10 lg:h-full relative z-10 left-0 top-0 group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' alt="" />
+                            </div>
+                            <p className='text-[#54595F] mb-2 text-[0.9rem] lg:text-[0.98rem] group-hover:text-gray-300 transition-all duration-700 ease-in-out'>Product (03)</p>
+                            <p className='text-[1.1rem] lg:text-[1.18rem] font-semibold text-black group-hover:text-white transition-all duration-700 ease-in-out'>Dairy Products</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                            <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
+                            <div className='p-5 lg:p-6 rounded-full relative mb-5'>
+                                <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
+                                <img src={tea} className='h-10 lg:h-full relative z-10 left-0 top-0 group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' alt="" />
+                            </div>
+                            <p className='text-[#54595F] mb-2 text-[0.9rem] lg:text-[0.98rem] group-hover:text-gray-300 transition-all duration-700 ease-in-out'>Product (04)</p>
+                            <p className='text-[1.1rem] lg:text-[1.18rem] font-semibold text-black group-hover:text-white transition-all duration-700 ease-in-out'>Tea & Coffee</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                            <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
+                            <div className='p-5 lg:p-6 rounded-full relative mb-5'>
+                                <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
+                                <img src={meat} className='h-10 lg:h-full relative z-10 left-0 top-0 group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' alt="" />
+                            </div>
+                            <p className='text-[#54595F] mb-2 text-[0.9rem] lg:text-[0.98rem] group-hover:text-gray-300 transition-all duration-700 ease-in-out'>Product (05)</p>
+                            <p className='text-[1.1rem] lg:text-[1.18rem] font-semibold text-black group-hover:text-white transition-all duration-700 ease-in-out'>Meat and Fish</p>
+                        </div>
+                    </SwiperSlide>
+
+
+                </Swiper>
+
+                <button onClick={() => slideRef.current.swiper.slidePrev()}> Prev </button>
+                <button onClick={() => slideRef.current.swiper.slideNext()} className='next-pag'>Next </button>
+
+                {/* <Swiper
+                    slidesPerView={1}
+                    spaceBetween={10}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                            spaceBetween: 50,
+                        },
+                    }}
+                    modules={[Pagination]}
+                    className="mySwiper"
+                >
+                    <SwiperSlide>Slide 1</SwiperSlide>
+                    <SwiperSlide>Slide 2</SwiperSlide>
+                    <SwiperSlide>Slide 3</SwiperSlide>
+                    <SwiperSlide>Slide 4</SwiperSlide>
+                    <SwiperSlide>Slide 5</SwiperSlide>
+                    <SwiperSlide>Slide 6</SwiperSlide>
+                    <SwiperSlide>Slide 7</SwiperSlide>
+                    <SwiperSlide>Slide 8</SwiperSlide>
+                    <SwiperSlide>Slide 9</SwiperSlide>
+                </Swiper> */}
+            </div >
         </>
-
     )
 }
