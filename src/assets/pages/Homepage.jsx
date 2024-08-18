@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import logoWhite from '../images/logo-white.svg';
 import titleIcon from '../images//title_icon.svg'
 import heroImg1 from '../images/hero_2_1.png'
@@ -38,6 +38,19 @@ import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 export const Homepage = () => {
 
     const slideRef = useRef();
+    const [handleSlide, setHandleSlide] = useState({
+        isFirst: true,
+        isLast: false
+    })
+
+
+    const slidechange = swiper => {
+        setHandleSlide({
+            isFirst: swiper.isBeginning,
+            isLast: swiper.isEnd
+        })
+    }
+
 
     return (
         <>
@@ -239,27 +252,32 @@ export const Homepage = () => {
                     // navigation={true}
                     ref={slideRef}
                     loop={true}
-                    // autoplay={{
-                    //     delay: 1000
-                    // }}
+                    onSlideChange={slidechange}
+                    autoplay={{
+                        delay: 2300
+                    }}
                     modules={[Pagination, Navigation, Autoplay]}
                     breakpoints={{
                         0: {
                             slidesPerView: 2,
-                            spaceBetween: 10,
+                            spaceBetween: 15,
                         },
-                        // 640: {
-                        //     slidesPerView: 1,
-                        //     spaceBetween: 20,
-                        // },
-                        // 768: {
-                        //     slidesPerView: 4,
-                        //     spaceBetween: 40,
-                        // },
-                        // 1024: {
-                        //     slidesPerView: 5,
-                        //     spaceBetween: 50,
-                        // },
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 30,
+                        },
+                        1500: {
+                            slidesPerView: 5,
+                            spaceBetween: 40,
+                        },
                     }}
 
                     className="mySwiper w-full min-h-fit py-5 px-3 lg:w-4/5"
@@ -325,8 +343,18 @@ export const Homepage = () => {
 
                 </Swiper>
 
-                <button onClick={() => slideRef.current.swiper.slidePrev()}> Prev </button>
-                <button onClick={() => slideRef.current.swiper.slideNext()} className='next-pag'>Next </button>
+                <div className='flex mt-3 space-x-5 lg:space-x-5'>
+                    <button disabled={handleSlide.isFirst} className={`${handleSlide.isFirst ? 'bg-[#017d033e] p-2 rounded-full cursor-pointer' : 'bg-[#017D03] p-2 rounded-full cursor-pointer'}`} onClick={() => slideRef.current.swiper.slidePrev()}>
+                        <Icon icon="ion:arrow-back" className='text-white rounded-full text-[1.3rem] lg:text-2xl' />
+                    </button>
+
+
+                    <button disabled={handleSlide.isLast} className={`${handleSlide.isLast ? 'bg-[#017d033e] p-2 rounded-full cursor-pointer' : 'bg-[#017D03] p-2 rounded-full cursor-pointer'}`} onClick={() => slideRef.current.swiper.slideNext()}>
+                        <Icon icon="ion:arrow-forward" className='text-white rounded-full text-[1.3rem] lg:text-2xl' />
+                    </button>
+
+                </div>
+
 
                 {/* <Swiper
                     slidesPerView={1}
