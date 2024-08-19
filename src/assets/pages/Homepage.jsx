@@ -167,7 +167,7 @@ export const Homepage = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide className='w-full h-full bg-heroBg bg-cover bg-center bg-no-repeat'>
+                <SwiperSlide className='w-full min-h-git bg-heroBg bg-cover bg-center bg-no-repeat'>
                     <div className='w-full min-h-fit lg:h-full flex flex-col items-center relative'>
                         <img src={heroShape1} className='h-12 absolute top-[46%] left-12 md:left-28 md:top-[40%] xl:left-16 2xl:left-32 xl:top-[80%] lg:hidden xl:block' alt="" />
                         <img src={heroShape2} alt="" className='h-16 absolute top-32 right-3 md:right-[15%] lg:right-[55%] lg:top-[30%] lg:hidden xl:block' />
@@ -391,10 +391,13 @@ export const Homepage = () => {
             </div>
 
 
-            <div className='w-full min-h-fit justify-center px-3 items-center lg:w-4/5 mt-12 font-lexend lg:mx-auto relative pb-36'>
-                <img src={chooseImg} className='absolute right-0 top-0' alt="" />
-                <div className='flex'>
-                    <div className='lg:w-1/2'>
+            <div className='w-full min-h-fit justify-center px-3 items-center lg:w-4/5 mt-24 font-lexend lg:mt-16 lg:mx-auto relative pb-36'>
+                <div className="lg:hidden w-full flex flex-col justify-center items-center absolute top-0 left-0 -z-10">
+                    <img src={rotateImg} className='w-4/5 absolute -top-20 right-7' alt="" />
+                </div>
+                <img src={chooseImg} className='lg:absolute right-0 top-0' alt="" />
+                <div className='flex flex-col lg:flex-row'>
+                    <div className='lg:w-1/2 mt-12 lg:mt-0'>
                         <div className='flex items-center justify-center lg:justify-start'>
                             <img src={titleIcon} className='h-5 lg:h-7' alt="" />
                             <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Why Choose Us</p>
@@ -405,24 +408,24 @@ export const Homepage = () => {
                         </p>
 
                     </div>
-                    <div className="w-1/2 relative">
-                        <img src={rotateImg} className='absolute -top-20 right-12 -z-10 ' alt="" />
+                    <div className="w-1/2 relative hidden lg:block">
+                        <img src={rotateImg} className='absolute lg:-top-20 lg:right-12 -z-10 ' alt="" />
                     </div>
                 </div>
 
                 <div className='flex w-full bottom-0 min-h-fit left-0 bg-[#F5F7EB] rounded-[30px] mt-8'>
-                    <div className='w-full lg:w-1/2 ps-6 py-7'>
-                        <div className='grid grid-cols-2 gap-x-6 gap-y-7 rounded-xl w-fit'>
+                    <div className='w-full lg:w-1/2 px-3 lg:pe-0 lg:ps-6 py-7'>
+                        <div className='grid sm:grid-cols-2 gap-x-6 gap-y-7 rounded-xl w-fit'>
 
-                            <div className='bg-white rounded-xl flex overflow-hidden shadow-lg'>
-                                <div className='relative min-w-fit'>
-                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] relative -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
+                            <div className='bg-white rounded-xl flex flex-col lg:flex-row justify-center items-center overflow-hidden shadow-lg py-8'>
+                                <div className='relative min-w-fit mb-5 lg:mb-0'>
+                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] lg:relative  -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
                                         <img className='w-5/5' src={chooseImg1} alt="" />
                                     </div>
                                 </div>
-                                <div className='py-5 pe-3'>
+                                <div className='pb-0 lg:py-5 pe-3 text-center'>
                                     <p className='font-bold text-xl mb-2'>100% Organic</p>
-                                    <p className='text-[15px] leading-[1.5] text-[#54595F] lg:leading-[1.6]'>Our products are certified by reputable organic. </p>
+                                    <p className='text-md lg:text-[15px] w-4/5 lg:w-full mx-auto leading-[1.5] text-[#54595F] lg:leading-[1.6]'>Our products are certified by reputable organic. </p>
                                 </div>
                             </div>
                             <div className='bg-white rounded-xl flex overflow-hidden shadow-lg'>
