@@ -236,7 +236,7 @@ export const Homepage = () => {
             </div>
 
 
-            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend py-10 lg:px-12 lg:py-16 lg:bg-transparent xl:px-0 bg-center bg-cover bg-no-repeat'>
+            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend py-10 lg:px-12 lg:py-16 lg:bg-transparent xl:mx-auto xl:px-0'>
                 <div className='flex items-center justify-center lg:justify-start'>
                     <img src={titleIcon} className='h-5 lg:h-7' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Food Category</p>
@@ -273,13 +273,13 @@ export const Homepage = () => {
                             slidesPerView: 4,
                             spaceBetween: 30,
                         },
-                        1500: {
+                        1300: {
                             slidesPerView: 5,
                             spaceBetween: 40,
                         },
                     }}
 
-                    className="mySwiper w-full min-h-fit py-5 px-3 xl:w-4/5"
+                    className="mySwiper w-full min-h-fit py-5 px-3 xl:w-11/12 xl:px-0 2xl:w-4/5"
                 >
                     <SwiperSlide>
                         <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
@@ -391,33 +391,33 @@ export const Homepage = () => {
             </div>
 
 
-            <div className='w-full min-h-fit justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-4/5 mt-24 font-lexend lg:mt-16 lg:mx-auto relative pb-36'>
+            <div className='w-full min-h-fit justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 mt-24 lg:mt-3 font-lexend 2xl:mt-16 lg:mx-auto relative pb-36'>
                 <div className="lg:hidden w-full flex flex-col justify-center items-center absolute top-0 left-0 -z-10">
                     <img src={rotateImg} className='w-4/5 absolute -top-20 right-7' alt="" />
                 </div>
-                <img src={chooseImg} className='lg:hidden xl:block lg:absolute right-0 top-0' alt="" />
+                <img src={chooseImg} className='lg:hidden xl:block lg:absolute xl:w-5/12 2xl:w-auto right-0 top-0 xl:top-16 2xl:top-0 z-50' alt="" />
                 <div className='flex flex-col lg:flex-row'>
-                    <div className='xl:w-1/2 mt-12 lg:mt-0 flex flex-col justify-center items-center '>
+                    <div className='xl:w-1/2 mt-12 lg:mt-0 flex flex-col justify-center items-center xl:justify-start xl:items-start '>
                         <div className='flex items-center justify-center lg:justify-start'>
                             <img src={titleIcon} className='h-5 lg:h-7' alt="" />
                             <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Why Choose Us</p>
                         </div>
-                        <h1 className='mt-3 mb-4 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-5 lg:mt-5 xl:w-5/6 mx-auto'>Nourish Your Body with Pure Organic Goodness!</h1>
-                        <p className='text-md leading-[1.5] text-[#54595F] lg:leading-[1.6] lg:w-5/6 mx-auto text-center'>
+                        <h1 className='mt-3 mb-4 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-5 lg:mt-5 xl:w-5/6 mx-auto xl:mx-0'>Nourish Your Body with Pure Organic Goodness!</h1>
+                        <p className='text-md leading-[1.5] text-[#54595F] lg:leading-[1.6] lg:w-5/6 mx-auto text-center xl:mx-0 xl:text-left'>
                             Governments have regulations in place to ensure that products labeled as organic meet specific standards. Regular inspections and audits are conducted to maintain the integrity of the organic label.
                         </p>
 
                     </div>
                     <div className="w-1/2 relative hidden xl:block">
-                        <img src={rotateImg} className='absolute lg:w-3/5 xl:-top-20 lg:right-8 xl:right-12 xl:-z-10 ' alt="" />
+                        <img src={rotateImg} className='absolute lg:w-3/5 xl:top-0 lg:right-8 xl:right-12 2xl:-top-20' alt="" />
                         <img src={chooseImg} className='absolute w-4/5 right-0 top-20 xl:hidden' alt="" />
 
                     </div>
                 </div>
 
                 <div className='flex w-full bottom-0 min-h-fit left-0 bg-[#F5F7EB] rounded-[30px] mt-8'>
-                    <div className='w-full lg:w-5/5 mx-auto px-3 py-5 lg:pe-0 lg:ps-6 lg:py-7'>
-                        <div className='grid sm:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-x-6 gap-y-7 rounded-xl w-full lg-w-fit'>
+                    <div className='w-full xl:w-7/12 2xl:w-1/2 mx-auto xl:mx-0 px-3 py-5 xl:pe-0 xl:ps-6 lg:py-7'>
+                        <div className='grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 justify-center items-center gap-x-6 gap-y-7 rounded-xl w-full lg-w-fit'>
 
                             {/* <div className='bg-white rounded-xl flex flex-col lg:flex-row justify-center items-center lg:items-start overflow-hidden shadow-lg py-6 lg:py-0'>
                                 <div className='relative min-w-fit mb-5 lg:mb-0'>
@@ -434,49 +434,48 @@ export const Homepage = () => {
 
                             <div className='bg-white rounded-xl flex lg:justify-center lg:items-center lg:flex-col xl:flex-row overflow-hidden shadow-lg'>
                                 <div className='relative min-w-fit'>
-                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute lg:relative lg:mt-5 lg:top-0 lg:left-0 xl:absolute -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
+                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute lg:relative xl:absolute lg:mt-4 xl:mt-0 lg:top-0 lg:left-0 xl:-top-[90px] xl:-left-4 -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
                                         <img className='w-5/5' src={chooseImg1} alt="" />
                                     </div>
                                 </div>
-                                <div className='py-8 px-5 '>
+                                <div className='py-8 px-5 lg:pt-3 lg:pb-4 xl:py-8 '>
                                     <p className='font-bold text-xl mb-2 text-center'>100% Organic</p>
                                     <p className='text-[15px] leading-[1.5] text-center text-[#54595F] lg:leading-[1.6]'>Our products are certified by reputable organic. </p>
                                 </div>
                             </div>
-                            <div className='bg-white rounded-xl flex overflow-hidden shadow-lg'>
+                            <div className='bg-white rounded-xl flex lg:justify-center lg:items-center lg:flex-col xl:flex-row overflow-hidden shadow-lg'>
                                 <div className='relative min-w-fit'>
-                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
-                                        <img className='w-5/5' src={chooseImg2} alt="" />
+                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute lg:relative xl:absolute lg:mt-4 xl:mt-0 lg:top-0 lg:left-0 xl:-top-[90px] xl:-left-4 -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
+                                        <img className='w-5/5' src={chooseImg1} alt="" />
                                     </div>
                                 </div>
-                                <div className='py-8 px-5 '>
+                                <div className='py-8 px-5 lg:pt-3 lg:pb-4 xl:py-8 '>
                                     <p className='font-bold text-xl mb-2 text-center'>Fresh Products</p>
                                     <p className='text-[15px] leading-[1.5] text-center text-[#54595F] lg:leading-[1.6]'>Our products are certified by reputable organic. </p>
                                 </div>
                             </div>
-                            <div className='bg-white rounded-xl flex overflow-hidden shadow-lg'>
+                            <div className='bg-white rounded-xl flex lg:justify-center lg:items-center lg:flex-col xl:flex-row overflow-hidden shadow-lg'>
                                 <div className='relative min-w-fit'>
-                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
-                                        <img className='w-5/5' src={chooseImg3} alt="" />
+                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute lg:relative xl:absolute lg:mt-4 xl:mt-0 lg:top-0 lg:left-0 xl:-top-[90px] xl:-left-4 -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
+                                        <img className='w-5/5' src={chooseImg1} alt="" />
                                     </div>
                                 </div>
-                                <div className='py-8 px-5 '>
+                                <div className='py-8 px-5 lg:pt-3 lg:pb-4 xl:py-8 '>
                                     <p className='font-bold text-xl mb-2 text-center'>Biodynamic Food</p>
                                     <p className='text-[15px] leading-[1.5] text-center text-[#54595F] lg:leading-[1.6]'>Our products are certified by reputable organic. </p>
                                 </div>
                             </div>
-                            <div className='bg-white rounded-xl flex overflow-hidden shadow-lg'>
+                            <div className='bg-white rounded-xl flex lg:justify-center lg:items-center lg:flex-col xl:flex-row overflow-hidden shadow-lg'>
                                 <div className='relative min-w-fit'>
-                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
-                                        <img className='w-5/5' src={chooseImg2} alt="" />
+                                    <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute lg:relative xl:absolute lg:mt-4 xl:mt-0 lg:top-0 lg:left-0 xl:-top-[90px] xl:-left-4 -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
+                                        <img className='w-5/5' src={chooseImg1} alt="" />
                                     </div>
                                 </div>
-                                <div className='py-8 px-5 '>
+                                <div className='py-8 px-5 lg:pt-3 lg:pb-4 xl:py-8 '>
                                     <p className='font-bold text-xl mb-2 text-center'>Secured Payment</p>
                                     <p className='text-[15px] leading-[1.5] text-center text-[#54595F] lg:leading-[1.6]'>Our products are certified by reputable organic. </p>
                                 </div>
                             </div>
-
 
 
                         </div>
