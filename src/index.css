@@ -16,7 +16,7 @@ body {
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: auto;
   touch-action: pan-y;
 }
 
@@ -27,6 +27,11 @@ body {
   /* border: 2px solid red2 */
 }
 
+#heroSwiper .swiper-wrapper,
+#heroSwiper .swiper-slide {
+  height: auto !important;
+}
+
 .swiper-pagination-bullet-active {
   background: #FF9C00;
   /* border: 1px solid #017D03; */
@@ -35,4 +40,31 @@ body {
 .swiper-pagination-vertical.swiper-pagination-bullets,
 .swiper-vertical>.swiper-pagination-bullets {
   left: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  /* .swiper-slide {
+    height: 100% !important;
+  }
+
+  .swiper-slide {
+  height: auto !important;
+}
+  .swiper-wrapper {
+    height: 100% !important;
+  } */
+
+
+  /* .swiper-slide {
+    height: auto !important;
+  }
+
+  .swiper-wrapper {
+    height: auto !important;
+  } */
+  #heroSwiper .swiper-wrapper,
+  #heroSwiper .swiper-slide {
+    height: 100dvh !important;
+  }
+
 }
