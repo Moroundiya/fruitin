@@ -19,6 +19,10 @@ import chooseImg1 from '../images/choose1.svg'
 import chooseImg2 from '../images/choose2.svg'
 import chooseImg3 from '../images/choose3.svg'
 import chooseImg4 from '../images/choose4.svg'
+import counter1 from '../images/counter_card_1.svg';
+import counter2 from '../images/counter_card_2.svg';
+import counter3 from '../images/counter_card_3.svg';
+import counter4 from '../images/counter_card_4.svg';
 
 
 import heroImg4 from '../images/hero_1_1.png'
@@ -391,7 +395,7 @@ export const Homepage = () => {
             </div>
 
 
-            <div className='w-full min-h-fit justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 mt-24 lg:mt-3 font-lexend 2xl:mt-16 lg:mx-auto relative pb-36'>
+            <div className='w-full min-h-fit justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 mt-24 lg:mt-3 font-lexend 2xl:mt-16 lg:mx-auto relative pb-16'>
                 <div className="lg:hidden w-full flex flex-col justify-center items-center absolute top-0 left-0 -z-10">
                     <img src={rotateImg} className='w-4/5 absolute -top-20 right-7' alt="" />
                 </div>
@@ -481,8 +485,62 @@ export const Homepage = () => {
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </div >
+
+            <div className='bg-counterBg bg-cover bg-no-repeat bg-center w-full py-10 lg:pt-20 lg:pb-18 mb-20 font-lexend text-white'>
+
+
+                <div className='grid grid-cols-2 xl:grid-cols-4 px-3 lg:px-0 xl:w-11/12 2xl:w-4/5 mx-auto lg:divide-x divide-[#ffffff66]'>
+
+                    <div className='flex flex-col items-center justify-center border-b border-r xl:border-b-0 border-[#ffffff66] xl:flex-row xl:justify-start py-6 xl:py-0'>
+                        <div className=''>
+                            <img src={counter1} className='h-14 xl:h-auto mb-4 xl:mb-0' alt="" />
+                        </div>
+                        <div className='lg:ms-4 flex flex-col justify-center items-center'>
+                            <p className='text-[1.8rem] lg:text-4xl xl:text-5xl lg:mb-2 font-bold'>15663+</p>
+                            <p className='text-sm lg:text-lg'>Our Total Products</p>
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col items-center justify-center border-b xl:border-b-0 border-[#ffffff66] xl:flex-row py-6 xl:py-0'>
+                        <div className=''>
+                            <img src={counter2} className='h-14 xl:h-auto mb-4 xl:mb-0' alt="" />
+                        </div>
+                        <div className='lg:ms-4 flex flex-col justify-center items-center'>
+                            <p className='text-[1.8rem] lg:text-4xl xl:text-5xl lg:mb-2 font-bold'>356+</p>
+                            <p className='text-sm lg:text-lg'>Team Members</p>
+                        </div>
+                    </div>
+                    <div className='flex flex-col items-center justify-center border-r  border-[#ffffff66] xl:flex-row py-6 xl:py-0'>
+                        <div className=''>
+                            <img src={counter3} className='h-14 xl:h-auto mb-4 xl:mb-0' alt="" />
+                        </div>
+                        <div className='lg:ms-4 flex flex-col justify-center items-center'>
+                            <p className='text-[1.8rem] lg:text-4xl xl:text-5xl lg:mb-2 font-bold'>2365+</p>
+                            <p className='text-sm lg:text-lg'>Satisfied Customers</p>
+                        </div>
+                    </div>
+                    <div className='flex flex-col items-center justify-center  border-[#ffffff66] xl:flex-row py-6 xl:py-0'>
+                        <div className=''>
+                            <img src={counter4} className='h-14 xl:h-auto mb-4 xl:mb-0' alt="" />
+                        </div>
+                        <div className='lg:ms-4 flex flex-col justify-center items-center'>
+                            <p className='text-[1.8rem] lg:text-4xl xl:text-5xl lg:mb-2 font-bold'>156+</p>
+                            <p className='text-sm lg:text-lg'>Awards Winning</p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
         </>
     )
 }
