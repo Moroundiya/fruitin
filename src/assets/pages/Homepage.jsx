@@ -358,40 +358,6 @@ export const Homepage = () => {
 
                 </div>
 
-
-                {/* <Swiper
-                    slidesPerView={1}
-                    spaceBetween={10}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    breakpoints={{
-                        640: {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                        768: {
-                            slidesPerView: 4,
-                            spaceBetween: 40,
-                        },
-                        1024: {
-                            slidesPerView: 5,
-                            spaceBetween: 50,
-                        },
-                    }}
-                    modules={[Pagination]}
-                    className="mySwiper"
-                >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    <SwiperSlide>Slide 5</SwiperSlide>
-                    <SwiperSlide>Slide 6</SwiperSlide>
-                    <SwiperSlide>Slide 7</SwiperSlide>
-                    <SwiperSlide>Slide 8</SwiperSlide>
-                    <SwiperSlide>Slide 9</SwiperSlide>
-                </Swiper> */}
             </div>
 
 
@@ -488,7 +454,7 @@ export const Homepage = () => {
             </div>
 
 
-            <div className='bg-counterBg bg-cover bg-no-repeat bg-center w-full py-10 lg:pt-20 lg:pb-18 mb-20 font-lexend text-white'>
+            <div className='bg-counterBg bg-cover bg-no-repeat bg-center w-full py-10 lg:pt-20 lg:pb-18 mb-3 lg:mb-5 font-lexend text-white'>
 
 
                 <div className='grid grid-cols-2 xl:grid-cols-4 px-3 lg:px-0 xl:w-11/12 2xl:w-4/5 mx-auto lg:divide-x divide-[#ffffff66]'>
@@ -541,6 +507,30 @@ export const Homepage = () => {
 
                 </div>
             </div>
+
+
+            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend py-10 lg:px-12 lg:py-16 lg:bg-transparent xl:mx-auto xl:px-0'>
+                <div className='flex items-center justify-center lg:justify-start'>
+                    <img src={titleIcon} className='h-5 lg:h-7' alt="" />
+                    <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Food Category</p>
+                </div>
+
+                <div className='mt-2 w-4/5 mb-3 text-center text-2xl font-bold lg:w-full mx-auto  2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>
+                    <h1 className='text-center'>Organic & Fresh Products Daily!</h1>
+
+                </div>
+
+                <div className='space-x-9 text-[0.95rem]'>
+                    <button className='px-7 py-2 border border-[#D9D9D9] rounded-md hover:bg-[#017D03] hover:text-white transition-all duration-700'>ALL</button>
+                    <button>FRUITS</button>
+                    <button>VEGETABLE</button>
+                    <button>MEAT AND FISH</button>
+                    <button>FRUIT JUICE</button>
+                    <button>SALADS</button>
+                </div>
+
+            </div>
+
         </>
     )
 }
