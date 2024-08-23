@@ -521,7 +521,7 @@ export const Homepage = () => {
                 </div>
 
                 <div className='space-x-9 text-[0.95rem]'>
-                    <button className='px-7 py-2 border border-[#D9D9D9] rounded-md hover:bg-[#017D03] hover:text-white transition-all duration-700'>ALL</button>
+                    <button className='px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>ALL</button>
                     <button>FRUITS</button>
                     <button>VEGETABLE</button>
                     <button>MEAT AND FISH</button>
