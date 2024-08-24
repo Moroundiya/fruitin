@@ -69,7 +69,7 @@ export const Homepage = () => {
                 </div>
                 <div className='flex justify-center items-center'>
                     <Icon icon="bitcoin-icons:cart-filled" className='text-white text-[2.1rem] lg:text-4xl' />
-                    <a href="#" className='bg-[#FF9C00] w-fit justify-center items-center ms-4 text-center hidden lg:flex text-sm py-2 ps-4 pe-2.5 rounded-full text-white mx-auto 2xl:text-md'>SHOP NOW
+                    <a href="#" className='bg-[#FF9C00] w-fit justify-center items-center ms-4 text-center hidden lg:flex text-sm py-2 ps-4 pe-2.5 rounded-full text-white mx-auto 2xl:text-md z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>SHOP NOW
                         <Icon icon="solar:double-alt-arrow-right-linear" className='text-white text-2xl pe-0' />
                     </a>
                 </div>
@@ -106,7 +106,7 @@ export const Homepage = () => {
                                 </div>
                                 <p className='text-white text-[2.6rem] text-center px-3 leading-tight sm:px-0 sm:w-2/3 mx-auto font-bold my-6 sm:mx-auto sm:text-6xl sm:leading-[1.1] lg:text-[4.3rem] xl:text-7xl lg:w-full xl:mt-8 xl:mb-14 2xl:mb-10 xl:leading-[1.2] 2xl:leading-[1.1] 2xl:text-[5.4rem]'>Our Organic Collection.</p>
 
-                                <a href='#' className='bg-[#017D03] w-fit flex justify-center items-center text-[0.9rem] text-center py-2.5 ps-5 pe-3 rounded-full text-white mx-auto lg:text-lg lg:ps-7 lg:pe-5'>Shop Now
+                                <a href='#' className='bg-[#017D03] w-fit flex justify-center items-center text-[0.9rem] text-center py-2.5 ps-5 pe-3 rounded-full text-white mx-auto lg:text-lg lg:ps-7 lg:pe-5 z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>Shop Now
                                     <Icon icon="solar:double-alt-arrow-right-linear" className='text-white text-2xl pe-0' />
                                 </a>
                             </div>
@@ -233,7 +233,7 @@ export const Homepage = () => {
                             <span>Best Prices</span>
                         </li>
                     </ul>
-                    <a href='#' className='bg-[#017D03] w-fit flex justify-center items-center text-[0.8rem] text-center py-2.5 ps-5 pe-3 rounded-full text-white mx-auto mt-10 lg:mx-0 lg:text-[0.95rem] lg:ps-7 lg:pe-5'>DISCOVER MORE
+                    <a href='#' className='bg-[#017D03] w-fit flex justify-center items-center text-[0.8rem] text-center py-2.5 ps-5 pe-3 rounded-full text-white mx-auto mt-10 lg:mx-0 lg:text-[0.95rem] lg:ps-7 lg:pe-5 z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>DISCOVER MORE
                         <Icon icon="solar:double-alt-arrow-right-linear" className='text-white text-2xl pe-0' />
                     </a>
                 </div >
@@ -363,9 +363,9 @@ export const Homepage = () => {
 
             <div className='w-full min-h-fit justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 mt-24 lg:mt-3 font-lexend 2xl:mt-16 lg:mx-auto relative pb-16'>
                 <div className="lg:hidden w-full flex flex-col justify-center items-center absolute top-0 left-0 -z-10">
-                    <img src={rotateImg} className='w-4/5 absolute -top-20 right-7' alt="" />
+                    <img src={rotateImg} className='w-4/5 -top-20 right-7 absolute sm:w-2/4 sm:left-1/4' alt="" />
                 </div>
-                <img src={chooseImg} className='lg:hidden xl:block lg:absolute xl:w-5/12 2xl:w-auto right-0 top-0 xl:top-16 2xl:top-0 z-50' alt="" />
+                <img src={chooseImg} className='right-0 top-0 sm:relative sm:w-3/4 sm:left-[50px] sm:top-auto lg:hidden lg:absolute lg:right-0 lg:left-auto xl:block xl:w-5/12 xl:top-16 2xl:w-auto 2xl:top-0  z-50' alt="" />
                 <div className='flex flex-col lg:flex-row'>
                     <div className='xl:w-1/2 mt-12 lg:mt-0 flex flex-col justify-center items-center xl:justify-start xl:items-start '>
                         <div className='flex items-center justify-center lg:justify-start'>
@@ -520,14 +520,21 @@ export const Homepage = () => {
 
                 </div>
 
-                <div className='space-x-9 text-[0.95rem]'>
-                    <button className='px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>ALL</button>
-                    <button>FRUITS</button>
+                <div className='spache-x-9 text-[0.8rem] lg:text-[0.95rem] px-3 spacje-y-8 lg:space-y-0 mt-4 lg:mt-0 grid grid-cols-3 gap-5 lg:flex'>
+                    <button className='block px-5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>ALL</button>
+                    <button className='block px-5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>FRUITS</button>
+                    <button className='block px-5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>VEGETABLE</button>
+                    <button className='block px-5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>MEAT AND FISH</button>
+                    <button className=' block px-5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>FRUIT JUICE</button>
+                    <button className=' block px-5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>SALADS</button>
+                    {/* <button className=' block px-5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>ALL</button> */}
+                    {/* <button>FRUITS</button>
                     <button>VEGETABLE</button>
                     <button>MEAT AND FISH</button>
                     <button>FRUIT JUICE</button>
-                    <button>SALADS</button>
+                    <button>SALADS</button> */}
                 </div>
+
 
             </div>
 
