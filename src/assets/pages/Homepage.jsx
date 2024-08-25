@@ -23,7 +23,9 @@ import counter1 from '../images/counter_card_1.svg';
 import counter2 from '../images/counter_card_2.svg';
 import counter3 from '../images/counter_card_3.svg';
 import counter4 from '../images/counter_card_4.svg';
-
+import productBg1 from '../images/vector_shape_1.png'
+import productBg2 from '../images/vector_shape_2.png'
+import product1 from '../images/product_1_1.jpg'
 
 import heroImg4 from '../images/hero_1_1.png'
 import heroImg5 from '../images/hero_1_2.png'
@@ -286,7 +288,7 @@ export const Homepage = () => {
                     className="mySwiper w-full min-h-fit py-5 px-3 xl:w-11/12 xl:px-0 2xl:w-4/5"
                 >
                     <SwiperSlide>
-                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                        <div className='bg-[#F5F7EB] shadow-md relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
                             <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
                             <div className='p-5 lg:p-6 rounded-full relative mb-5'>
                                 <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
@@ -298,7 +300,7 @@ export const Homepage = () => {
                     </SwiperSlide>
 
                     <SwiperSlide>
-                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                        <div className='bg-[#F5F7EB] shadow-md relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
                             <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
                             <div className='p-5 lg:p-6 rounded-full relative mb-5'>
                                 <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
@@ -309,7 +311,7 @@ export const Homepage = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                        <div className='bg-[#F5F7EB] shadow-md relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
                             <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
                             <div className='p-5 lg:p-6 rounded-full relative mb-5'>
                                 <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
@@ -320,7 +322,7 @@ export const Homepage = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                        <div className='bg-[#F5F7EB] shadow-md relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
                             <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
                             <div className='p-5 lg:p-6 rounded-full relative mb-5'>
                                 <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
@@ -331,8 +333,7 @@ export const Homepage = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-
-                        <div className='bg-[#F5F7EB] relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
+                        <div className='bg-[#F5F7EB] shadow-md relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out'>
                             <img src={cardBg} className='w-full h-full absolute left-0 top-0' alt="" />
                             <div className='p-5 lg:p-6 rounded-full relative mb-5'>
                                 <img src={circleBg} className='absolute top-0 left-0 w-full h-full' alt="" />
@@ -342,24 +343,16 @@ export const Homepage = () => {
                             <p className='text-[1.1rem] lg:text-[1.18rem] font-semibold text-black group-hover:text-white transition-all duration-700 ease-in-out'>Meat and Fish</p>
                         </div>
                     </SwiperSlide>
-
-
                 </Swiper>
-
                 <div className='flex mt-3 space-x-5 lg:space-x-5'>
                     <button disabled={handleSlide.isFirst} className={`${handleSlide.isFirst ? 'bg-[#017d033e] p-2 rounded-full cursor-pointer' : 'bg-[#017D03] p-2 rounded-full cursor-pointer'}`} onClick={() => slideRef.current.swiper.slidePrev()}>
                         <Icon icon="ion:arrow-back" className='text-white rounded-full text-[1.3rem] lg:text-2xl' />
                     </button>
-
-
                     <button disabled={handleSlide.isLast} className={`${handleSlide.isLast ? 'bg-[#017d033e] p-2 rounded-full cursor-pointer' : 'bg-[#017D03] p-2 rounded-full cursor-pointer'}`} onClick={() => slideRef.current.swiper.slideNext()}>
                         <Icon icon="ion:arrow-forward" className='text-white rounded-full text-[1.3rem] lg:text-2xl' />
                     </button>
-
                 </div>
-
             </div>
-
 
             <div className='w-full min-h-fit justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 mt-24 lg:mt-3 font-lexend 2xl:mt-16 lg:mx-auto relative pb-16'>
                 <div className="lg:hidden w-full flex flex-col justify-center items-center absolute top-0 left-0 -z-10">
@@ -376,15 +369,12 @@ export const Homepage = () => {
                         <p className='text-md leading-[1.5] text-[#54595F] lg:leading-[1.6] lg:w-5/6 mx-auto text-center xl:mx-0 xl:text-left'>
                             Governments have regulations in place to ensure that products labeled as organic meet specific standards. Regular inspections and audits are conducted to maintain the integrity of the organic label.
                         </p>
-
                     </div>
                     <div className="w-1/2 relative hidden xl:block">
                         <img src={rotateImg} className='absolute lg:w-3/5 xl:top-0 lg:right-8 xl:right-12 2xl:-top-20' alt="" />
                         <img src={chooseImg} className='absolute w-4/5 right-0 top-20 xl:hidden' alt="" />
-
                     </div>
                 </div>
-
                 <div className='flex w-full bottom-0 min-h-fit left-0 bg-[#F5F7EB] rounded-[30px] mt-8'>
                     <div className='w-full xl:w-7/12 2xl:w-1/2 mx-auto xl:mx-0 px-3 py-5 xl:pe-0 xl:ps-6 lg:py-7'>
                         <div className='grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 justify-center items-center gap-x-6 gap-y-7 rounded-xl w-full lg-w-fit'>
@@ -446,19 +436,12 @@ export const Homepage = () => {
                                     <p className='text-[15px] leading-[1.5] text-center text-[#54595F] lg:leading-[1.6]'>Our products are certified by reputable organic. </p>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <div className='bg-counterBg bg-cover bg-no-repeat bg-center w-full py-10 lg:pt-20 lg:pb-18 mb-3 lg:mb-5 font-lexend text-white'>
-
-
+            <div className='bg-counterBg bg-cover bg-no-repeat bg-center w-full py-10 lg:pt-20 lg:pb-18 font-lexend text-white'>
                 <div className='grid grid-cols-2 xl:grid-cols-4 px-3 lg:px-0 xl:w-11/12 2xl:w-4/5 mx-auto lg:divide-x divide-[#ffffff66]'>
-
                     <div className='flex flex-col items-center justify-center border-b border-r xl:border-b-0 border-[#ffffff66] xl:flex-row xl:justify-start py-6 xl:py-0'>
                         <div className=''>
                             <img src={counter1} className='h-14 xl:h-auto mb-4 xl:mb-0' alt="" />
@@ -496,48 +479,59 @@ export const Homepage = () => {
                             <p className='text-sm lg:text-lg'>Awards Winning</p>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
-
-
-            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend py-10 lg:px-12 lg:py-16 lg:bg-transparent xl:mx-auto xl:px-0'>
+            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:py-16 xl:py-20 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative'>
+                <img src={productBg1} className='absolute top-0 left-0 -z-0 xl:h-full' alt="" />
+                <img src={productBg2} className='absolute bottom-0 right-0 xl:h-full' alt="" />
                 <div className='flex items-center justify-center lg:justify-start'>
                     <img src={titleIcon} className='h-5 lg:h-7' alt="" />
-                    <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Food Category</p>
+                    <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Organic Products</p>
                 </div>
-
                 <div className='mt-2 w-4/5 mb-3 text-center text-2xl font-bold lg:w-full mx-auto  2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>
                     <h1 className='text-center'>Organic & Fresh Products Daily!</h1>
-
                 </div>
-
                 <div className='spache-x-9 text-[0.8rem] lg:text-[0.95rem] px-3 spacje-y-8 lg:space-y-0 mt-4 lg:mt-0 grid grid-cols-3 gap-5 lg:flex'>
-                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>ALL</button>
-                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>FRUITS</button>
-                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>VEGETABLE</button>
-                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>MEAT AND FISH</button>
-                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>FRUIT JUICE</button>
-                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>SALADS</button>
-                    {/* <button className=' block px-5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>ALL</button> */}
-                    {/* <button>FRUITS</button>
-                    <button>VEGETABLE</button>
-                    <button>MEAT AND FISH</button>
-                    <button>FRUIT JUICE</button>
-                    <button>SALADS</button> */}
+                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>ALL</button>
+                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>FRUITS</button>
+                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>VEGETABLE</button>
+                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>MEAT AND FISH</button>
+                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>FRUIT JUICE</button>
+                    <button className='block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>SALADS</button>
                 </div>
 
 
-            </div>
+                <div className='mt-10 bg-ryed-300 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid xl:grid-cols-4 gap-12 relative z-20 px-14 lg:px-0'>
 
+
+                    <div className='bg-white rounded-[20px] shadow-lg p-4 flex justify-center items-center flex-col cursor-pointer'>
+                        <div className='w-full bg-[#F7F7F7] rounded-[20px] flex justify-center items-center overflow-hidden relative cursor-pointer'>
+                            <p className='bg-[#017D03] text-white px-4 rounded-md py-0.5 text-[13px] absolute top-3 left-3 font-light'>Hot</p>
+                            <img src={product1} className='e pointer-events-none' alt="" />
+                        </div>
+
+                        <div className='mt-4 flex flex-col justify-center items-center'>
+                            <p className='text-[#54595F] font-light mb-2'>Fresh Fruits</p>
+                            <p className='font-semibold text-xl'>Bosco Apple Fruit</p>
+                            <p className='text-[#54595F] my-1 text-lg'>$177.85</p>
+                            <p className='text-[#54595F] text-sm'>(120 Reviews)</p>
+                        </div>
+                    </div>
+
+
+
+
+                    <div className='bg-white rounded-xl p-3'>
+                        hello
+                    </div>
+                    <div className='bg-white rounded-xl p-3'>
+                        hello
+                    </div>
+                    <div className='bg-white rounded-xl p-3'>
+                        hello
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
