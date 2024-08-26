@@ -12,7 +12,8 @@ export default {
         'orangeUnderlay': "url('/src/assets/images/hero_shape_2_1.png')",
         'cardBg': "url('/src/assets/images/card-bg.png')",
         'circleBg': "url('/src/assets/images/circle-bg.png')",
-        'counterBg': "url('/src/assets/images/counter-bg.png')"
+        'counterBg': "url('/src/assets/images/counter-bg.png')",
+        'processBg': "url('/src/assets/images/process_box_1.jpg')"
 
       },
       fontFamily: {

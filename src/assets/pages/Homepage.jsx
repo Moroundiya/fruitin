@@ -33,6 +33,7 @@ import product5 from '../images/product_1_5.jpg'
 import product6 from '../images/product_1_6.jpg'
 import product7 from '../images/product_1_7.jpg'
 import product8 from '../images/product_1_8.jpg'
+import processImg1 from '../images/process_box_1.jpg'
 
 import heroImg4 from '../images/hero_1_1.png'
 import heroImg5 from '../images/hero_1_2.png'
@@ -655,9 +656,20 @@ export const Homepage = () => {
                     <h1 className='text-center'>How We Work It?</h1>
                 </div>
 
-                <div className='mt-10 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-4 gap-x-[6px] gap-y-[15px] lg:gap-6 xl:gap-7 2xl:gap-10 relative z-20 px-0 lg:px-0'>
+                <div className='mt-14 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-x-[6px] gap-y-[15px] lg:gap-6 xl:gap-7 2xl:gap-10 relative z-20 px-0 lg:px-0'>
 
-                   
+                    <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0'>
+                        <div className='mb-6 relative'>
+                            <div className='absolute top-0 left-[10px] w-[100px] h-[118px] bg-[#F5F7EB]  z-10 clip'>
+                            </div>
+                            {/* <div className='absolute top-0 left-[10px] w-[100px] h-[118px] bg-red-500 z-10 clip'>
+                            </div> */}
+                            <img src={processImg1} className='mask' alt="" />
+                        </div>
+                        <p className='text-[#54595F] uppercase'>Step - 01</p>
+                        <p className='my-3 text-[1.3rem] font-semibold'>Work Planning</p>
+                        <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
+                    </div>
 
 
 
