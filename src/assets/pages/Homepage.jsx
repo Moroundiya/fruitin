@@ -652,7 +652,7 @@ export const Homepage = () => {
 
 
 
-            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:pb-16 lg:pt-6 xl:py-20 bg-[#fff] xl:mx-auto xl:px-0 relative'>
+            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:pb-16 lg:pt-12 xl:py-20 bg-[#fff] xl:mx-auto xl:px-0 relative'>
                 <img src={productBg1} className='absolute top-0 left-0 -z-0 xl:h-full' alt="" />
                 <img src={productBg2} className='absolute bottom-0 right-0 xl:h-full' alt="" />
                 <div className='flex items-center justify-center lg:justify-start'>
@@ -663,7 +663,7 @@ export const Homepage = () => {
                     <h1 className='text-center'>How We Work It?</h1>
                 </div>
 
-                <div className='mt-3 space-y-10 lg:mt-0 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-x-5 gap-y-[15px] lg:gap-6 xl:gap-7 2xl:gap-10 relative z-20 px-3 lg:px-0 lg:pb-24'>
+                <div className='mt-3 spjace-y-10 lg:mt-0 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-x-5 gap-y-[15px] lg:gap-y-20 xl:gap-y-0 xl:gap-x-7 2xl:gap-x-10 relative z-20 px-3 lg:px-0 lg:pb-24'>
                     <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0'>
                         <div className='mb-6 relative'>
                             <div className="clip bg-white flex justify-center items-center cursor-pointer group">
@@ -676,10 +676,11 @@ export const Homepage = () => {
                         <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
                     </div>
 
-                    <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0 lg:relative top-[60px]'>
+
+                    <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0 xl:relative top-[60px]'>
                         <div className='mb-6 relative'>
                             <div className="clip bg-white flex justify-center items-center cursor-pointer group">
-                                <img src={processIcon2} alt="" className='group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' />
+                                <img src={processIcon3} alt="" className='group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' />
                             </div>
                             <img src={processImg2} className='mask' alt="" />
                         </div>
@@ -687,6 +688,7 @@ export const Homepage = () => {
                         <p className='my-2 text-[1.3rem] lg:text-[1.55rem] font-semibold'>Farm Growing</p>
                         <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
                     </div>
+
 
                     <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0'>
                         <div className='mb-6 relative'>
@@ -700,7 +702,7 @@ export const Homepage = () => {
                         <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
                     </div>
 
-                    <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0 lg:relative top-[60px]'>
+                    <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0 xl:relative top-[60px]'>
                         <div className='mb-6 relative'>
                             <div className="clip bg-white flex justify-center items-center cursor-pointer group">
                                 <img src={processIcon4} alt="" className='group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' />
@@ -711,8 +713,6 @@ export const Homepage = () => {
                         <p className='my-2 text-[1.3rem] lg:text-[1.55rem] font-semibold'>Food Processing</p>
                         <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
                     </div>
-
-
                 </div>
             </div>
         </>
