@@ -34,6 +34,13 @@ import product6 from '../images/product_1_6.jpg'
 import product7 from '../images/product_1_7.jpg'
 import product8 from '../images/product_1_8.jpg'
 import processImg1 from '../images/process_box_1.jpg'
+import processImg2 from '../images/process_box_2.jpg'
+import processImg3 from '../images/process_box_3.jpg'
+import processImg4 from '../images/process_box_4.jpg'
+import processIcon1 from '../images/process_box_1.svg'
+import processIcon2 from '../images/process_box_2.svg'
+import processIcon3 from '../images/process_box_3.svg'
+import processIcon4 from '../images/process_box_4.svg'
 
 import heroImg4 from '../images/hero_1_1.png'
 import heroImg5 from '../images/hero_1_2.png'
@@ -210,7 +217,7 @@ export const Homepage = () => {
                 </SwiperSlide> */}
             </Swiper>
 
-            <div className='w-full min-h-fit flex flex-col-reverse font-lexend py-10 bg-aboutBg bg-center bg-cover bg-no-repeat lg:flex-row lg:px-12 xl:w-4/5 lg:py-14 lg:mx-auto'>
+            <div className='w-full min-h-fit flex flex-col-reverse font-lexend py-10 bg-aboutBg bg-center bg-contain bg-no-repeat lg:flex-row lg:px-12 xl:w-4/5 lg:py-14 lg:mx-auto'>
                 <div className='bg-orangeUnderlajy bg-center bg-cover hidden lg:flex bg-no-repeat h-1/2 justify-center lg:justify-start items-center py-8 lg:w-1/2'>
                     <img src={aboutBg} className='lg:w-4/5' alt="" />
                 </div>
@@ -645,34 +652,65 @@ export const Homepage = () => {
 
 
 
-            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 pb-10 pt-5 lg:px-12 lg:pb-16 lg:pt-6 xl:pb-20 xl:pt-6 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative'>
+            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:pb-16 lg:pt-6 xl:py-20 bg-[#fff] xl:mx-auto xl:px-0 relative'>
                 <img src={productBg1} className='absolute top-0 left-0 -z-0 xl:h-full' alt="" />
                 <img src={productBg2} className='absolute bottom-0 right-0 xl:h-full' alt="" />
                 <div className='flex items-center justify-center lg:justify-start'>
                     <img src={titleIcon} className='h-5 lg:h-7' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>How We Make Quality Foods</p>
                 </div>
-                <div className='mt-2 w-4/5 mb-3 text-center text-2xl font-bold lg:w-full mx-auto  2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>
+                <div className='mt-2 w-4/5 mb-10 text-center text-2xl font-bold lg:w-full mx-auto 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-12 lg:mt-5'>
                     <h1 className='text-center'>How We Work It?</h1>
                 </div>
 
-                <div className='mt-14 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-x-[6px] gap-y-[15px] lg:gap-6 xl:gap-7 2xl:gap-10 relative z-20 px-0 lg:px-0'>
-
+                <div className='mt-3 space-y-10 lg:mt-0 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-x-5 gap-y-[15px] lg:gap-6 xl:gap-7 2xl:gap-10 relative z-20 px-3 lg:px-0 lg:pb-24'>
                     <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0'>
                         <div className='mb-6 relative'>
-                            <div className='absolute top-0 left-[10px] w-[100px] h-[118px] bg-[#F5F7EB]  z-10 clip'>
+                            <div className="clip bg-white flex justify-center items-center cursor-pointer group">
+                                <img src={processIcon1} alt="" className='group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' />
                             </div>
-                            {/* <div className='absolute top-0 left-[10px] w-[100px] h-[118px] bg-red-500 z-10 clip'>
-                            </div> */}
                             <img src={processImg1} className='mask' alt="" />
                         </div>
                         <p className='text-[#54595F] uppercase'>Step - 01</p>
-                        <p className='my-3 text-[1.3rem] font-semibold'>Work Planning</p>
+                        <p className='my-2 text-[1.3rem] lg:text-[1.55rem] font-semibold'>Work Planning</p>
                         <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
                     </div>
 
+                    <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0 lg:relative top-[60px]'>
+                        <div className='mb-6 relative'>
+                            <div className="clip bg-white flex justify-center items-center cursor-pointer group">
+                                <img src={processIcon2} alt="" className='group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' />
+                            </div>
+                            <img src={processImg2} className='mask' alt="" />
+                        </div>
+                        <p className='text-[#54595F] uppercase'>Step - 02</p>
+                        <p className='my-2 text-[1.3rem] lg:text-[1.55rem] font-semibold'>Farm Growing</p>
+                        <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
+                    </div>
 
+                    <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0'>
+                        <div className='mb-6 relative'>
+                            <div className="clip bg-white flex justify-center items-center cursor-pointer group">
+                                <img src={processIcon3} alt="" className='group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' />
+                            </div>
+                            <img src={processImg3} className='mask' alt="" />
+                        </div>
+                        <p className='text-[#54595F] uppercase'>Step - 03</p>
+                        <p className='my-2 text-[1.3rem] lg:text-[1.55rem] font-semibold'>Crop Harvesting</p>
+                        <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
+                    </div>
 
+                    <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0 lg:relative top-[60px]'>
+                        <div className='mb-6 relative'>
+                            <div className="clip bg-white flex justify-center items-center cursor-pointer group">
+                                <img src={processIcon4} alt="" className='group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' />
+                            </div>
+                            <img src={processImg4} className='mask' alt="" />
+                        </div>
+                        <p className='text-[#54595F] uppercase'>Step - 04</p>
+                        <p className='my-2 text-[1.3rem] lg:text-[1.55rem] font-semibold'>Food Processing</p>
+                        <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
+                    </div>
 
 
                 </div>
