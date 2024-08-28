@@ -41,6 +41,7 @@ import processIcon1 from '../images/process_box_1.svg'
 import processIcon2 from '../images/process_box_2.svg'
 import processIcon3 from '../images/process_box_3.svg'
 import processIcon4 from '../images/process_box_4.svg'
+import faqImgRound from '../images/faq_img.jpg'
 
 import heroImg4 from '../images/hero_1_1.png'
 import heroImg5 from '../images/hero_1_2.png'
@@ -143,7 +144,7 @@ export const Homepage = () => {
                             <div className='font-lexend mb-14 mt-[140px] lg:mt-0 relative lg:flex lg:justify-center lg:items-center lg:flex-col lg:w-1/2'>
                                 <img src={heroArrow} className='absolute bottom-1 right-0 h-[32px] sm:right-24 md:right-40 lg:hiddenk lg:h-14 lg:-right-5 lg:bottom-20 2xl:block 2xl:h-20 2xl:bottom-12 2xl:right-0' alt="" />
                                 <div className='flex items-center justify-center'>
-                                    <img src={titleIcon} className='h-5 lg:h-7' alt="" />
+                                    <img src={titleIcon} className='h-5' alt="" />
                                     <p className='font-lobster text-[#FF9C00] ms-2 text-xl sm:text-2xl 2xl:text-3xl'>100% Quality Foods</p>
                                 </div>
                                 <p className='text-white text-[3rem] text-center px-3 leading-tight sm:px-5 md:w-2/3 mx-auto font-bold my-6 sm:mx-auto sm:text-7xl sm:leading-[1.1] lg:text-6xl lg:w-full lg:mt-8 lg:mb-14 2xl:mb-20 lg:leading-[1.2] 2xl:leading-[1.1] 2xl:text-8xl'>Our Organic Collection.</p>
@@ -170,7 +171,7 @@ export const Homepage = () => {
                             <div className='font-lexend mb-14 mt-[140px] lg:mt-0 relative lg:flex lg:justify-center lg:items-center lg:flex-col lg:w-1/2'>
                                 <img src={heroArrow} className='absolute bottom-1 right-0 h-[32px] sm:right-24 md:right-40 lg:hiddenk lg:h-14 lg:-right-5 lg:bottom-20 2xl:block 2xl:h-20 2xl:bottom-12 2xl:right-0' alt="" />
                                 <div className='flex items-center justify-center'>
-                                    <img src={titleIcon} className='h-5 lg:h-7' alt="" />
+                                    <img src={titleIcon} className='h-5' alt="" />
                                     <p className='font-lobster text-[#FF9C00] ms-2 text-xl sm:text-2xl 2xl:text-3xl'>100% Quality Foods</p>
                                 </div>
                                 <p className='text-white text-[3rem] text-center px-3 leading-tight sm:px-5 md:w-2/3 mx-auto font-bold my-6 sm:mx-auto sm:text-7xl sm:leading-[1.1] lg:text-6xl lg:w-full lg:mt-8 lg:mb-14 2xl:mb-20 lg:leading-[1.2] 2xl:leading-[1.1] 2xl:text-8xl'>Our Organic Vegetables.</p>
@@ -197,7 +198,7 @@ export const Homepage = () => {
                             <div className='font-lexend mb-14 mt-[140px] lg:mt-0 relative lg:flex lg:justify-center lg:items-center lg:flex-col lg:w-1/2'>
                                 <img src={heroArrow} className='absolute bottom-1 right-0 h-[32px] sm:right-24 md:right-40 lg:hiddenk lg:h-14 lg:-right-5 lg:bottom-20 2xl:block 2xl:h-20 2xl:bottom-12 2xl:right-0' alt="" />
                                 <div className='flex items-center justify-center'>
-                                    <img src={titleIcon} className='h-5 lg:h-7' alt="" />
+                                    <img src={titleIcon} className='h-5' alt="" />
                                     <p className='font-lobster text-[#FF9C00] ms-2 text-xl sm:text-2xl 2xl:text-3xl'>100% Quality Foods</p>
                                 </div>
                                 <p className='text-white text-[3rem] text-center px-3 leading-tight sm:px-5 md:w-2/3 mx-auto font-bold my-6 sm:mx-auto sm:text-7xl sm:leading-[1.1] lg:text-6xl lg:w-full lg:mt-8 lg:mb-14 2xl:mb-20 lg:leading-[1.2] 2xl:leading-[1.1] 2xl:text-8xl'>Our Organic Fruits.</p>
@@ -223,7 +224,7 @@ export const Homepage = () => {
                 </div>
                 <div className='px-3 lg:w-1/2 flex flex-col justify-center'>
                     <div className='flex items-center justify-center lg:justify-start'>
-                        <img src={titleIcon} className='h-5 lg:h-7' alt="" />
+                        <img src={titleIcon} className='h-5' alt="" />
                         <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>About Us Company</p>
                     </div>
                     <h1 className='mt-2 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5'>Organic Integrity Durable Impact Frutin's Story</h1>
@@ -259,7 +260,7 @@ export const Homepage = () => {
 
             <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend py-10 lg:px-12 lg:py-16 lg:bg-transparent xl:mx-auto xl:px-0'>
                 <div className='flex items-center justify-center lg:justify-start'>
-                    <img src={titleIcon} className='h-5 lg:h-7' alt="" />
+                    <img src={titleIcon} className='h-5' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Food Category</p>
                 </div>
                 <h1 className='mt-2 mb-3 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>What We’re Offering</h1>
@@ -377,7 +378,7 @@ export const Homepage = () => {
                 <div className='flex flex-col lg:flex-row'>
                     <div className='xl:w-1/2 mt-12 lg:mt-0 flex flex-col justify-center items-center xl:justify-start xl:items-start '>
                         <div className='flex items-center justify-center lg:justify-start'>
-                            <img src={titleIcon} className='h-5 lg:h-7' alt="" />
+                            <img src={titleIcon} className='h-5' alt="" />
                             <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Why Choose Us</p>
                         </div>
                         <h1 className='mt-3 mb-4 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-5 lg:mt-5 xl:w-5/6 mx-auto xl:mx-0'>Nourish Your Body with Pure Organic Goodness!</h1>
@@ -500,7 +501,7 @@ export const Homepage = () => {
                 <img src={productBg1} className='absolute top-0 left-0 -z-0 xl:h-full' alt="" />
                 <img src={productBg2} className='absolute bottom-0 right-0 xl:h-full' alt="" />
                 <div className='flex items-center justify-center lg:justify-start'>
-                    <img src={titleIcon} className='h-5 lg:h-7' alt="" />
+                    <img src={titleIcon} className='h-5' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Organic Products</p>
                 </div>
                 <div className='mt-2 w-4/5 mb-3 text-center text-2xl font-bold lg:w-full mx-auto  2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>
@@ -647,16 +648,11 @@ export const Homepage = () => {
                 </div>
             </div>
 
-
-
-
-
-
-            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:pb-16 lg:pt-12 xl:py-20 bg-[#fff] xl:mx-auto xl:px-0 relative'>
+            <div className='w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:pb-16 lg:pt-12 xl:pt-20 xl:10 bg-[#fff] xl:mx-auto xl:px-0 relative'>
                 <img src={productBg1} className='absolute top-0 left-0 -z-0 xl:h-full' alt="" />
                 <img src={productBg2} className='absolute bottom-0 right-0 xl:h-full' alt="" />
                 <div className='flex items-center justify-center lg:justify-start'>
-                    <img src={titleIcon} className='h-5 lg:h-7' alt="" />
+                    <img src={titleIcon} className='h-5' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>How We Make Quality Foods</p>
                 </div>
                 <div className='mt-2 w-4/5 mb-10 text-center text-2xl font-bold lg:w-full mx-auto 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-12 lg:mt-5'>
@@ -680,7 +676,7 @@ export const Homepage = () => {
                     <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0 xl:relative top-[60px]'>
                         <div className='mb-6 relative'>
                             <div className="clip bg-white flex justify-center items-center cursor-pointer group">
-                                <img src={processIcon3} alt="" className='group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' />
+                                <img src={processIcon2} alt="" className='group-hover:scale-x-[-1] transition-all duration-700 ease-in-out' />
                             </div>
                             <img src={processImg2} className='mask' alt="" />
                         </div>
@@ -714,6 +710,25 @@ export const Homepage = () => {
                         <p className='text-[#54595F] font-normal text-[0.95rem]'>Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.</p>
                     </div>
                 </div>
+            </div>
+
+            <div className='w-full min-h-fit bg-faqBg bg-[#F5F7EB] bg-center bg-contain lg:bg-cover bg-no-repeat'>
+                <div className='w-full h-full lg:flex space-x-8 font-lexend mt-0 px-3 py-10 lg:px-12 lg:py-16 xl:py-24 xl:mx-auto xl:px-20'>
+                    <div className='lg:w-2/5 bg-faqVectorBg bg-center bg-contain bg-no-repeat flex justify-center items-center'>
+                        <div className='h-full relative p-7 before:content-[""] before:border-2 before:rounded-full  before:border-[#017D03] before:border-dashed before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-10'>
+                            <img src={faqImgRound} className='rounded-full relative z-50 h-full' alt="" />
+
+                        </div>
+                    </div>
+                    <div className='lg:w-3/5'>
+                        <div className='flex items-center justify-center lg:justify-start'>
+                            <img src={titleIcon} className='h-5' alt="" />
+                            <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Looking For Answers?</p>
+                        </div>
+                        <h1 className='mt-2 mb-3 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.2] lg:text-left lg:mb-8 lg:mt-5 xl:w-4/5'>Frequently Asked If You Have any Questions?</h1>
+                    </div>
+                </div>
+
             </div>
         </>
     )

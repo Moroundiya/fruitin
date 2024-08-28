@@ -13,7 +13,9 @@ export default {
         'cardBg': "url('/src/assets/images/card-bg.png')",
         'circleBg': "url('/src/assets/images/circle-bg.png')",
         'counterBg': "url('/src/assets/images/counter-bg.png')",
-        'processBg': "url('/src/assets/images/process_box_1.jpg')"
+        'processBg': "url('/src/assets/images/process_box_1.jpg')",
+        'faqBg': "url('/src/assets/images/faq_bg_1.png')",
+        'faqVectorBg': "url('/src/assets/images/faq_vector.png')"
 
       },
       fontFamily: {
