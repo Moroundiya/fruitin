@@ -730,9 +730,6 @@ export const Homepage = () => {
                                 <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Looking For Answers?</p>
                             </div>
                             <h1 className='mt-2 mb-3 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.2] lg:text-left lg:mb-8 lg:mt-5'>Frequently Asked If You Have any Questions?</h1>
-
-
-
                             <div className='mt-8 lg:mt-0 space-y-4 lg:space-y-5'>
                                 <div className='w-full bg-white shadow-md rounded-lg'>
                                     <div>
@@ -817,14 +814,16 @@ export const Homepage = () => {
                                 <p className='text-black text-lg lg:text-2xl font-semibold'>
                                     Angelina Margret
                                 </p>
-                                <p className='text-[#017D03] text-sm'>
+                            <p className='text-[#017D03] text-sm'>
                                     Customer of Our Shop
                                 </p>
+                                <p>df</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+           
         </>
     )
 }
