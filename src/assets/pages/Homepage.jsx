@@ -42,6 +42,10 @@ import processIcon2 from '../images/process_box_2.svg'
 import processIcon3 from '../images/process_box_3.svg'
 import processIcon4 from '../images/process_box_4.svg'
 import faqImgRound from '../images/faq_img.jpg'
+import testiImg from '../images/testi_img.jpg'
+import testiShape from '../images/testi_box_shape.png'
+import testiProfile from '../images/testi_profile.jpg'
+import testiQuote from '../images/quote.png'
 
 import heroImg4 from '../images/hero_1_1.png'
 import heroImg5 from '../images/hero_1_2.png'
@@ -788,6 +792,38 @@ export const Homepage = () => {
                     </div>
                 </div>
 
+            </div>
+
+
+            <div className='w-full min-h-fit flex flex-col justify-center items-center px-3 font-lexend py-10 lg:px-12 lg:py-16 lg:bg-transparent xl:mx-auto xl:px-0'>
+                <div className='flex items-center justify-center lg:justify-start'>
+                    <img src={titleIcon} className='h-5' alt="" />
+                    <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Testimonials</p>
+                </div>
+                <h1 className='mt-2 mb-5 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>Our Customer Feedback</h1>
+
+                <div className='w-full flex px-3 h-auto rounded-3xl overflow-hidden lg:px-0 xl:w-11/12 2xl:w-4/5 mx-auto bg-testiBg bg-contain bg-right bg-no-repeat bg-[#F5F7EB]'>
+                    <img src={testiImg} className='hidden lg:block h-full' alt="" />
+                    <img src={testiShape} className='hidden lg:block h-full -ms-4' alt="" />
+
+                    <div className='px-3 py-6 lg:p-10 relative'>
+                        <img src={testiQuote} className='absolute bottom-16 lg:bottom-6 right-3 lg:right-20 h-[60px] lg:h-auto' alt="" />
+                        <p className='italic text-md lg:text-xl leading-[1.8] text-[#54595F] mb-12'>
+                            “Diversity is a cornerstone of our farming philosophy. We carefully select a wide range of crops, ensuring a varied and balanced ecosystem. This not only helps to naturally deter pests and diseases but also promotes soil health by varying the nutrient demands of different plants.”
+                        </p>
+                        <div className='flex items-center'>
+                            <img src={testiProfile} className='rounded-full h-[45px] lg:h-[60px]' alt="" />
+                            <div className='ms-3'>
+                                <p className='text-black text-lg lg:text-2xl font-semibold'>
+                                    Angelina Margret
+                                </p>
+                                <p className='text-[#017D03] text-sm'>
+                                    Customer of Our Shop
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )
