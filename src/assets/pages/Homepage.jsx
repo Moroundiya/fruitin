@@ -643,11 +643,6 @@ export const Homepage = () => {
                         </div>
                     </div>
 
-
-
-
-
-
                 </div>
             </div>
 
@@ -788,9 +783,7 @@ export const Homepage = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
-
 
             <div className='w-full min-h-fit flex flex-col justify-center items-center px-3 font-lexend py-10 lg:px-12 lg:py-16 lg:bg-transparent xl:mx-auto xl:px-0'>
                 <div className='flex items-center justify-center lg:justify-start'>
