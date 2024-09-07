@@ -233,7 +233,7 @@ export const Homepage = () => {
                         <img src={titleIcon} className='h-5' alt="" />
                         <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>About Us Company</p>
                     </div>
-                    <h1 className='mt-2 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5'>Organic Integrity Durable Impact Frutin's Story</h1>
+                    <h1 className='mt-2 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5'>Organic Integrity Durable Impact Frutin's Story</h1>
                     <p className='text-md leading-[1.5] my-4 text-[#54595F] lg:my-6 lg:leading-[1.6]'>Some studies suggest that organic foods may have higher levels of certain nutrients and antioxidants compared to conventionally grown foods. However, this can vary depending on factors like soil quality and growing conditions.</p>
                     <ul className='text-black font-semiold space-y-2 xl:columns-2'>
                         <li className='flex items-center space-x-2'>
@@ -269,7 +269,7 @@ export const Homepage = () => {
                     <img src={titleIcon} className='h-5' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Food Category</p>
                 </div>
-                <h1 className='mt-2 mb-3 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>What We’re Offering</h1>
+                <h1 className='mt-2 mb-3 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>What We’re Offering</h1>
 
 
                 <Swiper
@@ -387,7 +387,7 @@ export const Homepage = () => {
                             <img src={titleIcon} className='h-5' alt="" />
                             <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Why Choose Us</p>
                         </div>
-                        <h1 className='mt-3 mb-4 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-5 lg:mt-5 xl:w-5/6 mx-auto xl:mx-0'>Nourish Your Body with Pure Organic Goodness!</h1>
+                        <h1 className='mt-3 mb-4 text-center text-2xl lg:text-3xl lg:leading-[1.2] font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-5 lg:mt-5 xl:w-5/6 mx-auto xl:mx-0'>Nourish Your Body with Pure Organic Goodness!</h1>
                         <p className='text-md leading-[1.5] text-[#54595F] lg:leading-[1.6] lg:w-5/6 mx-auto text-center xl:mx-0 xl:text-left'>
                             Governments have regulations in place to ensure that products labeled as organic meet specific standards. Regular inspections and audits are conducted to maintain the integrity of the organic label.
                         </p>
@@ -510,7 +510,7 @@ export const Homepage = () => {
                     <img src={titleIcon} className='h-5' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Organic Products</p>
                 </div>
-                <div className='mt-2 w-4/5 mb-3 text-center text-2xl font-bold lg:w-full mx-auto  2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>
+                <div className='mt-2 w-4/5 mb-3 text-center text-2xl lg:text-3xl font-bold lg:w-full mx-auto  2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>
                     <h1 className='text-center'>Organic & Fresh Products Daily!</h1>
                 </div>
                 <div className='spache-x-9 text-[0.8rem] lg:text-[0.95rem] px-3 spacje-y-8 lg:space-y-0 mt-4 lg:mt-0 grid grid-cols-3 gap-5 lg:flex'>
@@ -656,7 +656,7 @@ export const Homepage = () => {
                     <img src={titleIcon} className='h-5' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>How We Make Quality Foods</p>
                 </div>
-                <div className='mt-2 w-4/5 mb-10 text-center text-2xl font-bold lg:w-full mx-auto 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-12 lg:mt-5'>
+                <div className='mt-2 w-4/5 mb-10 text-center text-2xl lg:text-3xl font-bold lg:w-full mx-auto 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-12 lg:mt-5'>
                     <h1 className='text-center'>How We Work It?</h1>
                 </div>
 
@@ -718,16 +718,15 @@ export const Homepage = () => {
                     <div className='lg:w-2/5 bg-faqVectorBg bg-center bg-contain bg-no-repeat flex justify-center items-center'>
                         <div className='h-full relative p-7 before:content-[""] before:border-2 before:rounded-full  before:border-[#017D03] before:border-dashed before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-10'>
                             <img src={faqImgRound} className='rounded-full relative z-50 h-full' alt="" />
-
                         </div>
                     </div>
                     <div className='lg:w-3/5 mt-10 lg:mt-0'>
-                        <div className='lg:w-5/6'>
+                        <div className=''>
                             <div className='flex items-center justify-center lg:justify-start'>
                                 <img src={titleIcon} className='h-5' alt="" />
                                 <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Looking For Answers?</p>
                             </div>
-                            <h1 className='mt-2 mb-3 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.2] lg:text-left lg:mb-8 lg:mt-5'>Frequently Asked If You Have any Questions?</h1>
+                            <h1 className='mt-2 mb-3 text-center text-2xl lg:text-3xl lg:leading-[1.2] capitalize font-bold 2xl:text-[2.5rem] 2xl:leading-[1.2] lg:text-left lg:mb-8 lg:mt-5'>Frequently Asked If You Have any Questions?</h1>
                             <div className='mt-8 lg:mt-0 space-y-4 lg:space-y-5'>
                                 <div className='w-full bg-white shadow-md rounded-lg'>
                                     <div>
@@ -780,9 +779,6 @@ export const Homepage = () => {
 
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
@@ -793,7 +789,7 @@ export const Homepage = () => {
                     <img src={titleIcon} className='h-5' alt="" />
                     <p className='font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl'>Testimonials</p>
                 </div>
-                <h1 className='mt-2 mb-5 text-center text-2xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>Our Customer Feedback</h1>
+                <h1 className='mt-2 mb-5 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5'>Our Customer Feedback</h1>
 
                 <div className='w-full flex px-3 h-auto rounded-3xl overflow-hidden lg:px-0 xl:w-11/12 2xl:w-4/5 mx-auto bg-testiBg bg-contain bg-right bg-no-repeat bg-[#F5F7EB]'>
                     <img src={testiImg} className='hidden lg:block h-full' alt="" />
@@ -839,11 +835,12 @@ export const Homepage = () => {
                         </div>
 
                         <form className='w-1/2 flex justify-end'>
-                            <input type="email" required className='bg-white rounded-md p-3 outline-none border-none w-[320px] placeholder:font-light placeholder:text-gray-400' placeholder='Email Address' name="" id="" />
-                            <button type='submit'>Subscribe</button>
+                            <input type="email" required className='bg-white rounded-md px-3 py-2.5 outline-none border-none w-[320px] placeholder:font-light placeholder:text-gray-400' placeholder='Email Address' name="" id="" />
+                            <button type='submit' className='bg-[#017D03] text-white rounded-lg ms-2 text-sm px-4'>Subscribe</button>
                         </form>
-
                     </div>
+
+                    <hr className="h-px my-20 bg-[#017D03] border-0" />
                 </div>
             </footer>
 
