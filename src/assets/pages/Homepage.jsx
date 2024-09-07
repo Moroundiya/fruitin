@@ -798,7 +798,7 @@ export const Homepage = () => {
 
                     <div className='px-3 py-6 lg:p-10 relative'>
                         <img src={testiQuote} className='absolute bottom-16 lg:bottom-6 right-3 lg:right-20 h-[60px] lg:h-auto' alt="" />
-                        <p className='italic text-md lg:text-xl leading-[1.8] text-[#54595F] mb-12'>
+                        <p className='italic text-md text-[#54595F] mb-12 leading-[1.8] lg:leading-[1.8] lg:text-xl'>
                             “Diversity is a cornerstone of our farming philosophy. We carefully select a wide range of crops, ensuring a varied and balanced ecosystem. This not only helps to naturally deter pests and diseases but also promotes soil health by varying the nutrient demands of different plants.”
                         </p>
                         <div className='flex items-center'>
@@ -807,16 +807,24 @@ export const Homepage = () => {
                                 <p className='text-black text-lg lg:text-2xl font-semibold'>
                                     Angelina Margret
                                 </p>
-                            <p className='text-[#017D03] text-sm'>
+                                <p className='text-[#017D03] text-sm'>
                                     Customer of Our Shop
                                 </p>
-                                <p>df</p>
                             </div>
+                        </div>
+
+                        <div className='flex mt-10 space-x-5 lg:space-x-5 lg:mt-16'>
+                            <button className={`${!handleSlide.isFirst ? 'bg-[#017d033e] p-2 lg:p-3 rounded-full cursor-pointer' : 'bg-[#017D03] p-2 lg:p-3 rounded-full cursor-pointer'}`} onClick={() => slideRef.current.swiper.slidePrev()}>
+                                <Icon icon="ion:arrow-back" className='text-white rounded-full text-[1.3rem] lg:text-2xl' />
+                            </button>
+                            <button className={`${!handleSlide.isLast ? 'bg-[#017d033e] p-2 lg:p-3 rounded-full cursor-pointer' : 'bg-[#017D03] p-2 lg:p-3 rounded-full cursor-pointer'}`} onClick={() => slideRef.current.swiper.slideNext()}>
+                                <Icon icon="ion:arrow-forward" className='text-white rounded-full text-[1.3rem] lg:text-2xl' />
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-           
+
         </>
     )
 }
