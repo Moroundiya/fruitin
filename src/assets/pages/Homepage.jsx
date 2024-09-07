@@ -428,7 +428,7 @@ export const Homepage = () => {
                             <div className='bg-white rounded-xl flex lg:justify-center lg:items-center lg:flex-col xl:flex-row overflow-hidden shadow-lg'>
                                 <div className='relative min-w-fit'>
                                     <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute lg:relative xl:absolute lg:mt-4 xl:mt-0 lg:top-0 lg:left-0 xl:-top-[90px] xl:-left-4 -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
-                                        <img className='w-5/5' src={chooseImg1} alt="" />
+                                        <img className='w-5/5' src={chooseImg2} alt="" />
                                     </div>
                                 </div>
                                 <div className='py-8 px-5 lg:pt-3 lg:pb-4 xl:py-8 '>
@@ -439,7 +439,7 @@ export const Homepage = () => {
                             <div className='bg-white rounded-xl flex lg:justify-center lg:items-center lg:flex-col xl:flex-row overflow-hidden shadow-lg'>
                                 <div className='relative min-w-fit'>
                                     <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute lg:relative xl:absolute lg:mt-4 xl:mt-0 lg:top-0 lg:left-0 xl:-top-[90px] xl:-left-4 -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
-                                        <img className='w-5/5' src={chooseImg1} alt="" />
+                                        <img className='w-5/5' src={chooseImg3} alt="" />
                                     </div>
                                 </div>
                                 <div className='py-8 px-5 lg:pt-3 lg:pb-4 xl:py-8 '>
@@ -450,7 +450,7 @@ export const Homepage = () => {
                             <div className='bg-white rounded-xl flex lg:justify-center lg:items-center lg:flex-col xl:flex-row overflow-hidden shadow-lg'>
                                 <div className='relative min-w-fit'>
                                     <div className=' bg-[#017D03] rounded-full flex justify-end items-end p-2 w-[70px] h-[70px] absolute lg:relative xl:absolute lg:mt-4 xl:mt-0 lg:top-0 lg:left-0 xl:-top-[90px] xl:-left-4 -top-4 -left-3 border-[10px] border-[#F5F7EB]'>
-                                        <img className='w-5/5' src={chooseImg1} alt="" />
+                                        <img className='w-5/5' src={chooseImg4} alt="" />
                                     </div>
                                 </div>
                                 <div className='py-8 px-5 lg:pt-3 lg:pb-4 xl:py-8 '>
