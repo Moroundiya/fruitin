@@ -46,6 +46,9 @@ import testiImg from '../images/testi_img.jpg'
 import testiShape from '../images/testi_box_shape.png'
 import testiProfile from '../images/testi_profile.jpg'
 import testiQuote from '../images/quote.png'
+import footerBg1 from '../images/footer_shape_1.png'
+import footerBg2 from '../images/footer_shape_2.png'
+import footerEmail from '../images/email.svg'
 
 import heroImg4 from '../images/hero_1_1.png'
 import heroImg5 from '../images/hero_1_2.png'
@@ -662,7 +665,7 @@ export const Homepage = () => {
                     <h1 className='text-center'>How We Work It?</h1>
                 </div>
 
-                <div className='mt-3 spjace-y-10 lg:mt-0 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-x-5 gap-y-[15px] lg:gap-y-20 xl:gap-y-0 xl:gap-x-7 2xl:gap-x-10 relative z-20 px-3 lg:px-0 lg:pb-24'>
+                <div className='mt-3 lg:mt-0 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid sm:grid-cols-2 xl:grid-cols-4 gap-x-5 gap-y-14 lg:gap-y-20 xl:gap-y-0 xl:gap-x-7 2xl:gap-x-10 relative z-20 px-3 lg:px-0 lg:pb-24'>
                     <div className='flex justify-center items-center flex-col text-center px-3 lg:px-0'>
                         <div className='mb-6 relative'>
                             <div className="clip bg-white flex justify-center items-center cursor-pointer group">
@@ -788,7 +791,6 @@ export const Homepage = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
 
 
@@ -831,6 +833,25 @@ export const Homepage = () => {
                     </div>
                 </div>
             </div>
+
+            <footer className=' bg-[#002D00] h-[750px] pt-20 mt-10 relative font-lexend'>
+                <img src={footerBg1} className='absolute top-0 left-0 h-full pointer-events-none' alt="" />
+                <img src={footerBg2} className='absolute top-0 right-0 h-full pointer-events-none' alt="" />
+                <div className='w-full bg-redd-300 h-full justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 lg:mx-auto'>
+                    <div className='w-full flex justify-between items-center'>
+                        <div className='w-1/2 flex items-center space-x-5'>
+                            <img src={footerEmail} alt="" />
+                            <p className='text-[1.8rem] leading-[1.2] text-white w-3/5 font-semibold'>Sign Up to Get Updates & News About Us.</p>
+                        </div>
+
+                        <form className='w-1/2 flex justify-end'>
+                            <input type="email" required className='bg-white rounded-md p-3' name="" id="" />
+                            <button type='submit'>Subscribe</button>
+                        </form>
+
+                    </div>
+                </div>
+            </footer>
 
         </>
     )
