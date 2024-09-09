@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import footerBg1 from "../images/footer_shape_1.png";
 import footerBg2 from "../images/footer_shape_2.png";
