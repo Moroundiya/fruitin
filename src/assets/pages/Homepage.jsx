@@ -282,7 +282,7 @@ export const Homepage = () => {
                 </SwiperSlide> */}
             </Swiper>
 
-            <div className="w-full min-h-fit flex flex-col-reverse font-lexend py-10 bg-aboutBg bg-center bg-contain bg-no-repeat lg:flex-row lg:px-12 xl:w-4/5 lg:py-14 lg:mx-auto">
+            <div className="w-full min-h-fit flex flex-col-reverse font-lexend pt-10 pb-5 bg-aboutBg bg-center bg-contain bg-no-repeat lg:flex-row lg:px-12 xl:w-4/5 lg:py-14 lg:mx-auto">
                 <div className="bg-orangeUnderlajy bg-center bg-cover hidden lg:flex bg-no-repeat h-1/2 justify-center lg:justify-start items-center py-8 lg:w-1/2">
                     <img
                         src={aboutBg}
@@ -1341,7 +1341,7 @@ export const Homepage = () => {
                     <div className="px-3 py-6 lg:p-10 relative">
                         <img
                             src={testiQuote}
-                            className="absolute bottom-16 lg:bottom-6 right-3 lg:right-20 h-[60px] lg:h-auto"
+                            className="absolute bottom-16 right-3 lg:right-20 lg:bottom-24 h-[60px] lg:h-[80px] xl:h-auto xl:bottom-6"
                             alt=""
                         />
                         <p className="italic text-md text-[#54595F] mb-12 leading-[1.8] lg:leading-[1.8] lg:text-xl">
@@ -1393,54 +1393,55 @@ export const Homepage = () => {
                 </div>
             </div>
 
-            <footer className=" bg-[#002D00] h-auto px-3 lg:px-0 pt-12 lg:pt-20 mt-10 relative font-lexend">
+            <footer className=" bg-[#002D00] h-auto pt-12 lg:pt-20 mt-10 relative font-lexend">
                 <img
                     src={footerBg1}
-                    className="absolute top-0 left-0 h-full pointer-events-none"
+                    className="absolute top-0 left-0 h-auto lg:h-full pointer-events-none"
                     alt=""
                 />
                 <img
                     src={footerBg2}
-                    className="absolute top-0 right-0 h-full pointer-events-none"
+                    className="absolute bottom-0 lg:top-0 right-0 h-auto lg:h-full pointer-events-none"
                     alt=""
                 />
-                <div className="w-full h-full justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 lg:mx-auto">
+                <div className="w-full h-full justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 lg:mx-auto relative z-50">
                     <div className="w-full lg:flex justify-between items-center">
-                        <div className="lg:w-1/2 flex items-center space-x-5">
+                        <div className="w-full lg:w-1/2 justify-center lg:justify-start flex items-center space-x-5 mb-6 lg:mb-0">
                             <img
                                 src={footerEmail}
                                 alt=""
-                                className=""
+                                className="h-10 lg:h-auto"
                             />
-                            <p className="text-[1.8rem] leading-[1.2] text-white w-4/5 font-semibold">
+                            <p className="text-xl text-center sm:text-left lg:text-[1.8rem] leading-[1.2] text-white lg:w-4/5 xl:w-3/5 font-semibold">
                                 Sign Up to Get Updates & News About Us.
                             </p>
                         </div>
 
-                        <form className="lg:w-1/2 flex justify-end">
+                        <form className="w-full lg:w-1/2 flex justify-center lg:justify-end">
                             <input
                                 type="email"
                                 required
-                                className="bg-white rounded-md px-3 py-2.5 outline-none border-none w-[320px] placeholder:font-light placeholder:text-gray-400"
+                                className="bg-white rounded-md text-sm px-3 py-2.5 outline-none border-none w-[320px] placeholder:font-light placeholder:text-gray-400 lg:text-md"
                                 placeholder="Email Address"
                                 name=""
                                 id=""
                             />
                             <button
                                 type="submit"
-                                className='bg-[#017D03] text-white uppercase rounded-lg ms-2 text-sm px-4 z-50 overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
+                                className='bg-[#017D03] min-w-fit text-[0.8rem] text-white uppercase rounded-lg ms-2 lg:text-sm px-2 lg:px-4 z-50 overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
                                 Subscribe
                             </button>
                         </form>
                     </div>
-                    <hr className="h-px my-16 bg-[#017d0380] border-0" />
-                    <div className="flex justify-center pb-20">
-                        <div className="w-1/3">
+                    <hr className="h-px my-10 lg:my-16 bg-[#017d0380] border-0" />
+                    <div className="lg:flex justify-center pb-20 space-y-10 lg:space-y-0">
+                        <div className="lg:w-1/3">
                             <img
                                 src={footerLogo}
                                 alt=""
+                                className="h-10 lg:h-auto"
                             />
-                            <p className="text-[#B5B5B5] my-10 leading-[1.7] text-[1rem] font-light w-4/5">
+                            <p className="text-[#B5B5B5] my-5 lg:my-10 lg:leading-[1.7] text-[1rem] font-light lg:w-4/5">
                                 We provide specialized winterization services to safeguard your
                                 pool during the off-season, and when spring arrives, we handle
                                 the thorough opening process.
@@ -1464,16 +1465,16 @@ export const Homepage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-1/4">
-                            <div className="flex h-[50px] mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg">
+                        <div className="lg:w-1/4">
+                            <div className="flex h-[50px] mb-5 lg:mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg">
                                 <img
                                     src={titleIcon}
                                     className=""
                                     alt=""
                                 />
-                                <p className="text-[1.38rem]">Categories</p>
+                                <p className="text-xl lg:text-[1.38rem]">Categories</p>
                             </div>
-                            <div className="space-y-3.5">
+                            <div className="space-y-2.5 lg:space-y-3.5">
                                 <a href="#" className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
                                     <Icon
                                         icon="tabler:arrow-right"
@@ -1511,16 +1512,16 @@ export const Homepage = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="w-1/4">
-                            <div className="flex h-[50px] mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg">
+                        <div className="lg:w-1/4">
+                            <div className="flex h-[50px] mb-5 lg:mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg">
                                 <img
                                     src={titleIcon}
                                     className=""
                                     alt=""
                                 />
-                                <p className="text-[1.38rem]">Quick Links</p>
+                                <p className="text-xl lg:text-[1.38rem]">Quick Links</p>
                             </div>
-                            <div className="space-y-3.5">
+                            <div className="space-y-2.5 lg:space-y-3.5">
                                 <a href="#" className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
                                     <Icon
                                         icon="tabler:arrow-right"
@@ -1558,14 +1559,14 @@ export const Homepage = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="w-1/4">
-                            <div className="flex h-[50px] mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg">
+                        <div className="lg:w-1/4">
+                            <div className="flex h-[50px] mb-5 lg:mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg">
                                 <img
                                     src={titleIcon}
                                     className=""
                                     alt=""
                                 />
-                                <p className="text-[1.38rem]">Contact Us</p>
+                                <p className="text-xl lg:text-[1.38rem]">Contact Us</p>
                             </div>
                             <div className="space-y-4">
                                 <div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
@@ -1599,11 +1600,14 @@ export const Homepage = () => {
                     </div>
                 </div>
 
-                <div className='w-full h-[100px] bg-subFooterBg bg-top bg-no-repeat bg-cover relative z-50 font-lexend text-white font-light flex flex-col justify-center items-center'>
-                    <div className="w-full min-h-fit flex justify-between px-3 items-center mt-6 lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 lg:mx-auto">
-                        <p className="flex items-center">Copyright <span><Icon icon="ph:copyright" className='mx-[3px] text-xl' /></span> 2024 Frutin. All Rights Reserved.</p>
+                <div className='w-full lg:h-[100px] py-6 lg:py-0 px-3 xl:px-0 bg-subFooterBg bg-top bg-no-repeat bg-cover relative z-50 font-lexend text-white font-light flex flex-col justify-center items-center'>
+                    <div className="w-full min-h-fit flex flex-col lg:flex-row justify-between px-3 items-center mt-4 lg:mt-7 lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 lg:mx-auto">
+                        <p className="flex flex-col justify-center lg:justify-start items-center mb-3.5 leading-[1.2] text-[0.95rem] lg:text-md lg:mb-0">
+                            <p className="flex items-center"> Copyright <Icon icon="ph:copyright" className='mx-[3px] text-xl' /> 2024 Frutin. </p>
+                            <p> All Rights Reserved.</p>
+                        </p>
                         <div>
-                            <img src={paymentMethod} alt="" />
+                            <img src={paymentMethod} alt="" className="h-5 lg:h-auto" />
                         </div>
                     </div>
                 </div>
