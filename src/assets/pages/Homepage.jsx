@@ -1411,7 +1411,7 @@ export const Homepage = () => {
                                 src={footerEmail}
                                 alt=""
                             />
-                            <p className="text-[1.8rem] leading-[1.2] text-white w-3/5 font-semibold">
+                            <p className="text-[1.8rem] leading-[1.2] text-white w-4/5 font-semibold">
                                 Sign Up to Get Updates & News About Us.
                             </p>
                         </div>
