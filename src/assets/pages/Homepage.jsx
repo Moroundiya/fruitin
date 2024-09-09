@@ -51,6 +51,9 @@ import footerBg2 from "../images/footer_shape_2.png";
 import footerEmail from "../images/email.svg";
 import footerLogo from "../images/logo-footer.svg";
 
+import paymentMethod from '../images/payment-method.png';
+
+
 import heroImg4 from "../images/hero_1_1.png";
 import heroImg5 from "../images/hero_1_2.png";
 import heroImg6 from "../images/hero_1_3.png";
@@ -1595,8 +1598,13 @@ export const Homepage = () => {
                     </div>
                 </div>
 
-                <div className='w-full h-[80px] bg-subFooterBg bg-top bg-no-repeat bg-cover relative z-50'>
-                    sfsf
+                <div className='w-full h-[100px] bg-subFooterBg bg-top bg-no-repeat bg-cover relative z-50 font-lexend text-white font-light flex flex-col justify-center items-center'>
+                    <div className="w-full min-h-fit flex justify-between px-3 items-center mt-6 lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 lg:mx-auto">
+                        <p className="flex items-center">Copyright <span><Icon icon="ph:copyright" className='mx-[3px] text-xl' /></span> 2024 Frutin. All Rights Reserved.</p>
+                        <div>
+                            <img src={paymentMethod} alt="" />
+                        </div>
+                    </div>
                 </div>
             </footer>
         </>
