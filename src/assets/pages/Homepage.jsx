@@ -1390,7 +1390,7 @@ export const Homepage = () => {
                 </div>
             </div>
 
-            <footer className=" bg-[#002D00] h-[750px] pt-20 mt-10 relative font-lexend">
+            <footer className=" bg-[#002D00] h-auto pt-20 mt-10 relative font-lexend">
                 <img
                     src={footerBg1}
                     className="absolute top-0 left-0 h-full pointer-events-none"
@@ -1430,7 +1430,7 @@ export const Homepage = () => {
                         </form>
                     </div>
                     <hr className="h-px my-16 bg-[#017d0380] border-0" />
-                    <div className="flex justify-center">
+                    <div className="flex justify-center pb-20">
                         <div className="w-1/3">
                             <img
                                 src={footerLogo}
@@ -1563,11 +1563,40 @@ export const Homepage = () => {
                                 />
                                 <p className="text-[1.38rem]">Contact Us</p>
                             </div>
-                            <div className="space-y-3.5">
-                                
+                            <div className="space-y-4">
+                                <div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
+                                    <div className='bg-[#123C12] text-[#FF9C00] rounded-lg p-2'>
+                                        <Icon icon="mdi:location" className='text-lg' />
+                                    </div>
+                                    <span className="leading-[1.7]">
+                                        8502 Preston Rd. Inglewood, <br />
+                                        Maine 98380
+                                    </span>
+                                </div>
+                                <div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
+                                    <div className='bg-[#123C12] text-[#FF9C00] rounded-lg p-2'>
+                                        <Icon icon="ion:call-sharp" className="text-lg" />
+                                    </div>
+                                    <span className="leading-[1.7]">
+                                        +(163)-2654-3564 <br />
+                                        +(163)-2654-5432
+                                    </span>
+                                </div>
+                                <div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
+                                    <div className='bg-[#123C12] text-[#FF9C00] rounded-lg p-2'>
+                                        <Icon icon="fluent:mail-20-filled" className='text-lg' />
+                                    </div>
+                                    <span className="leading-[1.7]">
+                                        help24/7@frutin.com
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div className='w-full h-[80px] bg-subFooterBg bg-top bg-no-repeat bg-cover relative z-50'>
+                    sfsf
                 </div>
             </footer>
         </>
