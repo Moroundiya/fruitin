@@ -1393,7 +1393,7 @@ export const Homepage = () => {
                 </div>
             </div>
 
-            <footer className=" bg-[#002D00] h-auto pt-20 mt-10 relative font-lexend">
+            <footer className=" bg-[#002D00] h-auto px-3 lg:px-0 pt-12 lg:pt-20 mt-10 relative font-lexend">
                 <img
                     src={footerBg1}
                     className="absolute top-0 left-0 h-full pointer-events-none"
@@ -1405,18 +1405,19 @@ export const Homepage = () => {
                     alt=""
                 />
                 <div className="w-full h-full justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 lg:mx-auto">
-                    <div className="w-full flex justify-between items-center">
-                        <div className="w-1/2 flex items-center space-x-5">
+                    <div className="w-full lg:flex justify-between items-center">
+                        <div className="lg:w-1/2 flex items-center space-x-5">
                             <img
                                 src={footerEmail}
                                 alt=""
+                                className=""
                             />
                             <p className="text-[1.8rem] leading-[1.2] text-white w-4/5 font-semibold">
                                 Sign Up to Get Updates & News About Us.
                             </p>
                         </div>
 
-                        <form className="w-1/2 flex justify-end">
+                        <form className="lg:w-1/2 flex justify-end">
                             <input
                                 type="email"
                                 required
