@@ -18,7 +18,7 @@ export const Navbar = () => {
 
 	return (
 		<nav
-			className={`flex justify-between uppercase items-center w-full z-10 top-0 left-0 px-3 py-4 lg:py-5 lg:px-12 xl:px-20 2xl:py-10 font-lexend transition-all ease-in-out duration-700 ${
+			className={`flex justify-between uppercase items-center w-full z-50 top-0 left-0 px-2.5 py-3 lg:py-3 lg:px-12 xl:px-20 font-lexend transition-all ease-in-out duration-700 ${
 				scroll ? "bg-white fixed shadow z-50" : "bg-transparent absolute"
 			}`}>
 			<Icon

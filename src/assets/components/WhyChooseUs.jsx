@@ -20,7 +20,7 @@ export const WhyChooseUs = () => {
             </div>
             <img
                 src={chooseImg}
-                className="right-0 top-0 sm:relative sm:w-3/4 sm:left-[50px] sm:top-auto lg:hidden lg:absolute lg:right-0 lg:left-auto xl:block xl:w-5/12 xl:top-16 2xl:w-auto 2xl:top-0  z-50"
+                className="right-0 top-0 sm:relative sm:w-3/4 sm:left-[50px] sm:top-auto lg:hidden lg:absolute lg:right-0 lg:left-auto xl:block xl:w-5/12 xl:top-16 2xl:w-auto 2xl:top-0  z-30"
                 alt=""
             />
             <div className="flex flex-col lg:flex-row">

@@ -13,7 +13,7 @@ export const Faq = () => {
                     <div className='h-full relative p-7 before:content-[""] before:border-2 before:rounded-full  before:border-[#017D03] before:border-dashed before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-10'>
                         <img
                             src={faqImgRound}
-                            className="rounded-full relative z-50 h-full"
+                            className="rounded-full relative z-30 h-full"
                             alt=""
                         />
                     </div>
