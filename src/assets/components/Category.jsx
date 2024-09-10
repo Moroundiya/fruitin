@@ -82,7 +82,7 @@ export const Category = () => {
                     category.map((item, i) => {
                         return (
                             <SwiperSlide>
-                                <CategoryProps key={i} img={item.img} desc={item.desc} title={item.title} />
+                                <CategoryProps key={i} {...item} />
                             </SwiperSlide>
                         )
                     })

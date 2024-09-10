@@ -9,11 +9,7 @@ import CountUp from 'react-countup';
 export const Counter = () => {
     return (
         <div className="bg-counterBg bg-cover bg-no-repeat bg-center w-full py-10 lg:pt-20 lg:pb-18 font-lexend text-white">
-
-
-
             <div className="grid grid-cols-2 xl:grid-cols-4 px-3 lg:px-0 xl:w-11/12 2xl:w-4/5 mx-auto lg:divide-x divide-[#ffffff66]">
-
                 <div className="flex flex-col items-center justify-center border-b border-r xl:border-b-0 border-[#ffffff66] xl:flex-row xl:justify-start py-6 xl:py-0">
                     <div className="">
                         <img
@@ -33,7 +29,6 @@ export const Counter = () => {
                         <p className="text-sm lg:text-lg">Our Total Products</p>
                     </div>
                 </div>
-
                 <div className="flex flex-col items-center justify-center border-b xl:border-b-0 border-[#ffffff66] xl:flex-row py-6 xl:py-0">
                     <div className="">
                         <img

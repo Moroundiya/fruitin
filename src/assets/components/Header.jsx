@@ -48,7 +48,7 @@ export const Header = () => {
                     heroswiper.map((item, i) => {
                         return (
                             <SwiperSlide className="w-full flex justify-center items-center bg-heroBg bg-cover bg-center bg-no-repeat">
-                                <HeroSwiper key={i} title1={item.title1} title2={item.title2} img={item.img} />
+                                <HeroSwiper key={i} {...item} />
                             </SwiperSlide>
                         )
                     })

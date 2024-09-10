@@ -59,7 +59,7 @@ export const WhyChooseUs = () => {
                 <div className="w-full xl:w-7/12 2xl:w-1/2 mx-auto xl:mx-0 px-3 py-5 xl:pe-0 xl:ps-6 lg:py-7">
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 justify-center items-center gap-x-6 gap-y-7 rounded-xl w-full lg-w-fit">
                         {
-                            chooseus.map((item, i) => <ChooseUs key={i} title={item.title} desc={item.desc} img={item.img} />)
+                            chooseus.map((item, i) => <ChooseUs key={i} {...item} />)
                         }
                     </div>
                 </div>
