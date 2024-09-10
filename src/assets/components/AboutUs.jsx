@@ -4,7 +4,6 @@ import titleIcon from "../images//title_icon.svg";
 import bullet from "../images/bullet.svg";
 import { Icon } from "@iconify/react";
 
-
 export const AboutUs = () => {
     return (
         <div className="w-full min-h-fit flex flex-col-reverse font-lexend pt-10 pb-5 bg-aboutBg bg-center bg-contain bg-no-repeat lg:flex-row lg:px-12 xl:w-4/5 lg:py-14 lg:mx-auto">
