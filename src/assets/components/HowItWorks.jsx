@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import productBg1 from "../images/vector_shape_1.png";
 import productBg2 from "../images/vector_shape_2.png";

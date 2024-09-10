@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import faqImgRound from "../images/faq_img.jpg";
 import titleIcon from "../images//title_icon.svg";
@@ -40,7 +41,7 @@ export const Faq = () => {
                                             Do I need to be in when you deliver ?
                                         </p>
                                         <Icon
-                                            icon="hugeicons:view"
+                                            icon="clarity:eye-hide-line"
                                             className="text-[1.4rem] text-[#017D03]"
                                         />
                                     </div>
