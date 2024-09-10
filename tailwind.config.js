@@ -23,6 +23,9 @@ export default {
       fontFamily: {
         'lobster': ["Lobster", "sans-serif"],
         'lexend': ["Lexend", "sans-serif"]
+      },
+      animation: {
+        'spin-slow': 'spin 7.8s linear infinite',
       }
     },
   },

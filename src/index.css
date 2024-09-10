@@ -17,8 +17,8 @@ body {
 
 .swiper-pagination-bullet {
   background: #FF9C00;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
 }
 
 #heroSwiper .swiper-wrapper,
