@@ -59,7 +59,7 @@ export const productsdata = [
     },
     {
         type: 'Hot',
-        desc: 'Fresh Fruits',
+        desc: 'Meat and Fish',
         name: 'Sausage Ribs Beef',
         price: '$23.50',
         img: `${product8}`

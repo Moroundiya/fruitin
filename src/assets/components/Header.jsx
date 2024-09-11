@@ -1,14 +1,6 @@
-// import React from "react";
-import { Icon } from "@iconify/react";
-import heroArrow from "../images/hero_arrow.svg";
-import heroShape1 from "../images/hero_shape_1_1.png";
-import heroShape2 from "../images/hero_shape_1_2.png";
-import heroShape3 from "../images/hero_shape_1_3.png";
-import heroUnderlay from "../images/hero_shape_2_1.png";
-import heroImg1 from "../images/hero_2_1.png";
-import heroImg2 from "../images/hero_2_2.png";
-import heroImg3 from "../images/hero_2_3.png";
-import titleIcon from "../images//title_icon.svg";
+
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -47,7 +39,7 @@ export const Header = () => {
                 {
                     heroswiper.map((item, i) => {
                         return (
-                            <SwiperSlide className="w-full flex justify-center items-center bg-heroBg bg-cover bg-center bg-no-repeat">
+                            <SwiperSlide key={i} className="w-full flex justify-center items-center bg-heroBg bg-cover bg-center bg-no-repeat">
                                 <HeroSwiper key={i} {...item} />
                             </SwiperSlide>
                         )

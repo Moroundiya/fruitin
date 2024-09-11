@@ -1,5 +1,5 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import { SwiperSlide } from "swiper/react";
 
 import { Icon } from "@iconify/react";
 import heroArrow from "../images/hero_arrow.svg";
@@ -9,6 +9,7 @@ import heroShape3 from "../images/hero_shape_1_3.png";
 import heroUnderlay from "../images/hero_shape_2_1.png";
 import titleIcon from "../images//title_icon.svg";
 
+// eslint-disable-next-line react/prop-types
 export const HeroSwiper = ({ title1, title2, img }) => {
     return (
         <div className="w-full xl:w-5/5 2xl:4/5 mx-auto mt-5 sm:mt-20 md:mt-28 lg:mt-[170px] flex flex-col items-center relative pb-5">
