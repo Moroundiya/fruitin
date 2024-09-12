@@ -15,7 +15,7 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Testimonial = () => {
-	const slideRef = useRef();
+	const slideReviewRef = useRef();
 	const [handleSlide, setHandleSlide] = useState({
 		isFirst: true,
 		isLast: false,
@@ -68,8 +68,11 @@ export const Testimonial = () => {
 					/>
 					<div className="">
 						<Swiper
-							navigation={true}
+							// navigation={true}
 							modules={[Navigation]}
+							ref={slideReviewRef}
+							loop={true}
+							onChange={slidechange}
 							className="">
 							<SwiperSlide className="">
 								<p className="italic text-md text-[#54595F] mb-12 leading-[1.8] lg:leading-[1.8] lg:text-xl">
@@ -147,24 +150,26 @@ export const Testimonial = () => {
 
 						<div className="flex mt-10 space-x-5 lg:space-x-5 lg:mt-16">
 							<button
+								disabled={handleSlide.isFirst}
 								className={`${
-									!handleSlide.isFirst
-										? "bg-[#017d033e] p-2 lg:p-3 rounded-full cursor-pointer"
-										: "bg-[#017D03] p-2 lg:p-3 rounded-full cursor-pointer"
+									handleSlide.isFirst
+										? "bg-[#017d033e] p-2 rounded-full cursor-pointer"
+										: "bg-[#017D03] p-2 rounded-full cursor-pointer"
 								}`}
-								onClick={() => slideRef.current.swiper.slidePrev()}>
+								onClick={() => slideReviewRef.current.swiper.slidePrev()}>
 								<Icon
 									icon="ion:arrow-back"
 									className="text-white rounded-full text-[1.3rem] lg:text-2xl"
 								/>
 							</button>
 							<button
+								disabled={handleSlide.isLast}
 								className={`${
-									!handleSlide.isLast
-										? "bg-[#017d033e] p-2 lg:p-3 rounded-full cursor-pointer"
-										: "bg-[#017D03] p-2 lg:p-3 rounded-full cursor-pointer"
+									handleSlide.isLast
+										? "bg-[#017d033e] p-2 rounded-full cursor-pointer"
+										: "bg-[#017D03] p-2 rounded-full cursor-pointer"
 								}`}
-								onClick={() => slideRef.current.swiper.slideNext()}>
+								onClick={() => slideReviewRef.current.swiper.slideNext()}>
 								<Icon
 									icon="ion:arrow-forward"
 									className="text-white rounded-full text-[1.3rem] lg:text-2xl"
