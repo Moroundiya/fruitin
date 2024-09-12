@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 import titleIcon from "../images//title_icon.svg";
@@ -81,7 +82,7 @@ export const Category = () => {
                 {
                     category.map((item, i) => {
                         return (
-                            <SwiperSlide>
+                            <SwiperSlide key={i}>
                                 <CategoryProps key={i} {...item} />
                             </SwiperSlide>
                         )
