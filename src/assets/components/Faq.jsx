@@ -8,7 +8,9 @@ import { Question } from "../props/Question";
 export const Faq = () => {
 	const [showAnswer, setShowAnswser] = useState(null);
 
-	useEffect(() => {}, [showAnswer]);
+	useEffect(() => {
+		// console.log(showAnswer)
+	}, [showAnswer]);
 
 	const singleAccordion = (num) => {
 		setShowAnswser(showAnswer == num ? null : num);

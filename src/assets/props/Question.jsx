@@ -20,19 +20,19 @@ export const Question = ({
 						{question}
 					</p>
 					<Icon
-						icon="hugeicons:view"
+						icon={`${
+							showAnswer === index ? "clarity:eye-hide-line" : "hugeicons:view"
+						}`}
 						className="text-[1.4rem] text-[#017D03]"
 					/>
-					{/* <Icon
-                                            icon="clarity:eye-hide-line"
-                                            className="text-[1.4rem] text-[#017D03]"
-                                        /> */}
 				</div>
 
 				<div
 					className={`${
-						showAnswer === index ? "block" : "hidden"
-					} font-normal pt-4 pb-5 text-[#54595F] border-[#D9D9D9] relative leading-[1.5] px-6 border-t text-[0.91rem] lg:text-[0.95rem] transition-all ease-out duration-1000`}>
+						showAnswer === index
+							? "max-h-[300px] pt-4 pb-5 border-t"
+							: "max-h-0"
+					} font-normal  text-[#54595F] border-[#D9D9D9] bg-white overflow-hidden max-h-0 leading-[1.5] px-6 text-[0.91rem] lg:text-[0.95rem] transition-all ease-in-out duration-500`}>
 					<p>{answer}</p>
 				</div>
 			</div>
