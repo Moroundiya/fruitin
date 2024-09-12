@@ -15,7 +15,7 @@ export const Question = ({
 			className="w-full bg-white shadow-md rounded-lg"
 			onClick={() => singleAccordion(index)}>
 			<div className="">
-				<div className="flex justify-between items-center cursor-pointer py-3 px-6">
+				<div className="flex justify-between items-center cursor-pointer py-3 px-2.5 lg:px-6">
 					<p className="text-[0.96rem] font-semibold lg:text-[1.09rem]">
 						{question}
 					</p>
@@ -23,10 +23,9 @@ export const Question = ({
 						icon={`${
 							showAnswer === index ? "clarity:eye-hide-line" : "hugeicons:view"
 						}`}
-						className="text-[1.4rem] text-[#017D03]"
+						className="text-xl lg:text-[1.4rem] text-[#017D03]"
 					/>
 				</div>
-
 				<div
 					className={`${
 						showAnswer === index
