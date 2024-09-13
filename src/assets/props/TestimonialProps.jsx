@@ -21,6 +21,6 @@ export const TestimonialProps = ({ name, review, img, desc }) => {
                     </p>
                 </div>
             </div>
-        </>
+        </> 
     )
 }
