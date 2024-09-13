@@ -10,21 +10,23 @@ import { Icon } from "@iconify/react";
 import "swiper/css";
 import "swiper/css/navigation";
 // import required modules
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { testimonials } from "../data/testimonials";
+import { TestimonialProps } from "../props/TestimonialProps";
 
 export const Testimonial = () => {
 	const slideReviewRef = useRef();
 	const [handleSlide, setHandleSlide] = useState({
-		isFirst: true,
-		isLast: false,
+		isPrev: true,
+		isNext: false,
 	});
 	// eslint-disable-next-line no-unused-vars
 	const slidechange = (swiper) => {
 		setHandleSlide({
-			isFirst: swiper.isBeginning,
-			isLast: swiper.isEnd,
+			isPrev: swiper.isBeginning,
+			isNext: swiper.isEnd,
 		});
 	};
 
@@ -63,99 +65,42 @@ export const Testimonial = () => {
 				<div className="px-3 py-6 lg:p-8 xl:p-10 relative w-full lg:w-full xl:w-4/6">
 					<img
 						src={testiQuote}
-						className="absolute bottom-16 right-3 lg:right-20 lg:bottom-24 h-[60px] lg:h-[80px] xl:h-auto xl:bottom-6"
+						className="absolute bottom-16 right-3 lg:right-20 lg:bottom-24 h-[60px] lg:h-[80px] z-20 xl:h-auto xl:bottom-6"
 						alt=""
 					/>
 					<div className="">
 						<Swiper
 							// navigation={true}
-							modules={[Navigation]}
+							modules={[Navigation, Autoplay]}
 							ref={slideReviewRef}
 							loop={true}
-							onChange={slidechange}
+							speed={1000}
+							spaceBetween={150}
+							onSlideChange={slidechange}
+							autoplay={{
+								delay: 2300,
+							}}
 							className="">
-							<SwiperSlide className="">
-								<p className="italic text-md text-[#54595F] mb-12 leading-[1.8] lg:leading-[1.8] lg:text-xl">
-									“Diversity is a cornerstone of our farming philosophy. We
-									carefully select a wide range of crops, ensuring a varied and
-									balanced ecosystem. This not only helps to naturally deter
-									pests and diseases but also promotes soil health by varying
-									the nutrient demands of different plants.”
-								</p>
-								<div className="flex items-center">
-									<img
-										src={testiProfile}
-										className="rounded-full h-[45px] lg:h-[60px]"
-										alt=""
-									/>
-									<div className="ms-3">
-										<p className="text-black text-lg lg:text-2xl font-semibold">
-											Angelina Margret
-										</p>
-										<p className="text-[#017D03] text-sm">
-											Customer of Our Shop
-										</p>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide>
-								<p className="italic text-md text-[#54595F] mb-12 leading-[1.8] lg:leading-[1.8] lg:text-xl">
-									“Diversity is a cornerstone of our farming philosophy. We
-									carefully select a wide range of crops, ensuring a varied and
-									balanced ecosystem. This not only helps to naturally deter
-									pests and diseases but also promotes soil health by varying
-									the nutrient demands of different plants.”
-								</p>
-								<div className="flex items-center">
-									<img
-										src={testiProfile}
-										className="rounded-full h-[45px] lg:h-[60px]"
-										alt=""
-									/>
-									<div className="ms-3">
-										<p className="text-black text-lg lg:text-2xl font-semibold">
-											Angelina Margret
-										</p>
-										<p className="text-[#017D03] text-sm">
-											Customer of Our Shop
-										</p>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide>
-								<p className="italic text-md text-[#54595F] mb-12 leading-[1.8] lg:leading-[1.8] lg:text-xl">
-									“Diversity is a cornerstone of our farming philosophy. We
-									carefully select a wide range of crops, ensuring a varied and
-									balanced ecosystem. This not only helps to naturally deter
-									pests and diseases but also promotes soil health by varying
-									the nutrient demands of different plants.”
-								</p>
-								<div className="flex items-center">
-									<img
-										src={testiProfile}
-										className="rounded-full h-[45px] lg:h-[60px]"
-										alt=""
-									/>
-									<div className="ms-3">
-										<p className="text-black text-lg lg:text-2xl font-semibold">
-											Angelina Margret
-										</p>
-										<p className="text-[#017D03] text-sm">
-											Customer of Our Shop
-										</p>
-									</div>
-								</div>
-							</SwiperSlide>
+
+							{
+								testimonials.map((item, i) => {
+									return (
+										<SwiperSlide key={i}>
+											<TestimonialProps key={i} {...item} />
+										</SwiperSlide>
+									)
+								})
+							}
+
 						</Swiper>
 
 						<div className="flex mt-10 space-x-5 lg:space-x-5 lg:mt-16">
 							<button
-								disabled={handleSlide.isFirst}
-								className={`${
-									handleSlide.isFirst
-										? "bg-[#017d033e] p-2 rounded-full cursor-pointer"
-										: "bg-[#017D03] p-2 rounded-full cursor-pointer"
-								}`}
+								disabled={handleSlide.isPrev}
+								className={`${handleSlide.isPrev
+									? "bg-[#017d033e] p-2 rounded-full cursor-pointer"
+									: "bg-[#017D03] p-2 rounded-full cursor-pointer"
+									}`}
 								onClick={() => slideReviewRef.current.swiper.slidePrev()}>
 								<Icon
 									icon="ion:arrow-back"
@@ -163,12 +108,11 @@ export const Testimonial = () => {
 								/>
 							</button>
 							<button
-								disabled={handleSlide.isLast}
-								className={`${
-									handleSlide.isLast
-										? "bg-[#017d033e] p-2 rounded-full cursor-pointer"
-										: "bg-[#017D03] p-2 rounded-full cursor-pointer"
-								}`}
+								disabled={handleSlide.isNext}
+								className={`${handleSlide.isNext
+									? "bg-[#017d033e] p-2 rounded-full cursor-pointer"
+									: "bg-[#017D03] p-2 rounded-full cursor-pointer"
+									}`}
 								onClick={() => slideReviewRef.current.swiper.slideNext()}>
 								<Icon
 									icon="ion:arrow-forward"

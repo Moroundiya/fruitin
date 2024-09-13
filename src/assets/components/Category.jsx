@@ -48,6 +48,7 @@ export const Category = () => {
 				// navigation={true}
 				ref={slideRef}
 				loop={true}
+				speed={500}
 				onSlideChange={slidechange}
 				autoplay={{
 					delay: 2300,
