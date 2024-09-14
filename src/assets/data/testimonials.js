@@ -1,6 +1,6 @@
 import testiprofile1 from "../images/testi_profile.jpg";
 import testiprofile2 from "../images/testiprofile2.jpg";
-import testiprofile3 from "../images/testi_img.jpg";
+import testiprofile3 from "../images/testiprofile3.png";
 
 
 export const testimonials = [
