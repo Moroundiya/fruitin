@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import faqImgRound from "../images/faq_img.jpg";
-import titleIcon from "../images//title_icon.svg";
+import titleIcon from "../images/title_icon.svg";
 import { faq } from "../data/faq";
 import { Question } from "../props/Question";
 

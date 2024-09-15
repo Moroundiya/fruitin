@@ -1,6 +1,6 @@
 import React from 'react'
 import aboutBg from "../images/about_img.png";
-import titleIcon from "../images//title_icon.svg";
+import titleIcon from "../images/title_icon.svg";
 import bullet from "../images/bullet.svg";
 import { Icon } from "@iconify/react";
 

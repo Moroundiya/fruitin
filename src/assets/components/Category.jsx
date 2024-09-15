@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useRef, useState } from "react";
 import { Icon } from "@iconify/react";
-import titleIcon from "../images//title_icon.svg";
+import titleIcon from "../images/title_icon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";

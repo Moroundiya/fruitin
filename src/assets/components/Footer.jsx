@@ -6,7 +6,7 @@ import footerEmail from "../images/email.svg";
 import footerLogo from "../images/logo-footer.svg";
 import paymentMethod from "../images/payment-method.png";
 import { Icon } from "@iconify/react";
-import titleIcon from "../images//title_icon.svg";
+import titleIcon from "../images/title_icon.svg";
 
 export const Footer = () => {
 	return (

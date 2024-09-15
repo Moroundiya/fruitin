@@ -1,5 +1,5 @@
 import React from 'react'
-import titleIcon from "../images//title_icon.svg";
+import titleIcon from "../images/title_icon.svg";
 import rotateImg from "../images/choose-rotate.png";
 import chooseImg from "../images/why-choose-us.png";
 import { chooseus } from './../data/chooseus';

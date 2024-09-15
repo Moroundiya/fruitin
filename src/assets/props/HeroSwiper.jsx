@@ -7,7 +7,7 @@ import heroShape1 from "../images/hero_shape_1_1.png";
 import heroShape2 from "../images/hero_shape_1_2.png";
 import heroShape3 from "../images/hero_shape_1_3.png";
 import heroUnderlay from "../images/hero_shape_2_1.png";
-import titleIcon from "../images//title_icon.svg";
+import titleIcon from "../images/title_icon.svg";
 
 // eslint-disable-next-line react/prop-types
 export const HeroSwiper = ({ title1, title2, img }) => {

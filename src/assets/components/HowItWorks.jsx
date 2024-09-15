@@ -2,7 +2,7 @@
 import React from "react";
 import productBg1 from "../images/vector_shape_1.png";
 import productBg2 from "../images/vector_shape_2.png";
-import titleIcon from "../images//title_icon.svg";
+import titleIcon from "../images/title_icon.svg";
 import { howitworks } from "../data/howitworks";
 import { HowItWorksProps } from "../props/HowItWorksProps";
 
