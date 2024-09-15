@@ -19,9 +19,9 @@ export const Homepage = () => {
 			<AboutUs />
 			<Category />
 			<WhyChooseUs />
-			<Counter />
+			<Counter counterbg="bg-counterBg" />
 			<Products />
-			<HowItWorks />
+			<HowItWorks bgcolor="[#fff]" />
 			<Faq />
 			<Testimonial />
 			<Footer />

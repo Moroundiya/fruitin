@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import productBg1 from "../images/vector_shape_1.png";
@@ -6,9 +7,10 @@ import titleIcon from "../images/title_icon.svg";
 import { howitworks } from "../data/howitworks";
 import { HowItWorksProps } from "../props/HowItWorksProps";
 
-export const HowItWorks = () => {
+export const HowItWorks = ({ bgcolor }) => {
 	return (
-		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:pb-16 lg:pt-12 xl:pt-20 xl:10 bg-[#fff] xl:mx-auto xl:px-0 relative">
+		<div
+			className={`w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:pb-16 lg:pt-12 xl:pt-20 xl:10 bg-${bgcolor} xl:mx-auto xl:px-0 relative`}>
 			<img
 				src={productBg1}
 				className="absolute top-0 left-0 -z-0 xl:h-full"

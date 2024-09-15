@@ -3,13 +3,13 @@ import React, { useRef, useState } from "react";
 import titleIcon from "../images/title_icon.svg";
 import testiImg from "../images/testi_img.jpg";
 import testiShape from "../images/testi_box_shape.png";
-import testiProfile from "../images/testi_profile.jpg";
 import testiQuote from "../images/quote.png";
 import { Icon } from "@iconify/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 // import required modules
+// eslint-disable-next-line no-unused-vars
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
