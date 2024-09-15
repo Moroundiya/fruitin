@@ -90,7 +90,6 @@ export const About = () => {
                     </div>
                 </div>
             </div>
-
             <HowItWorks />
             <Counter />
             <div className='py-6 lg:py-12'>
