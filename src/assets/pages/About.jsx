@@ -6,6 +6,7 @@ import { Counter } from "../components/Counter";
 import { WhyChooseUs } from "../components/WhyChooseUs";
 import { Testimonial } from "../components/Testimonial";
 import { Experience } from "../components/Experience";
+import { Footer } from "../components/Footer";
 import { Team } from "../components/Team";
 
 export const About = () => {
@@ -24,6 +25,7 @@ export const About = () => {
 				<Testimonial />
 			</div>
 			<Team />
+			<Footer />
 		</>
 	);
 };
