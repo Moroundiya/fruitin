@@ -37,7 +37,7 @@ export const Navbar = () => {
 					} space-x-9 lg:block`}>
 				<Link to="/">Home</Link>
 				<Link to="/about-us">About</Link>
-				<a href="#">Shop</a>
+				<Link to="/shop">Shop</Link>
 				<a href="#">FAQ</a>
 				<a href="#">Contact</a>
 			</div>
