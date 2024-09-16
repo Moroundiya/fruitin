@@ -22,7 +22,6 @@ export const Testimonial = () => {
 		isPrev: true,
 		isNext: false,
 	});
-	// eslint-disable-next-line no-unused-vars
 	const slidechange = (swiper) => {
 		setHandleSlide({
 			isPrev: swiper.isBeginning,

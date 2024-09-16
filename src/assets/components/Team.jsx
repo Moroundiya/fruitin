@@ -22,7 +22,7 @@ export const Team = () => {
 				<span>Here to Help You!</span>
 			</h1>
 
-			<div className="w-full min-h-fit py-5 px-3 mt-4 lg:mt-7 xl:w-11/12 xl:px-0 2xl:w-4/5 grid justify-center items-center sm:grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-10 overflow-clip">
+			<div className="w-full min-h-fit py-5 px-3 mt-4 lg:mt-7 xl:w-11/12 xl:px-0 2xl:w-4/5 grid justify-center items-center sm:grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-14 lg:gap-x-10 overflow-clip">
 				{team.map((item, i) => {
 					return (
 						<TeamMembers

@@ -21,7 +21,7 @@ export const TeamMembers = ({ img, name, desc }) => {
 
 			<div className="bg-[#F5F7EB] flex flex-col justify-center items-center absolute bottom-0 px-10 py-3 lg:px-5 xl:px-10 rounded-xl shadow-md">
 				<p className="text-[#017D03] text-sm">{desc}</p>
-				<p className="text-lg lg:text-[1.4rem] font-semibold pt-1 pb-2.5">
+				<p className="text-lg xl:text-xl 2xl:text-[1.4rem] font-semibold pt-1 pb-2.5">
 					{name}
 				</p>
 				<div className="text-[#54595F] flex items-center justify-center space-x-4 text-md lg:text-xl">
