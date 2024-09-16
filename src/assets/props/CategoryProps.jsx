@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import cardBg from "../images/card-bg.png";
 import circleBg from "../images/circle-bg.png";
