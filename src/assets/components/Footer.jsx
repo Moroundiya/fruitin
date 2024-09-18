@@ -10,7 +10,7 @@ import titleIcon from "../images/title_icon.svg";
 
 export const Footer = () => {
 	return (
-		<footer className=" bg-[#002D00] h-auto pt-12 lg:pt-20 mt-10 relative font-lexend">
+		<footer className=" bg-[#002D00] h-auto pt-12 lg:pt-20 relative font-lexend">
 			<img
 				src={footerBg1}
 				className="absolute top-0 left-0 h-auto lg:h-full pointer-events-none"
