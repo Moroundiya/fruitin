@@ -38,7 +38,7 @@ export const Navbar = () => {
 				<Link to="/">Home</Link>
 				<Link to="/about-us">About</Link>
 				<Link to="/shop">Shop</Link>
-				<a href="#">FAQ</a>
+				<Link to="/faq">FAQ</Link>
 				<a href="#">Contact</a>
 			</div>
 			<div className="flex justify-center items-center">

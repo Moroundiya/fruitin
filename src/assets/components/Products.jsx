@@ -37,12 +37,12 @@ export const Products = () => {
 		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:py-16 xl:py-20 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
 			<img
 				src={productBg1}
-				className="absolute top-0 left-0 -z-0 xl:h-full"
+				className="absolute top-0 left-0 -z-0"
 				alt=""
 			/>
 			<img
 				src={productBg2}
-				className="absolute bottom-0 right-0 xl:h-full"
+				className="absolute bottom-0 right-0"
 				alt=""
 			/>
 			<div className="flex items-center justify-center lg:justify-start">
