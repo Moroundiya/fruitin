@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import productBg1 from "../images/vector_shape_1.png";
 import productBg2 from "../images/vector_shape_2.png";
 import titleIcon from "../images/title_icon.svg";
@@ -6,6 +6,18 @@ import { allfaq } from '../data/allfaq';
 import { AllQuestions } from '../props/AllQuestions';
 
 export const AllFaq = () => {
+
+    const [open, setOpen] = useState(null)
+    // const [indexNum, setIndexNum] = useState(null)
+
+    const showAnswerHandle = (num) => {
+        setOpen(open == num ? null : num)
+    }
+
+    useEffect(() => {
+        console.log(open)
+    }, [open])
+
     return (
         <div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-16 lg:px-12 lg:py-20 xl:py-28 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
             <img
@@ -40,6 +52,8 @@ export const AllFaq = () => {
                             key={i}
                             {...item}
                             index={i}
+                            showAnswerHandle={showAnswerHandle}
+                            open={open}
                         />
                     ))}
                 </div>
