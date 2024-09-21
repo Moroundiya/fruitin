@@ -52,7 +52,7 @@ export const Contact = () => {
 						<div className="flex items-center lg:justify-center">
 							<Icon
 								icon="mingcute:question-line"
-								className="text-3xl lg:text-4xl me-3 text-[#017D03]"
+								className="text-3xl lg:text-4xl me-3 text-[#FF9C00]"
 							/>
 
 							<div>
@@ -64,7 +64,7 @@ export const Contact = () => {
 						<div className="flex items-center lg:justify-center">
 							<Icon
 								icon="carbon:email"
-								className="text-3xl lg:text-4xl me-3 text-[#017D03]"
+								className="text-3xl lg:text-4xl me-3 text-[#FF9C00]"
 							/>
 
 							<div>
@@ -75,7 +75,7 @@ export const Contact = () => {
 						<div className="flex items-center lg:justify-center">
 							<Icon
 								icon="hugeicons:location-05"
-								className="text-3xl lg:text-4xl me-3 text-[#017D03]"
+								className="text-3xl lg:text-4xl me-3 text-[#FF9C00]"
 							/>
 
 							<div>
@@ -84,19 +84,19 @@ export const Contact = () => {
 							</div>
 						</div>
 						<div className="flex space-x-2 lg:justify-center items-center mt-2 lg:mt-0">
-							<div className="text-white bg-[#123C12] w-10 h-10  flex justify-center items-center cursor-pointer rounded-full text-lg lg:text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#017D03]">
+							<div className="text-white bg-[#017D03] w-10 h-10  flex justify-center items-center cursor-pointer rounded-full text-lg lg:text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#123C12]">
 								<Icon
 									icon="ri:facebook-fill"
 									className=""
 								/>
 							</div>
-							<div className="text-white bg-[#123C12] w-10 h-10  flex justify-center items-center cursor-pointer rounded-full text-lg lg:text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#017D03]">
+							<div className="text-white bg-[#017D03] w-10 h-10  flex justify-center items-center cursor-pointer rounded-full text-lg lg:text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#123C12]">
 								<Icon icon="mdi:twitter" />
 							</div>
-							<div className="text-white bg-[#123C12] w-10 h-10  flex justify-center items-center cursor-pointer rounded-full text-lg lg:text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#017D03]">
+							<div className="text-white bg-[#017D03] w-10 h-10  flex justify-center items-center cursor-pointer rounded-full text-lg lg:text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#123C12]">
 								<Icon icon="mdi:linkedin" />
 							</div>
-							<div className="text-white bg-[#123C12] w-10 h-10  flex justify-center items-center cursor-pointer rounded-full text-lg lg:text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#017D03]">
+							<div className="text-white bg-[#017D03] w-10 h-10  flex justify-center items-center cursor-pointer rounded-full text-lg lg:text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#123C12]">
 								<Icon icon="ic:baseline-whatsapp" />
 							</div>
 						</div>
@@ -112,22 +112,59 @@ export const Contact = () => {
 
 						<form
 							action=""
-							className="mt-14 py-10 w-full lg:w-3/5">
-							<div className="grid lg:grid-cols-2 gap-x-10">
-								<div className="w-full bg-[#] rounded-lg flex items-center px-1 py-2">
-									<Icon icon="basil:user-outline" className="text-3xl" />
+							className="lg:mt-10 py-10 w-full lg:w-3/5">
+							<div className="grid md:grid-cols-2 gap-x-10 gap-y-5">
+								<div className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]">
+									<Icon
+										icon="basil:user-outline"
+										className="text-3xl text-[#FF9C00]"
+									/>
 									<input
 										type="text"
-                                        placeholder="Your Name"
-                                        className="w-full h-full bg-transparent"
+										placeholder="Your Name"
+										className="w-full h-full bg-transparent outline-none border-none ms-1 placeholder:font-light"
 									/>
 								</div>
 
-								<div className="w-full">
-									<input
-										type="email"
-										placeholder="Email Address"
+								<div className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]">
+									<Icon
+										icon="ic:outline-email"
+										className="text-2xl text-[#FF9C00]"
 									/>
+									<input
+										type="text"
+										placeholder="Email Address"
+										className="w-full h-full bg-transparent outline-none border-none ms-2 placeholder:font-light"
+									/>
+								</div>
+								<div className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]">
+									<Icon
+										icon="solar:phone-outline"
+										className="text-2xl text-[#FF9C00]"
+									/>
+									<input
+										type="tel"
+										placeholder="Phone Number"
+										className="w-full h-full bg-transparent outline-none border-none ms-2 placeholder:font-light"
+									/>
+								</div>
+
+								<div className="w-full rounded-lg flex h-11 items-center px-1.5 py-2 bg-[#a1a19a4c]">
+									<select
+										placeholder="Subject"
+										className="w-full h-full font-light
+										bg-transparent outline-none border-none ms-1
+										placeholder:font-light">
+										<option
+											value=""
+											disabled
+											selected>
+											Select Subject
+										</option>
+										<option value="Organic Food">Organic Food</option>
+										<option value="Fresh Fruits">Fresh Fruits</option>
+										<option value="Fresh Vegetable">Fresh Vegetable</option>
+									</select>
 								</div>
 							</div>
 						</form>
