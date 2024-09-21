@@ -10,7 +10,7 @@ export const AllProducts = () => {
 	const [activeCategory, setActiveCategory] = useState("all");
 	const [products, setProducts] = useState(allproducts);
 
-	useEffect(() => { }, [activeCategory, products]);
+	useEffect(() => {}, [activeCategory, products]);
 
 	const fruitsProduct = () => {
 		var updateProduct = allproducts.filter(
@@ -34,15 +34,15 @@ export const AllProducts = () => {
 	};
 
 	return (
-		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-16 lg:px-12 lg:py-20 xl:py-28 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
+		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-16 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
 			<img
 				src={productBg1}
-				className="absolute top-0 left-0 -z-0"
+				className="absolute top-0 left-0 -z-0 pointer-events-none"
 				alt=""
 			/>
 			<img
 				src={productBg2}
-				className="absolute bottom-0 right-0"
+				className="absolute bottom-0 right-0 pointer-events-none"
 				alt=""
 			/>
 			<div className="flex items-center justify-center lg:justify-start">
@@ -60,40 +60,44 @@ export const AllProducts = () => {
 			</div>
 			<div className="text-[0.8rem] lg:text-[0.95rem] px-3 lg:space-y-0 mt-4 lg:mt-0 grid grid-cols-2 gap-5 lg:flex">
 				<button
-					className={`${activeCategory == "all"
+					className={`${
+						activeCategory == "all"
 							? "bg-[#017D03] text-white"
 							: "bg-transparent text-black"
-						}  block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]`}
+					}  block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]`}
 					onClick={() => {
 						setActiveCategory("all"), setProducts(allproducts);
 					}}>
 					ALL
 				</button>
 				<button
-					className={`${activeCategory == "fruits"
+					className={`${
+						activeCategory == "fruits"
 							? "bg-[#017D03] text-white"
 							: "bg-transparent text-black"
-						} block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]`}
+					} block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]`}
 					onClick={() => {
 						setActiveCategory("fruits"), fruitsProduct();
 					}}>
 					FRUITS
 				</button>
 				<button
-					className={`${activeCategory == "vegetable"
+					className={`${
+						activeCategory == "vegetable"
 							? "bg-[#017D03] text-white"
 							: "bg-transparent text-black"
-						} block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]`}
+					} block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]`}
 					onClick={() => {
 						setActiveCategory("vegetable"), vegetableProduct();
 					}}>
 					VEGETABLE
 				</button>
 				<button
-					className={`${activeCategory == "meat-and-fish"
+					className={`${
+						activeCategory == "meat-and-fish"
 							? "bg-[#017D03] text-white"
 							: "bg-transparent text-black"
-						} block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]`}
+					} block px-1.5 lg:px-7 py-2 border border-[#D9D9D9] rounded-md hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]`}
 					onClick={() => {
 						setActiveCategory("meat-and-fish"), meatandfishProduct();
 					}}>

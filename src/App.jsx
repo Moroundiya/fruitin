@@ -4,6 +4,7 @@ import { Homepage } from "./assets/pages/Homepage";
 import { Error } from "./assets/pages/Error";
 import { Shop } from "./assets/pages/Shop";
 import { FAQ } from "./assets/pages/FAQ";
+import { Contact } from "./assets/pages/Contact";
 
 const router = createBrowserRouter([
 	{
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
 	{
 		path: "/faq",
 		element: <FAQ />,
+	},
+	{
+		path: "/contact",
+		element: <Contact />,
 	},
 ]);
 function App() {

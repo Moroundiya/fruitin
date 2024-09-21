@@ -39,7 +39,7 @@ export const Navbar = () => {
 				<Link to="/about-us">About</Link>
 				<Link to="/shop">Shop</Link>
 				<Link to="/faq">FAQ</Link>
-				<a href="#">Contact</a>
+				<Link to="/contact">Contact</Link>
 			</div>
 			<div className="flex justify-center items-center">
 				<div className="relative">
