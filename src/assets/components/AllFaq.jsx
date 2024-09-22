@@ -22,12 +22,12 @@ export const AllFaq = () => {
 		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-16 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
 			<img
 				src={productBg1}
-				className="absolute top-0 left-0 -z-0 lg:h-full pointer-events-none"
+				className="absolute top-0 left-0 pointer-events-none"
 				alt=""
 			/>
 			<img
 				src={productBg2}
-				className="absolute bottom-0 right-0 lg:h-full pointer-events-none"
+				className="absolute bottom-0 right-0 pointer-events-none"
 				alt=""
 			/>
 			<div className="flex items-center justify-center lg:justify-start">
@@ -46,7 +46,7 @@ export const AllFaq = () => {
 				</h1>
 			</div>
 
-			<div className="px-3 lg:mt-5 w-full xl:w-11/12 2xl:w-4/5 mx-auto">
+			<div className="px-3 lg:mt-5 w-full xl:w-11/12 2xl:w-4/5 mx-auto relative z-20">
 				<div className="mt-8 lg:mt-0 lg:gap-x-10 lg:columns-2">
 					{allfaq.map((item, i) => (
 						<AllQuestions
