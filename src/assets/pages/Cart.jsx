@@ -4,6 +4,11 @@ import productBg1 from "../images/vector_shape_1.png";
 import productBg2 from "../images/vector_shape_2.png";
 import { Navbar } from "../components/Navbar";
 
+import cart1 from '../images/cart1.jpg';
+import cart2 from '../images/cart2.jpg';
+import cart3 from '../images/cart3.jpg';
+import { Icon } from "@iconify/react/dist/iconify.js";
+
 export const Cart = () => {
 	return (
 		<>
@@ -37,27 +42,44 @@ export const Cart = () => {
 								Cart Details
 							</h1>
 
-							<table className="table-auto align-middle mt-20 w-full border-[3px] border-[#eaf0f2] ">
-								<thead className="">
-									<tr className="bg-[#ECF0F1] p-10">
-										<th className="p-2.5 lg:p-5">Image</th>
-										<th className="">Product Name</th>
-										<th className="">Price</th>
-										<th className="">Quantity</th>
-										<th className="">Total</th>
+							<table className="table-auto mt-20 w-full border-2 border-[#eaf0f2] ">
+								<thead className="border">
+									<tr className="bg-[#eaf0f2] text-black hidden lg:table-row space-y-10">
+										<th className="block lg:table-cell p-2.5 lg:p-5">Image</th>
+										<th className="block lg:table-cell ">Product Name</th>
+										<th className="block lg:table-cell">Price</th>
+										<th className="block lg:table-cell">Quantity</th>
+										<th className="block lg:table-cell">Total</th>
+										<th className="block lg:table-cell"></th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr className="text-center">
-										<td className="p-5">Witchy Woman</td>
-										<td>The Eagles</td>
+								<tbody className="block lg:table-row-group space-y-0">
+
+
+									<tr className="text-center border-2 border-b border-[#eaf0f2] font-light block w-full lg:table-row space-y-10 mb-16">
+										<td className="block lg:table-cell border-b lg:border-b-0">
+											<img src={cart1} className="mx-auto" alt="" />
+										</td>
+										<td className="block lg:table-cell border-b lg:border-b-0">Bosco Apple Fruit</td>
+										<td className="block lg:table-cell border-b lg:border-b-0">$18</td>
+										<td className="block lg:table-cell border-b lg:border-b-0">1972</td>
+										<td className="block lg:table-cell border-b lg:border-b-0">$18</td>
+										<td className="block lg:table-cell border-b lg:border-b-0"><Icon icon="ion:trash-outline" className="text-center mx-auto text-2xl cursor-pointer text-red-500" /></td>
+									</tr>
+
+
+									<tr className="text-center  border-2 border-b border-[#eaf0f2] font-light ">
+										<td className="flex justify-center items-center w-full">
+											<img src={cart2} className="" alt="" />
+										</td>
+										<td>Green Cauliflower</td>
+										<td>$18</td>
 										<td>1972</td>
+										<td>$18</td>
+										<td className=""><Icon icon="ion:trash-outline" className="text-center mx-auto text-2xl cursor-pointer text-red-500" /></td>
+
 									</tr>
-									<tr className="text-center">
-										<td>Shining Star</td>
-										<td>Earth, Wind, and Fire</td>
-										<td>1975</td>
-									</tr>
+
 								</tbody>
 							</table>
 						</div>
