@@ -39,7 +39,7 @@ export const Cart = () => {
 
 							<table className="table-auto align-middle mt-20 w-full border-[3px] border-[#eaf0f2] ">
 								<thead className="">
-									<tr className="bg-[#ECF0F1] p-10">
+									<tr className="bg-[#017D03] text-white p-10">
 										<th className="p-2.5 lg:p-5">Image</th>
 										<th className="">Product Name</th>
 										<th className="">Price</th>
