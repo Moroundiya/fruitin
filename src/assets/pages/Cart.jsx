@@ -9,13 +9,14 @@ import cart1 from "../images/cart1.jpg";
 import cart2 from "../images/cart2.jpg";
 import cart3 from "../images/cart3.jpg";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { Footer } from "../components/Footer";
 
 export const Cart = () => {
 	return (
 		<>
 			<Navbar />
 
-			<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative ">
+			<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
 				<img
 					src={productBg1}
 					className="absolute top-0 left-0 pointer-events-none"
@@ -185,7 +186,7 @@ export const Cart = () => {
 									</p>
 									<table className="table-auto w-full mt-2 lg:mt-5">
 										<tr className="">
-											<td className="border border-[#FF9C00] w-1/3 font-semibold p-3">
+											<td className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]">
 												Cart Subtotal
 											</td>
 											<td className="border border-[#FF9C00] w-1/2 font-light p-3">
@@ -193,7 +194,7 @@ export const Cart = () => {
 											</td>
 										</tr>
 										<tr className="">
-											<td className="border border-[#FF9C00] w-1/3 font-semibold p-3">
+											<td className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]">
 												Shipping and Handling
 											</td>
 											<td className="border border-[#FF9C00] w-1/2 font-light px-3 py-4">
@@ -229,7 +230,7 @@ export const Cart = () => {
 											</td>
 										</tr>
 										<tr className="">
-											<td className="border border-[#FF9C00] w-1/3 font-semibold p-3">
+											<td className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]">
 												Total Order
 											</td>
 											<td className="border border-[#FF9C00] w-1/2 font-light p-3">
@@ -238,7 +239,7 @@ export const Cart = () => {
 										</tr>
 									</table>
 
-									<div className="w-full flex justify-start items-center my-5">
+									<div className="w-full flex justify-start items-center mt-5 mb-16">
 										<a
 											href="#"
 											className='bg-[#017D03] text-sm text-center capitalize py-3 px-6 rounded-full text-white lg:text-[1rem] z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
@@ -251,6 +252,8 @@ export const Cart = () => {
 					</div>
 				</div>
 			</div>
+
+			<Footer />
 		</>
 	);
 };
