@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import titleIcon from "../images/title_icon.svg";
 import productBg1 from "../images/vector_shape_1.png";
@@ -17,12 +18,12 @@ export const Cart = () => {
 			<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative ">
 				<img
 					src={productBg1}
-					className="absolute top-0 left-0 pointer-events-none h-full"
+					className="absolute top-0 left-0 pointer-events-none"
 					alt=""
 				/>
 				<img
 					src={productBg2}
-					className="absolute bottom-0 right-0 pointer-events-none h-full"
+					className="absolute bottom-0 right-0 pointer-events-none"
 					alt=""
 				/>
 				<div className="w-full xl:w-11/12 2xl:w-4/5 mx-auto z-20 relative top-10 lg:top-[72px] ">
@@ -41,7 +42,6 @@ export const Cart = () => {
 							<h1 className="text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] text-center">
 								Cart Details
 							</h1>
-
 							<table className="table-auto mt-14 w-full border-none">
 								<thead className="border">
 									<tr className="bg-[#017D03] text-white hidden lg:table-row space-y-10">
@@ -170,11 +170,10 @@ export const Cart = () => {
 									</tr>
 								</tbody>
 							</table>
-
 							<div className="w-full flex justify-end items-center my-5">
 								<a
 									href="#"
-									className='bg-[#017D03] text-sm text-center capitalize py-3 px-6 rounded-full text-white lg:text-[1rem] z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
+									className='bg-[#FF9C00] text-sm text-center capitalize py-3 px-6 rounded-full text-white lg:text-[1rem] z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>
 									continue shopping
 								</a>
 							</div>
@@ -205,7 +204,7 @@ export const Cart = () => {
 														defaultValue=""
 														name="default-radio"
 														className="w-4 h-4 cursor-pointer text-green-600 bg-green-600"
-													 />
+													/>
 													<label
 														htmlFor="default-radio-1"
 														className="ms-2 font-normal text-black cursor-pointer">
@@ -219,7 +218,7 @@ export const Cart = () => {
 														type="radio"
 														defaultValue=""
 														name="default-radio"
-														className="w-4 h-4 0 text-red-600 ring-lime-600 cursor-pointer"
+														className="w-4 h-4 0 ring-lime-600 cursor-pointer"
 													/>
 													<label
 														htmlFor="default-radio-2"
@@ -238,6 +237,14 @@ export const Cart = () => {
 											</td>
 										</tr>
 									</table>
+
+									<div className="w-full flex justify-start items-center my-5">
+										<a
+											href="#"
+											className='bg-[#017D03] text-sm text-center capitalize py-3 px-6 rounded-full text-white lg:text-[1rem] z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
+											Proceed to checkout
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
