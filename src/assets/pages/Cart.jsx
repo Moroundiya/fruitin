@@ -203,7 +203,7 @@ export const Cart = () => {
 														type="radio"
 														defaultValue=""
 														name="default-radio"
-														className="w-4 h-4 cursor-pointer text-green-600 bg-green-600"
+														className="w-4 h-4 cursor-pointer accent-green-600"
 													/>
 													<label
 														htmlFor="default-radio-1"
@@ -218,7 +218,7 @@ export const Cart = () => {
 														type="radio"
 														defaultValue=""
 														name="default-radio"
-														className="w-4 h-4 0 ring-lime-600 cursor-pointer"
+														className="w-4 h-4 cursor-pointer accent-green-600"
 													/>
 													<label
 														htmlFor="default-radio-2"
