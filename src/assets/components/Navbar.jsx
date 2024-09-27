@@ -42,7 +42,7 @@ export const Navbar = () => {
 				<Link to="/contact">Contact</Link>
 			</div>
 			<div className="flex justify-center items-center">
-				<div className="relative">
+				<Link to="/cart" className="relative">
 					<div
 						className={`absolute ${(scroll || currentpath !== '/') ? "bg-[#FF9C00]" : "bg-[#017D03]"
 							} text-white rounded-full w-4 h-4 overflow-hidden flex justify-center items-center text-[0.65rem] font-semibold shadow-xl right-0`}>
@@ -50,10 +50,10 @@ export const Navbar = () => {
 					</div>
 					<Icon
 						icon="bitcoin-icons:cart-filled"
-						className={`text-[2.1rem] lg:text-4xl ${(scroll || currentpath !== '/') ? "text-[#017D03]" : "text-white"
+						className={`text-[2.1rem] lg:text-4xl cursor-pointer ${(scroll || currentpath !== '/') ? "text-[#017D03]" : "text-white"
 							}`}
 					/>
-				</div>
+				</Link>
 				<a
 					href="#"
 					className='bg-[#FF9C00] w-fit justify-center items-center ms-4 text-center hidden lg:flex text-sm py-2 ps-4 pe-2.5 rounded-full text-white mx-auto 2xl:text-md z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>
