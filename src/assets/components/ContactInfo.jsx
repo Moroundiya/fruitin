@@ -173,7 +173,7 @@ export const ContactInfo = () => {
 						<div className="w-full flex justify-center items-center mb-3 lg:mb-10">
 							<a
 								href="#"
-								className='bg-[#017D03] text-sm text-center py-3 px-6 rounded-full text-white lg:text-[1rem] z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
+								className='bg-[#017D03] text-sm text-center py-3 px-6 rounded-full text-white lg:text-[1rem] z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
 								Send a message
 							</a>
 						</div>
