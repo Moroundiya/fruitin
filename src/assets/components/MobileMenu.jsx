@@ -69,40 +69,26 @@ export const MobileMenu = ({ showMenu, setShowMenu }) => {
 					</li>
 				</ul>
 
-				<div className="space-y-4">
-					<div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
-						<div className="bg-[#123C12] text-[#FF9C00] rounded-lg p-2">
+				<div className="text-[#FF9C00] text-2xl flex space-x-5 w-full justify-center items-center absolute bottom-24 left-0">
+					<Icon icon="ic:baseline-facebook" />
+					<Icon icon="mdi:twitter" />
+					<Icon icon="hugeicons:instagram" />
+					<Icon icon="ic:baseline-whatsapp" />
+				</div>
+
+				<div className="w-full absolute bottom-10 left-0">
+					<p className="flex flex-col justify-center items-center leading-[1.2] text-sm opacity-40 text-white">
+						<p className="flex items-center">
+							{" "}
+							Copyright{" "}
 							<Icon
-								icon="mdi:location"
-								className="text-lg"
-							/>
-						</div>
-						<span className="leading-[1.7]">
-							8502 Preston Rd. Inglewood, <br />
-							Maine 98380
-						</span>
-					</div>
-					<div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
-						<div className="bg-[#123C12] text-[#FF9C00] rounded-lg p-2">
-							<Icon
-								icon="ion:call-sharp"
-								className="text-lg"
-							/>
-						</div>
-						<span className="leading-[1.7]">
-							+(163)-2654-3564 <br />
-							+(163)-2654-5432
-						</span>
-					</div>
-					<div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
-						<div className="bg-[#123C12] text-[#FF9C00] rounded-lg p-2">
-							<Icon
-								icon="fluent:mail-20-filled"
-								className="text-lg"
-							/>
-						</div>
-						<span className="leading-[1.7]">help24/7@frutin.com</span>
-					</div>
+								icon="ph:copyright"
+								className="mx-[3px] text-xl"
+							/>{" "}
+							2024 Frutin.{" "}
+						</p>
+						<p> All Rights Reserved.</p>
+					</p>
 				</div>
 			</div>
 		</div>

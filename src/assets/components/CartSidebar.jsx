@@ -23,7 +23,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 					: "left-full opacity-0 delay-300 duration-[1s]"
 			} flex justify-end font-lexend`}>
 			<div
-				className={`w-10/12 lg:w-[440px] h-full bg-white px-5 lg:px-7 relative transition-all ease-in-out   ${
+				className={`w-10/12 lg:w-[440px] h-full bg-white px-5 lg:px-7 pb-5 relative transition-all ease-in-out   ${
 					showCart
 						? "left-0 opacity-100 delay-100 duration-[1s]"
 						: "left-full opacity-0 duration-[0.8s]"
@@ -39,7 +39,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 				<div className="w-full h-[2px] mt-2 bg-[#D9D9D9] rounded-3xl overflow-hidden">
 					<div className="h-full w-[50px] bg-[#017D03]"></div>
 				</div>
-				<div className="my-8 border-t h-[70%] overflow-y-auto">
+				<div className="mt-8 mb-5 border-t h-[70%] md:h-[700px] lg:h-[70%] overflow-y-auto">
 					<div className="py-3 border-b flex w-full">
 						<div className="flex justify-between items-center w-full">
 							<div className="flex items-center">
@@ -195,7 +195,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 						View Cart
 						<Icon
 							icon="typcn:shopping-cart"
-							className="text-white text-2xl ms-1 pe-0"
+							className="text-white text-xl ms-1 pe-0"
 						/>
 					</Link>
 				</div>
