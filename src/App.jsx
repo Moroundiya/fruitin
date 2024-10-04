@@ -7,6 +7,10 @@ import { FAQ } from "./assets/pages/FAQ";
 import { Contact } from "./assets/pages/Contact";
 import { Cart } from "./assets/pages/Cart";
 import { Checkout } from "./assets/pages/Checkout";
+import { createContext, useState } from "react";
+export const ProductContext = createContext();
+
+import { allproducts } from "./assets/data/allproducts";
 
 const router = createBrowserRouter([
 	{
@@ -40,7 +44,15 @@ const router = createBrowserRouter([
 	},
 ]);
 function App() {
-	return <RouterProvider router={router} />;
+	const [productList, setProductList] = useState(allproducts);
+
+	return (
+		<>
+			<ProductContext.Provider value={{ productList, setProductList }}>
+				<RouterProvider router={router} />
+			</ProductContext.Provider>
+		</>
+	);
 }
 
 export default App;
