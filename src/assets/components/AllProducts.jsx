@@ -7,6 +7,11 @@ import { allproducts } from "../data/allproducts";
 import { ProductsProps } from "../props/ProductsProps";
 
 export const AllProducts = () => {
+	const [addItem, setAddItem] = useState(false);
+
+	const addToCart = (index) => {
+		allproducts[index] = { ...allproducts[index], isCart: true };
+	};
 	const [activeCategory, setActiveCategory] = useState("all");
 	const [products, setProducts] = useState(allproducts);
 
@@ -109,7 +114,11 @@ export const AllProducts = () => {
 				{products.map((item, i) => (
 					<ProductsProps
 						key={i}
+						item={item}
 						{...item}
+						addToCart={addToCart}
+						index={i}
+						product={allproducts}
 					/>
 				))}
 			</div>

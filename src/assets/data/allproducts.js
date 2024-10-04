@@ -18,91 +18,106 @@ export const allproducts = [
         desc: 'Fresh Fruits',
         name: 'Bosco Apple Fruit',
         price: '$177.85',
-        img: `${product1}`
+        img: `${product1}`,
+        inCart: false
     },
     {
         type: 'New',
         desc: 'Vegetables',
         name: 'Green Cauliflower',
         price: '$39.85',
-        img: `${product2}`
+        img: `${product2}`,
+        inCart: false
     },
     {
         type: 'Hot',
         desc: 'Fresh Fruits',
         name: 'Mandarin orange',
         price: '$96.85',
-        img: `${product3}`
+        img: `${product3}`,
+        inCart: false
+
     },
     {
         type: 'Sale',
         desc: 'Vegetables',
         name: 'Shallot Red Onion',
         price: '$8.85',
-        img: `${product4}`
+        img: `${product4}`,
+        inCart: false
     },
     {
         type: 'New',
         desc: 'Fresh Fruits',
         name: 'Sour Red Cherry',
         price: '$32.85',
-        img: `${product5}`
+        img: `${product5}`,
+        inCart: false
     },
     {
         type: 'Hot',
         desc: 'Fresh Fruits',
         name: 'Strawberry Fruits',
         price: '$30.85',
-        img: `${product6}`
+        img: `${product6}`,
+        inCart: false
     },
     {
         type: 'New',
         desc: 'Fresh Fruits',
         name: 'Six Ripe Banana',
         price: '$232.85',
-        img: `${product7}`
+        img: `${product7}`,
+        inCart: false
     },
     {
         type: 'Hot',
         desc: 'Meat and Fish',
         name: 'Sausage Ribs Beef',
         price: '$23.50',
-        img: `${product8}`
+        img: `${product8}`,
+        inCart: false
     },
     {
         type: 'New',
         desc: 'Vegetables',
         name: 'Green Cucumber',
         price: '$32.85',
-        img: `${product9}`
+        img: `${product9}`,
+        inCart: false
     },
     {
         type: 'Hot',
         desc: 'Fresh Fruits',
         name: 'Rash Capsicum',
         price: '$30.85',
-        img: `${product10}`
+        img: `${product10}`,
+        inCart: false
     },
     {
         type: 'New',
         desc: 'Fresh Fruits',
         name: 'Ripe Papaya Fruit',
         price: '$232.85',
-        img: `${product11}`
+        img: `${product11}`,
+        inCart: false
     },
      {
         type: 'Sale',
         desc: 'Vegetables',
         name: 'Organic Tomato',
         price: '$21.99',
-        img: `${product12}`
+         img: `${product12}`,
+        inCart: false
     },
      {
         type: 'New',
         desc: 'Meat and Fish',
         name: 'Fresh Fish',
         price: '$11.63',
-        img: `${product13}`
+         img: `${product13}`,
+        inCart: false
+        
     },
 
 ]
