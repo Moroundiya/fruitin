@@ -23,13 +23,11 @@ export const ProductsProps = ({
 
 	const {storeCart, setStoreCart, setCartItems, cartItems}= useContext(ProductContext)
 	const [itemVal, setItemVal] = useState(item);
-
 	const addCart = (val, i) => {
 		product[i] = {
 			...val,
 			inCart: true,
 		};
-
 		setItemVal(product[i]);
 		setStoreCart((storeCart) => [...storeCart, itemVal]);
 	};

@@ -69,7 +69,7 @@ export const MobileMenu = ({ showMenu, setShowMenu }) => {
 					</li>
 				</ul>
 
-				<div className="text-[#FF9C00] text-2xl flex space-x-5 w-full justify-center items-center absolute bottom-24 left-0">
+				<div className="text-white text-2xl flex space-x-5 w-full justify-center items-center absolute bottom-24 left-0">
 					<Icon icon="ic:baseline-facebook" />
 					<Icon icon="mdi:twitter" />
 					<Icon icon="hugeicons:instagram" />
