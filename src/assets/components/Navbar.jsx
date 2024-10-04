@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Icon } from "@iconify/react";
 import logoWhite from "../images/logo-white.svg";
 import footerLogo from "../images/logo-footer.svg";
@@ -7,8 +7,10 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartSidebar } from "./CartSidebar";
 import { MobileMenu } from "./MobileMenu";
+import { ProductContext } from "../../App";
 
 export const Navbar = () => {
+	const { cartItems} = useContext(ProductContext);
 	const [scroll, setScroll] = useState(false);
 	const currentpath = window.location.pathname;
 
@@ -21,7 +23,7 @@ export const Navbar = () => {
 
 	useEffect(() => {
 		// console.log(currentpath);
-	}, [scroll, currentpath, showCart, showMenu]);
+	}, [scroll, currentpath, showCart, showMenu, cartItems]);
 
 	return (
 		<>
@@ -35,16 +37,14 @@ export const Navbar = () => {
 				showMenu={showMenu}
 			/>
 			<nav
-				className={`flex justify-between uppercase items-center w-full z-40 top-0 left-0 px-2.5 py-3 lg:px-12 xl:px-20 font-lexend transition-all ease-in-out duration-700 ${
-					scroll || currentpath !== "/"
-						? "bg-white fixed shadow z-40 lg:py-3"
-						: "bg-transparent absolute lg:py-4"
-				}`}>
+				className={`flex justify-between uppercase items-center w-full z-40 top-0 left-0 px-2.5 py-3 lg:px-12 xl:px-20 font-lexend transition-all ease-in-out duration-700 ${scroll || currentpath !== "/"
+					? "bg-white fixed shadow z-40 lg:py-3"
+					: "bg-transparent absolute lg:py-4"
+					}`}>
 				<Icon
 					icon="tabler:menu-4"
-					className={`text-[2.1rem] cursor-pointer lg:hidden ${
-						scroll || currentpath !== "/" ? "text-[#017D03]" : "text-white"
-					} `}
+					className={`text-[2.1rem] cursor-pointer lg:hidden ${scroll || currentpath !== "/" ? "text-[#017D03]" : "text-white"
+						} `}
 					onClick={() => setShowMenu(true)}
 				/>
 				<img
@@ -53,9 +53,8 @@ export const Navbar = () => {
 					alt=""
 				/>
 				<div
-					className={`hidden text-lg ${
-						scroll || currentpath !== "/" ? "text-[#017D03]" : "text-white"
-					} space-x-9 lg:block`}>
+					className={`hidden text-lg ${scroll || currentpath !== "/" ? "text-[#017D03]" : "text-white"
+						} space-x-9 lg:block`}>
 					<Link to="/">Home</Link>
 					<Link to="/about-us">About</Link>
 					<Link to="/shop">Shop</Link>
@@ -68,16 +67,14 @@ export const Navbar = () => {
 						className="relative"
 						onClick={() => setShowCart(true)}>
 						<div
-							className={`absolute ${
-								scroll || currentpath !== "/" ? "bg-[#FF9C00]" : "bg-[#017D03]"
-							} text-white rounded-full w-4 h-4 overflow-hidden flex justify-center items-center text-[0.65rem] font-semibold shadow-xl right-0`}>
-							5
+							className={`absolute ${scroll || currentpath !== "/" ? "bg-[#FF9C00]" : "bg-[#017D03]"
+								} text-white rounded-full w-4 h-4 overflow-hidden flex justify-center items-center text-[0.65rem] font-semibold shadow-xl right-0`}>
+							{cartItems}
 						</div>
 						<Icon
 							icon="typcn:shopping-cart"
-							className={`text-[2.1rem] lg:text-4xl cursor-pointer ${
-								scroll || currentpath !== "/" ? "text-[#017D03]" : "text-white"
-							}`}
+							className={`text-[2.1rem] lg:text-4xl cursor-pointer ${scroll || currentpath !== "/" ? "text-[#017D03]" : "text-white"
+								}`}
 						/>
 					</Link>
 					<a

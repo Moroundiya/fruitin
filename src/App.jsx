@@ -45,10 +45,14 @@ const router = createBrowserRouter([
 ]);
 function App() {
 	const [productList, setProductList] = useState(allproducts);
+	const [storeCart, setStoreCart] = useState([]);
+	const [cartItems, setCartItems] = useState(0);
+
+
 
 	return (
 		<>
-			<ProductContext.Provider value={{ productList, setProductList }}>
+			<ProductContext.Provider value={{ productList, setProductList, storeCart, setStoreCart, cartItems, setCartItems }}>
 				<RouterProvider router={router} />
 			</ProductContext.Provider>
 		</>

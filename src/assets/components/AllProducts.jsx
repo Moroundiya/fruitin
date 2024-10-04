@@ -12,9 +12,6 @@ export const AllProducts = () => {
 	const { productList, setProductList } = useContext(ProductContext);
 	const [addItem, setAddItem] = useState(false);
 
-	const [storeCart, setStoreCart] = useState([]);
-
-
 	const addToCart = (index) => {
 		productList[index] = { ...productList[index], isCart: true };
 	};
@@ -129,8 +126,8 @@ export const AllProducts = () => {
 						addToCart={addToCart}
 						identify={item.name}
 						product={productList}
-						storeCart={storeCart}
-						setStoreCart={setStoreCart}
+						// storeCart={storeCart}
+						// setStoreCart={setStoreCart}
 					/>
 				))}
 			</div>

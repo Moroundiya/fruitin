@@ -3,6 +3,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../../App";
 // import { allproducts } from "../data/allproducts";
 
 export const ProductsProps = ({
@@ -15,12 +16,13 @@ export const ProductsProps = ({
 	product,
 	addItem,
 	index,
-	storeCart,
-	setStoreCart,
+	// storeCart,
+	// setStoreCart,
 	identify,
 }) => {
-	const [itemVal, setItemVal] = useState(item);
 
+	const {storeCart, setStoreCart, setCartItems, cartItems}= useContext(ProductContext)
+	const [itemVal, setItemVal] = useState(item);
 
 	const addCart = (val, i) => {
 		product[i] = {
@@ -29,13 +31,13 @@ export const ProductsProps = ({
 		};
 
 		setItemVal(product[i]);
-
 		setStoreCart((storeCart) => [...storeCart, itemVal]);
 	};
 
 	useEffect(() => {
 		console.log(storeCart);
-	}, [itemVal, product, storeCart]);
+		setCartItems(storeCart.length)
+	}, [itemVal, product, storeCart, cartItems]);
 
 	return (
 		<div className="bg-white rounded-[20px] shadow-lg p-1.5 lg:p-4 flex justify-center items-center flex-col cursor-pointer">
