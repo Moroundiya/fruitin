@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Icon } from "@iconify/react/dist/iconify.js";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 
 import cartImg1 from "../images/cart-img1.jpg";
 import cartImg2 from "../images/cart-img2.jpg";
@@ -8,6 +8,8 @@ import cartImg3 from "../images/cart-img3.jpg";
 import cartImg4 from "../images/cart-img4.jpg";
 import cartImg5 from "../images/cart-img5.jpg";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../../App";
+import { CartSlideoutItem } from "./CartSlideoutItem";
 
 export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 	if (showCart || showMenu) {
@@ -15,6 +17,20 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 	} else {
 		document.body.style.overflow = "auto";
 	}
+
+	const { storeCart, setStoreCart } = useContext(ProductContext);
+
+	const remProd = (val) => {
+		const newStore = storeCart.filter((item) => {
+			return item.name !== storeCart[val].name;
+		});
+		setStoreCart(newStore);
+	};
+
+	useEffect(() => {
+		// console.log(storeCart);
+	}, [storeCart]);
+
 	return (
 		<div
 			className={`w-full h-full bg-[#000b00c9] fixed z-50 top-0 transition-all ease-in-out overflow-hidden ${
@@ -40,7 +56,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 					<div className="h-full w-[50px] bg-[#017D03]"></div>
 				</div>
 				<div className="mt-8 mb-5 border-t h-[70%] md:h-[700px] lg:h-[70%] overflow-y-auto">
-					<div className="py-3 border-b flex w-full">
+					{/* <div className="py-3 border-b flex w-full">
 						<div className="flex justify-between items-center w-full">
 							<div className="flex items-center">
 								<img
@@ -60,8 +76,8 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 								className="text-[#FF9C00] text-2xl cursor-pointer"
 							/>
 						</div>
-					</div>
-					<div className="py-3 border-b flex w-full">
+					</div> */}
+					{/* <div className="py-3 border-b flex w-full">
 						<div className="flex justify-between items-center w-full">
 							<div className="flex items-center">
 								<img
@@ -186,7 +202,18 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 								className="text-[#FF9C00] text-2xl cursor-pointer"
 							/>
 						</div>
-					</div>
+					</div> */}
+
+					{storeCart.map((prod, i) => {
+						return (
+							<CartSlideoutItem
+								key={i}
+								{...prod}
+								index={i}
+								remProd={remProd}
+							/>
+						);
+					})}
 				</div>
 				<div className="w-full flex justify-end">
 					<Link
