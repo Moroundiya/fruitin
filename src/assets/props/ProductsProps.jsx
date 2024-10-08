@@ -24,17 +24,19 @@ export const ProductsProps = ({
 
 	const addCart = (val, ident) => {
 		setStoreCart((storeCart) => [...storeCart, val]);
-		// product[ident] = {
-		// 	...val,
-		// 	inCart: true,
-		// };
 	};
 
 	useEffect(() => {
 		if (storeCart.some((val) => val.name === identify)) {
-			setCheckItem(true);
+			product[identify] = {
+				...item,
+				inCart: true,
+			};
 		} else {
-			setCheckItem(false);
+			product[identify] = {
+				...item,
+				inCart: false,
+			};
 		}
 
 		setCartItems(storeCart.length);
@@ -64,16 +66,18 @@ export const ProductsProps = ({
 						addCart(item, identify);
 					}}
 					className={`text-[0.7rem] lg:text-[0.85rem] ${
-						checkItem
+						product[identify]?.inCart
 							? "pointer-events-none bg-gray-400"
 							: "pointer-events-auto bg-[#017D03]"
 					} xl:text-[0.9rem] flex justify-center items-center my-4 lg:mt-3 lg:mb-4  text-white px-2.5 py-1.5 lg:px-4 lg:py-2  rounded-full hover:text-white overflow-hidden relative transition-all duration-700 z-10 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]`}>
 					<span className="me-1 lg:me-2 ps-1">
-						{checkItem ? "Item Added" : "Add to Cart"}
+						{product[identify]?.inCart ? "Item Added" : "Add to Cart"}
 					</span>
 					<Icon
 						icon={
-							checkItem ? "solar:cart-check-bold" : "icons8:add-shopping-cart"
+							product[identify]?.inCart
+								? "solar:cart-check-bold"
+								: "icons8:add-shopping-cart"
 						}
 						className="text-xl lg:text-3xl"
 					/>
