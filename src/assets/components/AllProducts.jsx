@@ -9,11 +9,12 @@ import { ProductsProps } from "../props/ProductsProps";
 import { ProductContext } from "../../App";
 
 export const AllProducts = () => {
-	const { productList, setProductList } = useContext(ProductContext);
+	const { productList, storeCart, setProductList, } = useContext(ProductContext);
 	const [addItem, setAddItem] = useState(false);
 
-	const addToCart = (index) => {
-		productList[index] = { ...productList[index], isCart: true };
+
+	const addToCart = (prod) => {
+		// productList[index] = { ...productList[index], isCart: true };
 	};
 	const [activeCategory, setActiveCategory] = useState("all");
 	const [products, setProducts] = useState(productList);
@@ -44,6 +45,7 @@ export const AllProducts = () => {
 		);
 		setProducts(updateProduct);
 	};
+
 
 	return (
 		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-16 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
@@ -126,6 +128,7 @@ export const AllProducts = () => {
 						addToCart={addToCart}
 						identify={item.name}
 						product={productList}
+				
 						// storeCart={storeCart}
 						// setStoreCart={setStoreCart}
 					/>
