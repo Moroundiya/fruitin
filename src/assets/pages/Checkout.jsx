@@ -12,9 +12,8 @@ import { Footer } from '../components/Footer';
 export const Checkout = () => {
 
     const [paymentMethod, setPaymentMethod] = useState(null)
-
     useEffect(() => {
-
+		window.scrollTo(0, 0);
     }, [paymentMethod]);
 
     return (

@@ -27,8 +27,12 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 		setStoreCart(newStore);
 	};
 
+	const addQuantity = (val) => {
+		
+	}
+
 	useEffect(() => {
-		// console.log(storeCart);
+		console.log(storeCart);
 	}, [storeCart]);
 
 	return (

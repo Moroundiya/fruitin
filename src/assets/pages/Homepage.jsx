@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
-
+import React, { useEffect } from "react";
 import { Header } from "../components/Header";
 import { AboutUs } from "../components/AboutUs";
 import { Category } from "../components/Category";
@@ -13,6 +12,9 @@ import { Testimonial } from "../components/Testimonial";
 import { Footer } from "../components/Footer";
 
 export const Homepage = () => {
+		useEffect(() => {
+			window.scrollTo(0, 0);
+		}, []);
 	return (
 		<>
 			<Header />

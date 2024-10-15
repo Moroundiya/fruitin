@@ -14,7 +14,7 @@ export const CartSlideoutItem = ({ img, name, price, index, remProd }) => {
 					/>
 					<div>
 						<p className="text-[#017D03] font-semibold">{name}</p>
-						<p className="text-[#54595F] text-sm">{price}</p>
+						<p className="text-[#54595F] text-sm">${price}</p>
 					</div>
 				</div>
 				<Icon

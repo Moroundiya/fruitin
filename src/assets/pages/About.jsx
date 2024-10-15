@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import { Navbar } from "../components/Navbar";
 import { HowItWorks } from "../components/HowItWorks";
 import { Counter } from "../components/Counter";
@@ -10,6 +10,10 @@ import { Footer } from "../components/Footer";
 import { Team } from "../components/Team";
 
 export const About = () => {
+	useEffect(() => {
+	 window.scrollTo(0, 0);
+	}, [])
+	
 	return (
 		<>
 			<Navbar />

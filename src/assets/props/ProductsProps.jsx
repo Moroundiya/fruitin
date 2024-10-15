@@ -24,8 +24,8 @@ export const ProductsProps = ({
 
 	const addCart = (val, ident) => {
 		setStoreCart((storeCart) => [...storeCart, val]);
+		// console.log(product[ident])
 	};
-
 	useEffect(() => {
 		if (storeCart.some((val) => val.name === identify)) {
 			product[identify] = {
@@ -38,8 +38,8 @@ export const ProductsProps = ({
 				inCart: false,
 			};
 		}
-
 		setCartItems(storeCart.length);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [product, storeCart, cartItems, checkItem]);
 
 	return (
@@ -59,7 +59,7 @@ export const ProductsProps = ({
 					{desc}
 				</p>
 				<p className="font-semibold text-[1.05rem] lg:text-xl">{name}</p>
-				<p className="text-[#54595F] lg:my-2 text-md lg:text-lg">{price}</p>
+				<p className="text-[#54595F] lg:my-2 text-md lg:text-lg">${price}</p>
 				<Link
 					to=""
 					onClick={() => {

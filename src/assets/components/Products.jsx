@@ -4,7 +4,7 @@ import productBg1 from "../images/vector_shape_1.png";
 import productBg2 from "../images/vector_shape_2.png";
 import titleIcon from "../images/title_icon.svg";
 import { productsdata } from "../data/productsdata";
-import { ProductsProps } from "../props/ProductsProps";
+import { HomeProducts } from "../props/HomeProducts";
 
 export const Products = () => {
 	const [activeCategory, setActiveCategory] = useState("all");
@@ -106,12 +106,14 @@ export const Products = () => {
 			</div>
 
 			<div className="mt-10 w-full xl:w-11/12 2xl:w-4/5 mx-auto grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-4 gap-x-[6px] gap-y-[15px] lg:gap-6 xl:gap-7 2xl:gap-10 relative z-20 px-2 lg:px-0">
-				{products.map((item, i) => (
-					<ProductsProps
-						key={i}
-						{...item}
-					/>
-				))}
+				{products.map((item, i) => {
+					return (
+						<HomeProducts
+							key={i}
+							{...item}
+						/>
+					);
+				})}
 			</div>
 		</div>
 	);

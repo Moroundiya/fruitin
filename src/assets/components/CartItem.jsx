@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import titleIcon from "../images/title_icon.svg";
 import productBg1 from "../images/vector_shape_1.png";
 import productBg2 from "../images/vector_shape_2.png";
@@ -7,8 +7,27 @@ import cart2 from "../images/cart2.jpg";
 import cart3 from "../images/cart3.jpg";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Link } from "react-router-dom";
-
+import { ProductContext } from "../../App";
+import { CartSingleItem } from "./CartSingleItem";
 export const CartItem = () => {
+	const { storeCart, setStoreCart } = useContext(ProductContext);
+
+	const [quantityIncrease, setQuantityIncrease] = useState(0);
+
+	const addQuantity = (val) => {
+		// setQuantityIncrease(quantityIncrease + 1);
+		return (val = {
+			quantity: function () {
+				this.quantity + 1
+			},
+			...val,
+		});
+	};
+
+	useEffect(() => {
+		// console.log(quantityIncrease);
+	}, [quantityIncrease]);
+
 	return (
 		<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
 			<img
@@ -49,45 +68,18 @@ export const CartItem = () => {
 								</tr>
 							</thead>
 							<tbody className="block lg:table-row-group space-y-16 lg:space-y-0">
-								<tr className="text-center border border-b border-[#FF9C00] font-light block w-full lg:table-row">
-									<td className="w-full lg:w-auto flex justify-end items-center px-5 lg:px-0 lg:table-cell border-b border-[#FF9C00] lg:border-b-0 before:content-['Image'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold">
-										<img
-											src={cart1}
-											className="lg:mx-auto"
-											alt=""
+								{storeCart.map((item, i) => {
+									return (
+										<CartSingleItem
+											key={i}
+											item={item}
+											{...item}
+											addQuantity={addQuantity}
 										/>
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Product_Name'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										Bosco Apple Fruit
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Price'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										$18
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Quantity'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										<div className="flex justify-center items-center space-x-4 ">
-											<button className="border px-1.5 py-0.5 border-gray-300 font-semibold rounded-sm hover:bg-[#017D03] hover:text-white transition-all ease-in-out duration-300">
-												<Icon icon="iconoir:minus" />
-											</button>
+									);
+								})}
 
-											<p className="">1</p>
-
-											<button className="border px-1.5 py-0.5 border-gray-300 font-semibold rounded-sm hover:bg-[#017D03] hover:text-white transition-all ease-in-out duration-300">
-												<Icon icon="iconoir:plus" />
-											</button>
-										</div>
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										$18
-									</td>
-
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell relative border-[#FF9C00] lg:border-b-0 before:content-[''] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold">
-										<Icon
-											icon="ion:trash-outline"
-											className="text-center lg:mx-auto text-2xl cursor-pointer text-red-500"
-										/>
-									</td>
-								</tr>
-								<tr className="text-center border border-b border-[#FF9C00] font-light block w-full lg:table-row">
+								{/* <tr className="text-center border border-b border-[#FF9C00] font-light block w-full lg:table-row">
 									<td className="w-full lg:w-auto flex justify-end items-center px-5 lg:px-0 lg:table-cell border-b border-[#FF9C00] lg:border-b-0 before:content-['Image'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold">
 										<img
 											src={cart2}
@@ -162,7 +154,7 @@ export const CartItem = () => {
 											className="text-center lg:mx-auto text-2xl cursor-pointer text-red-500"
 										/>
 									</td>
-								</tr>
+								</tr> */}
 							</tbody>
 						</table>
 						<div className="w-full flex justify-end items-center my-5">

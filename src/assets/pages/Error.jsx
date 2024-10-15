@@ -1,11 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import { Icon } from "@iconify/react";
 import errorImg from "../images/error.svg";
 import { Navbar } from "../components/Navbar";
 import { Link } from "react-router-dom";
 
 export const Error = () => {
+		useEffect(() => {
+			window.scrollTo(0, 0);
+		}, []);
 	return (
 		<div className="w-full h-fit relative top-[130px] lg:top-[20px] pb-8 xl:pb-10">
 			<Navbar />
