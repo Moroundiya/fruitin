@@ -20,9 +20,9 @@ export const allproducts = [
         price: 177.85,
         img: `${product1}`,
         inCart: false,
-        quantity: 2,
+        quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
     {
@@ -34,7 +34,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
     {
@@ -46,7 +46,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
 
     },
@@ -59,7 +59,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
     {
@@ -71,7 +71,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
     {
@@ -83,7 +83,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
     {
@@ -95,7 +95,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
          total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
     {
@@ -107,7 +107,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
          total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
     {
@@ -119,7 +119,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
          total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
     {
@@ -131,7 +131,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
     {
@@ -143,7 +143,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
      {
@@ -155,7 +155,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
     },
      {
@@ -167,7 +167,7 @@ export const allproducts = [
         inCart: false,
         quantity: 1,
         total: function() {
-              return this.price * this.quantity
+              return (this.price * this.quantity).toFixed(2)
         }
         
     },

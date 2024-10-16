@@ -12,21 +12,39 @@ import { CartSingleItem } from "./CartSingleItem";
 export const CartItem = () => {
 	const { storeCart, setStoreCart } = useContext(ProductContext);
 
-	const [quantityIncrease, setQuantityIncrease] = useState(0);
-
-	const addQuantity = (val) => {
-		// setQuantityIncrease(quantityIncrease + 1);
-		return (val = {
-			quantity: function () {
-				this.quantity + 1
-			},
-			...val,
-		});
+	const [subTotal, setSubTotal] = useState(0)
+	const increaseQuantity = (val) => {
+		setStoreCart(
+			storeCart.map((item) => {
+				if (item.name == val) {
+					return { ...item, quantity: item.quantity + 1 };
+				}
+				return item;
+			})
+		);
+	};
+	const reduceQuantity = (val) => {
+		setStoreCart(
+			storeCart.map((item) => {
+				if (item.name == val) {
+					return {
+						...item,
+						quantity:
+							item.quantity < 2 ? item.quantity = 1 : item.quantity - 1,
+					};
+				}
+				return item;
+			})
+		);
 	};
 
 	useEffect(() => {
-		// console.log(quantityIncrease);
-	}, [quantityIncrease]);
+		const totalAmount = storeCart.reduce((accumulator, item) => {
+			return (Number(accumulator) + Number(item.total())).toFixed(2)
+		}, 0);
+		setSubTotal(totalAmount)
+		console.log(totalAmount);
+	}, [storeCart, subTotal]);
 
 	return (
 		<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
@@ -74,87 +92,13 @@ export const CartItem = () => {
 											key={i}
 											item={item}
 											{...item}
-											addQuantity={addQuantity}
+											index={item.name}
+											increaseQuantity={increaseQuantity}
+											reduceQuantity={reduceQuantity}
 										/>
 									);
 								})}
 
-								{/* <tr className="text-center border border-b border-[#FF9C00] font-light block w-full lg:table-row">
-									<td className="w-full lg:w-auto flex justify-end items-center px-5 lg:px-0 lg:table-cell border-b border-[#FF9C00] lg:border-b-0 before:content-['Image'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold">
-										<img
-											src={cart2}
-											className="lg:mx-auto"
-											alt=""
-										/>
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Product_Name'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										Green Cauliflower
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Price'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										$10
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Quantity'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										<div className="flex justify-center items-center space-x-4 ">
-											<button className="border px-1.5 py-0.5 border-gray-300 font-semibold rounded-sm hover:bg-[#017D03] hover:text-white transition-all ease-in-out duration-300">
-												<Icon icon="iconoir:minus" />
-											</button>
-
-											<p className="">1</p>
-
-											<button className="border px-1.5 py-0.5 border-gray-300 font-semibold rounded-sm hover:bg-[#017D03] hover:text-white transition-all ease-in-out duration-300">
-												<Icon icon="iconoir:plus" />
-											</button>
-										</div>
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										$10
-									</td>
-
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell relative border-[#FF9C00] lg:border-b-0 before:content-[''] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold">
-										<Icon
-											icon="ion:trash-outline"
-											className="text-center lg:mx-auto text-2xl cursor-pointer text-red-500"
-										/>
-									</td>
-								</tr>
-								<tr className="text-center border border-b border-[#FF9C00] font-light block w-full lg:table-row">
-									<td className="w-full lg:w-auto flex justify-end items-center px-5 lg:px-0 lg:table-cell border-b border-[#FF9C00] lg:border-b-0 before:content-['Image'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold">
-										<img
-											src={cart3}
-											className="lg:mx-auto"
-											alt=""
-										/>
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Product_Name'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										Mandarin orange
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Price'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										$25
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Quantity'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										<div className="flex justify-center items-center space-x-4 ">
-											<button className="border px-1.5 py-0.5 border-gray-300 font-semibold rounded-sm hover:bg-[#017D03] hover:text-white transition-all ease-in-out duration-300">
-												<Icon icon="iconoir:minus" />
-											</button>
-
-											<p className="">1</p>
-
-											<button className="border px-1.5 py-0.5 border-gray-300 font-semibold rounded-sm hover:bg-[#017D03] hover:text-white transition-all ease-in-out duration-300">
-												<Icon icon="iconoir:plus" />
-											</button>
-										</div>
-									</td>
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-										$25
-									</td>
-
-									<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell relative border-[#FF9C00] lg:border-b-0 before:content-[''] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold">
-										<Icon
-											icon="ion:trash-outline"
-											className="text-center lg:mx-auto text-2xl cursor-pointer text-red-500"
-										/>
-									</td>
-								</tr> */}
 							</tbody>
 						</table>
 						<div className="w-full flex justify-end items-center my-5">
@@ -174,7 +118,7 @@ export const CartItem = () => {
 											Cart Subtotal
 										</td>
 										<td className="border border-[#FF9C00] w-1/2 font-light p-3">
-											$47
+											${subTotal}
 										</td>
 									</tr>
 									<tr className="">
@@ -218,7 +162,7 @@ export const CartItem = () => {
 											Total Order
 										</td>
 										<td className="border border-[#FF9C00] w-1/2 font-light p-3">
-											$84
+											${subTotal}
 										</td>
 									</tr>
 								</table>
