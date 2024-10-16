@@ -11,6 +11,7 @@ import { createContext, useState } from "react";
 export const ProductContext = createContext();
 
 import { allproducts } from "./assets/data/allproducts";
+import { Order } from "./assets/pages/Order";
 
 const router = createBrowserRouter([
 	{
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
 	{
 		path: "/checkout",
 		element: <Checkout />,
+	},
+	{
+		path: "/order",
+		element: <Order />,
 	},
 ]);
 function App() {

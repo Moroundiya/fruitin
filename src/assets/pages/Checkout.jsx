@@ -13,7 +13,7 @@ export const Checkout = () => {
 
     const [paymentMethod, setPaymentMethod] = useState(null)
     useEffect(() => {
-		window.scrollTo(0, 0);
+		// window.scrollTo(0, 0);
     }, [paymentMethod]);
 
     return (
@@ -186,14 +186,14 @@ export const Checkout = () => {
                                     </tr>
                                 </table>
 
-                                <form className='mt-8 w-full mb-20'>
+                                <form action='/order' method='' className='mt-8 w-full mb-20'>
 
                                     <div className="flex mb-2 lg:mb-3 flex-col">
                                         <div className='flex items-center'>
                                             <input
                                                 id="default-radio-1"
                                                 type="radio"
-                                                defaultValue=""
+                                                defaultValue="1"
                                                 onChange={() => setPaymentMethod('bank')}
                                                 name="default-radio"
                                                 className="w-5 h-5 cursor-pointer accent-green-600"
@@ -216,7 +216,7 @@ export const Checkout = () => {
                                                 id="default-radio-2"
                                                 type="radio"
                                                 onChange={() => setPaymentMethod('cheque')}
-                                                defaultValue=""
+                                                defaultValue="2"
                                                 name="default-radio"
                                                 className="w-5 h-5 cursor-pointer accent-green-600"
                                                 required
@@ -238,7 +238,7 @@ export const Checkout = () => {
                                                 id="default-radio-3"
                                                 type="radio"
                                                 onChange={() => setPaymentMethod('card')}
-                                                defaultValue=""
+                                                defaultValue="3"
                                                 name="default-radio"
                                                 className="w-5 h-5 cursor-pointer accent-green-600"
                                                 required
@@ -259,7 +259,7 @@ export const Checkout = () => {
                                                 defaultChecked=""
                                                 id="default-radio-4"
                                                 type="radio"
-                                                defaultValue=""
+                                                defaultValue="4"
                                                 onChange={() => setPaymentMethod('paypal')}
                                                 name="default-radio"
                                                 className="w-5 h-5 cursor-pointer accent-green-600"
