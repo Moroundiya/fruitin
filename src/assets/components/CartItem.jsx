@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import { ProductContext } from "../../App";
 import { CartSingleItem } from "./CartSingleItem";
 export const CartItem = () => {
-	const { storeCart, setStoreCart } = useContext(ProductContext);
+	const { storeCart, setStoreCart, totalPrice, setTotalPrice } =
+		useContext(ProductContext);
 
-	const [subTotal, setSubTotal] = useState(0)
 	const increaseQuantity = (val) => {
 		setStoreCart(
 			storeCart.map((item) => {
@@ -26,7 +26,7 @@ export const CartItem = () => {
 					return {
 						...item,
 						quantity:
-							item.quantity < 2 ? item.quantity = 1 : item.quantity - 1,
+							item.quantity < 2 ? (item.quantity = 1) : item.quantity - 1,
 					};
 				}
 				return item;
@@ -36,11 +36,11 @@ export const CartItem = () => {
 
 	useEffect(() => {
 		const totalAmount = storeCart.reduce((accumulator, item) => {
-			return (Number(accumulator) + Number(item.total())).toFixed(2)
+			return (Number(accumulator) + Number(item.total())).toFixed(2);
 		}, 0);
-		setSubTotal(totalAmount)
+		setTotalPrice(totalAmount);
 		console.log(totalAmount);
-	}, [storeCart, subTotal]);
+	}, [storeCart, totalPrice]);
 
 	return (
 		<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
@@ -94,7 +94,6 @@ export const CartItem = () => {
 										/>
 									);
 								})}
-
 							</tbody>
 						</table>
 						<div className="w-full flex justify-end items-center my-5">
@@ -114,7 +113,7 @@ export const CartItem = () => {
 											Cart Subtotal
 										</td>
 										<td className="border border-[#FF9C00] w-1/2 font-light p-3">
-											${subTotal}
+											${totalPrice}
 										</td>
 									</tr>
 									<tr className="">
@@ -158,7 +157,7 @@ export const CartItem = () => {
 											Total Order
 										</td>
 										<td className="border border-[#FF9C00] w-1/2 font-light p-3">
-											${subTotal}
+											${totalPrice}
 										</td>
 									</tr>
 								</table>

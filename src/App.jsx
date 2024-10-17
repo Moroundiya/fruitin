@@ -52,12 +52,27 @@ function App() {
 	const [productList, setProductList] = useState(allproducts);
 	const [storeCart, setStoreCart] = useState([]);
 	const [cartItems, setCartItems] = useState(0);
-
-
+	const [totalPrice, setTotalPrice] = useState(0);
+	const [username, setUsername] = useState("");
+	const [address, setAddress] = useState("Enter your shipping address");
 
 	return (
 		<>
-			<ProductContext.Provider value={{ productList, setProductList, storeCart, setStoreCart, cartItems, setCartItems }}>
+			<ProductContext.Provider
+				value={{
+					productList,
+					setProductList,
+					storeCart,
+					setStoreCart,
+					cartItems,
+					setCartItems,
+					totalPrice,
+					setTotalPrice,
+					username,
+					setUsername,
+					address,
+					setAddress,
+				}}>
 				<RouterProvider router={router} />
 			</ProductContext.Provider>
 		</>
