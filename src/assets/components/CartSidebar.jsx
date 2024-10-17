@@ -60,7 +60,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 				<div className="mt-8 mb-5 border-t h-[70%] md:h-[700px] lg:h-[70%] overflow-y-auto">
 					{storeCart[0] == undefined ? (
 						<p className="my-10 text-sm text-gray-500">
-							Cart is empty, please add item(s)
+							Cart is empty, please go to shop and add item(s)
 						</p>
 					) : (
 						storeCart.map((prod, i) => {
