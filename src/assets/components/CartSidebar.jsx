@@ -27,9 +27,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 		setStoreCart(newStore);
 	};
 
-	const addQuantity = (val) => {
-		
-	}
+	const addQuantity = (val) => {};
 
 	useEffect(() => {
 		console.log(storeCart);
@@ -60,21 +58,31 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 					<div className="h-full w-[50px] bg-[#017D03]"></div>
 				</div>
 				<div className="mt-8 mb-5 border-t h-[70%] md:h-[700px] lg:h-[70%] overflow-y-auto">
-					{storeCart.map((prod, i) => {
-						return (
-							<CartSlideoutItem
-								key={i}
-								{...prod}
-								index={i}
-								remProd={remProd}
-							/>
-						);
-					})}
+					{storeCart[0] == undefined ? (
+						<p className="my-10 text-sm text-gray-500">
+							Cart is empty, please add item(s)
+						</p>
+					) : (
+						storeCart.map((prod, i) => {
+							return (
+								<CartSlideoutItem
+									key={i}
+									{...prod}
+									index={i}
+									remProd={remProd}
+								/>
+							);
+						})
+					)}
 				</div>
 				<div className="w-full flex justify-end">
 					<Link
 						to="/cart"
-						className='bg-[#017D03] w-fit justify-center items-center ms-4 text-center flex text-sm py-2 ps-4 pe-3 rounded-full text-white 2xl:text-md z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
+						className={`w-fit justify-center items-center ${
+							storeCart[0] == undefined
+								? "pointer-events-none bg-gray-300"
+								: "bg-[#017D03] pointer-events-auto"
+						} ms-4 text-center flex text-sm py-2 ps-4 pe-3 rounded-full text-white 2xl:text-md z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]`}>
 						View Cart
 						<Icon
 							icon="typcn:shopping-cart"
