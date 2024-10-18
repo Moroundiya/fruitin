@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import titleIcon from "../images/title_icon.svg";
 import productBg1 from "../images/vector_shape_1.png";
 import productBg2 from "../images/vector_shape_2.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ProductContext } from "../../App";
 import { CartSingleItem } from "./CartSingleItem";
+
 export const CartItem = () => {
 	const { storeCart, setStoreCart, totalPrice, setTotalPrice } =
 		useContext(ProductContext);
@@ -33,6 +34,8 @@ export const CartItem = () => {
 			})
 		);
 	};
+
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const totalAmount = storeCart.reduce((accumulator, item) => {
@@ -104,7 +107,11 @@ export const CartItem = () => {
 							</Link>
 						</div>
 
-						<div className="w-full h-auto flex justify-end my-10">
+						<form
+							onSubmit={(e) => {
+								e.preventDefault(), navigate("/checkout");
+							}}
+							className="w-full h-auto flex justify-end my-10">
 							<div className="w-full h-full lg:w-1/2">
 								<p className="text-xl lg:text-3xl font-semibold">Cart Totals</p>
 								<table className="table-auto w-full mt-2 lg:mt-5">
@@ -127,6 +134,7 @@ export const CartItem = () => {
 													type="radio"
 													defaultValue=""
 													name="default-radio"
+													required
 													className="w-4 h-4 cursor-pointer accent-green-600"
 												/>
 												<label
@@ -142,6 +150,7 @@ export const CartItem = () => {
 													type="radio"
 													defaultValue=""
 													name="default-radio"
+													required
 													className="w-4 h-4 cursor-pointer accent-green-600"
 												/>
 												<label
@@ -163,14 +172,14 @@ export const CartItem = () => {
 								</table>
 
 								<div className="w-full flex justify-start items-center mt-5 mb-16">
-									<Link
-										to="/checkout"
+									<button
+										type="submit"
 										className='bg-[#017D03] text-sm text-center capitalize py-3 px-6 rounded-full text-white lg:text-[1rem] z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
 										Proceed to checkout
-									</Link>
+									</button>
 								</div>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>

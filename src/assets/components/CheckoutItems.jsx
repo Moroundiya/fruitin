@@ -7,19 +7,27 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { ProductContext } from "../../App";
 import { useNavigate } from "react-router";
 
-export const CheckoutItems = ({ paymentMethod, setPaymentMethod }) => {
-	const { storeCart, totalPrice, username, setUsername, address, setAddress } =
-		useContext(ProductContext);
+export const CheckoutItems = () => {
+	const {
+		storeCart,
+		totalPrice,
+		username,
+		setUsername,
+		address,
+		setAddress,
+		paymentMethod,
+		setPaymentMethod,
+		setEmail,
+		setNumber,
+		email,
+		number,
+	} = useContext(ProductContext);
 
-	// const [submitOrder, setSubmitOrder] = useState(false);
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		// setUsername(name);
-		// console.log("name is " + name);
-
-		console.log("username is " + username);
-	}, [username]);
+		// console.log("method is " + paymentMethod);
+	}, [username, paymentMethod, address, email, number]);
 
 	return (
 		<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
@@ -81,6 +89,7 @@ export const CheckoutItems = ({ paymentMethod, setPaymentMethod }) => {
 											type="email"
 											placeholder="Email Address"
 											className="w-full h-full bg-transparent outline-none border-none ms-2 placeholder:font-light"
+											onChange={(e) => setEmail(e.target.value)}
 											required
 										/>
 									</div>
@@ -91,8 +100,9 @@ export const CheckoutItems = ({ paymentMethod, setPaymentMethod }) => {
 										/>
 										<input
 											type="tel"
-											placeholder="Phone Number"
+											placeholder="Mobile Number"
 											className="w-full h-full bg-transparent outline-none border-none ms-2 placeholder:font-light"
+											onChange={(e) => setNumber(e.target.value)}
 											required
 										/>
 									</div>
@@ -170,10 +180,10 @@ export const CheckoutItems = ({ paymentMethod, setPaymentMethod }) => {
 								</tr>
 								<tr className="">
 									<td className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]">
-										Shipping Address
+										Shipping Fee
 									</td>
 									<td className="border border-[#FF9C00] w-1/2 font-light px-3 py-4">
-										{address == "" ? "Enter your shipping address" : address}
+										FREE
 									</td>
 								</tr>
 								<tr className="">
@@ -193,7 +203,7 @@ export const CheckoutItems = ({ paymentMethod, setPaymentMethod }) => {
 											id="default-radio-1"
 											type="radio"
 											defaultValue="1"
-											onChange={() => setPaymentMethod("bank")}
+											onChange={() => setPaymentMethod("Direct Bank Transfer")}
 											name="default-radio"
 											className="w-5 h-5 cursor-pointer accent-green-600"
 											required
@@ -222,7 +232,7 @@ export const CheckoutItems = ({ paymentMethod, setPaymentMethod }) => {
 											defaultChecked=""
 											id="default-radio-2"
 											type="radio"
-											onChange={() => setPaymentMethod("cheque")}
+											onChange={() => setPaymentMethod("Cheque Payment")}
 											defaultValue="2"
 											name="default-radio"
 											className="w-5 h-5 cursor-pointer accent-green-600"
@@ -250,7 +260,7 @@ export const CheckoutItems = ({ paymentMethod, setPaymentMethod }) => {
 											defaultChecked=""
 											id="default-radio-3"
 											type="radio"
-											onChange={() => setPaymentMethod("card")}
+											onChange={() => setPaymentMethod("Credit Card")}
 											defaultValue="3"
 											name="default-radio"
 											className="w-5 h-5 cursor-pointer accent-green-600"
@@ -278,7 +288,7 @@ export const CheckoutItems = ({ paymentMethod, setPaymentMethod }) => {
 											id="default-radio-4"
 											type="radio"
 											defaultValue="4"
-											onChange={() => setPaymentMethod("paypal")}
+											onChange={() => setPaymentMethod("Paypal")}
 											name="default-radio"
 											className="w-5 h-5 cursor-pointer accent-green-600"
 											required

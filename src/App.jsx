@@ -54,7 +54,10 @@ function App() {
 	const [cartItems, setCartItems] = useState(0);
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [username, setUsername] = useState("");
-	const [address, setAddress] = useState("Enter your shipping address");
+	const [address, setAddress] = useState("");
+	const [number, setNumber] = useState("");
+	const [email, setEmail] = useState("");
+	const [paymentMethod, setPaymentMethod] = useState("");
 
 	return (
 		<>
@@ -72,6 +75,12 @@ function App() {
 					setUsername,
 					address,
 					setAddress,
+					paymentMethod,
+					setPaymentMethod,
+					number,
+					setNumber,
+					email,
+					setEmail,
 				}}>
 				<RouterProvider router={router} />
 			</ProductContext.Provider>
