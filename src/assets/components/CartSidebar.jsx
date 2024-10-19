@@ -27,10 +27,6 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 		setStoreCart(newStore);
 	};
 
-	useEffect(() => {
-		console.log(storeCart);
-	}, [storeCart]);
-
 	return (
 		<div
 			className={`w-full h-full bg-[#000b00c9] fixed z-50 top-0 transition-all ease-in-out overflow-hidden ${

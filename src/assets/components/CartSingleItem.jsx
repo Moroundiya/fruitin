@@ -43,7 +43,7 @@ export const CartSingleItem = ({
 				</div>
 			</td>
 			<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-				${item.total()}
+				{/* ${item.total()} */}
 			</td>
 		</tr>
 	);

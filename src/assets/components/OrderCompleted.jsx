@@ -3,8 +3,15 @@ import { ProductContext } from "../../App";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 export const OrderCompleted = () => {
-	const { totalPrice, username, paymentMethod, address, email, number } =
-		useContext(ProductContext);
+	const {
+		totalPrice,
+		username,
+		paymentMethod,
+		address,
+		email,
+		number,
+		storeCart,
+	} = useContext(ProductContext);
 	return (
 		<div className="w-full min-h-fit flex flex-col justify-center items-center px-4 pb-32 font-lexend mt-0 py-16 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative top-10 lg:top-[72px]">
 			<Icon
@@ -47,22 +54,22 @@ export const OrderCompleted = () => {
 					<p>SUBTOTAL</p>
 				</div>
 				<div className="space-y-2 my-3 border-y border-[#767676c0] text-[#767676] text-sm py-3">
-					<div className="flex justify-between items-center w-full">
-						<p>Zessi Dresses x 2</p>
-						<p>$32.50</p>
-					</div>
-					<div className="flex justify-between items-center w-full">
-						<p>Kirby T-Shirt</p>
-						<p>$20.20</p>
-					</div>
-					<div className="flex justify-between items-center w-full">
-						<p>Zessi Dresses x 2</p>
-						<p>$32.50</p>
-					</div>
+					{storeCart.map((item, i) => {
+						return (
+							<div
+								key={i}
+								className="flex justify-between items-center w-full">
+								<p>
+									{item.name} x {item.quantity}
+								</p>
+								<p>${item.price}</p>
+							</div>
+						);
+					})}
 				</div>
 				<div className="flex justify-between items-center mt-5 text-sm">
 					<p>SUBTOTAL</p>
-					<p> $62.40</p>
+					<p>${totalPrice}</p>
 				</div>
 				<div className="flex justify-between items-center mt-5 text-sm">
 					<p>SHIPPING</p>

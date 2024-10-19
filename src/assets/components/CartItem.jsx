@@ -38,11 +38,14 @@ export const CartItem = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		const totalAmount = storeCart.reduce((accumulator, item) => {
-			return (Number(accumulator) + Number(item.total())).toFixed(2);
-		}, 0);
-		setTotalPrice(totalAmount);
-		console.log(totalAmount);
+		if (localStorage.getItem("products")) {
+			const totalAmount = storeCart.reduce((accumulator, item) => {
+				return (Number(accumulator) + Number(item.total())).toFixed(2);
+			}, 0);
+			setTotalPrice(totalAmount);
+		}
+
+		// console.log(totalAmount);
 	}, [storeCart, totalPrice]);
 
 	return (

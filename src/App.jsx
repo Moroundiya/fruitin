@@ -7,7 +7,7 @@ import { FAQ } from "./assets/pages/FAQ";
 import { Contact } from "./assets/pages/Contact";
 import { Cart } from "./assets/pages/Cart";
 import { Checkout } from "./assets/pages/Checkout";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 export const ProductContext = createContext();
 
 import { allproducts } from "./assets/data/allproducts";
@@ -49,8 +49,12 @@ const router = createBrowserRouter([
 	},
 ]);
 function App() {
+
+
+	const getLocalStoredCart =JSON.parse(localStorage.getItem("products")) || "[]";
+
 	const [productList, setProductList] = useState(allproducts);
-	const [storeCart, setStoreCart] = useState([]);
+	const [storeCart, setStoreCart] = useState(getLocalStoredCart);
 	const [cartItems, setCartItems] = useState(0);
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [username, setUsername] = useState("");
@@ -59,6 +63,13 @@ function App() {
 	const [email, setEmail] = useState("");
 	const [paymentMethod, setPaymentMethod] = useState("");
 
+
+	useEffect(() => {
+		localStorage.setItem("products", JSON.stringify(storeCart));
+		console.log(storeCart)
+		console.log(localStorage.getItem('products'))
+	}, [storeCart])
+	
 	return (
 		<>
 			<ProductContext.Provider
