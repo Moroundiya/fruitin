@@ -40,7 +40,7 @@ export const CartItem = () => {
 	useEffect(() => {
 		if (localStorage.getItem("products")) {
 			const totalAmount = storeCart.reduce((accumulator, item) => {
-				return (Number(accumulator) + Number(item.total())).toFixed(2);
+				return (Number(accumulator) + Number(item.total)).toFixed(2);
 			}, 0);
 			setTotalPrice(totalAmount);
 		}
@@ -93,6 +93,7 @@ export const CartItem = () => {
 										<CartSingleItem
 											key={i}
 											item={item}
+											total={item.total}
 											{...item}
 											index={item.name}
 											increaseQuantity={increaseQuantity}

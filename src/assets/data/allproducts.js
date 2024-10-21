@@ -23,7 +23,7 @@ export const allproducts = [
         quantity: 1,
         total: function() {
               return (this.price * this.quantity).toFixed(2)
-        }
+        },
     },
     {
         type: 'New',
