@@ -35,7 +35,7 @@ export const OrderCompleted = () => {
 				</div>
 				<div className="flex flex-col justify-center space-y-1">
 					<p className="text-[#767676] text-sm">Date</p>
-					<p className="font-semibold">12/10/2024</p>
+					<p className="font-semibold">24/10/2024</p>
 				</div>
 				<div className="flex flex-col justify-center space-y-1">
 					<p className="text-[#767676] text-sm">Total</p>
