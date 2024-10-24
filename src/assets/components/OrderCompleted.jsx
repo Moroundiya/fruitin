@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import { ProductContext } from "../../App";
 import { Icon } from "@iconify/react/dist/iconify.js";
