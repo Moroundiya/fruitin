@@ -13,6 +13,10 @@ export const OrderCompleted = () => {
 		number,
 		storeCart,
 	} = useContext(ProductContext);
+
+	const orderdate = new Date().toLocaleDateString();
+
+	// console.log(orderdate);
 	return (
 		<div className="w-full min-h-fit flex flex-col justify-center items-center px-4 pb-32 font-lexend mt-0 py-16 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative top-10 lg:top-[72px]">
 			<Icon
@@ -36,7 +40,7 @@ export const OrderCompleted = () => {
 				</div>
 				<div className="flex flex-col justify-center space-y-1">
 					<p className="text-[#767676] text-sm">Date</p>
-					<p className="font-semibold">24/10/2024</p>
+					<p className="font-semibold">{orderdate}</p>
 				</div>
 				<div className="flex flex-col justify-center space-y-1">
 					<p className="text-[#767676] text-sm">Total</p>
