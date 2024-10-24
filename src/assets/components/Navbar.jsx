@@ -23,7 +23,7 @@ export const Navbar = () => {
 
 	useEffect(() => {
 		// console.log(currentpath);
-	}, [scroll, currentpath, showCart, showMenu, cartItems]);
+	}, [scroll, currentpath, showCart, showMenu]);
 
 	return (
 		<>

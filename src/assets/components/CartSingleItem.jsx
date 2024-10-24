@@ -9,7 +9,7 @@ export const CartSingleItem = ({
 	increaseQuantity,
 	index,
 	reduceQuantity,
-	total
+	overall,
 }) => {
 	return (
 		<tr className="text-center border border-b border-[#11100f] font-light block w-full lg:table-row">

@@ -1,12 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React, { useContext, useEffect } from "react";
-
-import cartImg1 from "../images/cart-img1.jpg";
-import cartImg2 from "../images/cart-img2.jpg";
-import cartImg3 from "../images/cart-img3.jpg";
-import cartImg4 from "../images/cart-img4.jpg";
-import cartImg5 from "../images/cart-img5.jpg";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../../App";
 import { CartSlideoutItem } from "./CartSlideoutItem";

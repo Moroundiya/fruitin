@@ -38,15 +38,8 @@ export const CartItem = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (localStorage.getItem("products")) {
-			const totalAmount = storeCart.reduce((accumulator, item) => {
-				return (Number(accumulator) + Number(item.total)).toFixed(2);
-			}, 0);
-			setTotalPrice(totalAmount);
-		}
-
 		// console.log(totalAmount);
-	}, [storeCart, totalPrice]);
+	}, [storeCart]);
 
 	return (
 		<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
@@ -93,7 +86,7 @@ export const CartItem = () => {
 										<CartSingleItem
 											key={i}
 											item={item}
-											total={item.total}
+											overall={item.overall}
 											{...item}
 											index={item.name}
 											increaseQuantity={increaseQuantity}

@@ -49,17 +49,15 @@ const router = createBrowserRouter([
 	},
 ]);
 function App() {
-	const updatedCart = JSON.parse(localStorage.getItem("products")) || "[]";
-	const updatedCartList = updatedCart.map((obj) => ({
-		...obj,
-		total: "Hello",
-	}));
-
-	// const getStoredProducts =
-	// 	JSON.parse(localStorage.getItem("products")) || "[]";
+	const retrievedList = JSON.parse(localStorage.getItem("products"));
+	const newCart =
+		retrievedList.map((item) => ({
+			...item,
+			total: eval("(" + item.total + ")"),
+		})) || "[]";
 
 	const [productList, setProductList] = useState(allproducts);
-	const [storeCart, setStoreCart] = useState(updatedCartList);
+	const [storeCart, setStoreCart] = useState(newCart);
 	const [cartItems, setCartItems] = useState(0);
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [username, setUsername] = useState("");
@@ -69,14 +67,21 @@ function App() {
 	const [paymentMethod, setPaymentMethod] = useState("");
 
 	useEffect(() => {
-		const convertCart = storeCart.map((obj) => ({
-			...obj,
-			total: obj.total.toString(),
+		setCartItems(storeCart.length);
+
+		const functionsToStore = storeCart.map((item) => ({
+			...item,
+			total: item.total.toString(),
 		}));
-		const stringifiedCart = JSON.stringify(convertCart);
-		localStorage.setItem("products", stringifiedCart);
-		// console.log(getStoredProducts);
-	}, [storeCart, updatedCart, updatedCartList]);
+		localStorage.setItem("products", JSON.stringify(functionsToStore));
+
+		if (localStorage.getItem("products")) {
+			const totalAmount = storeCart.reduce((accumulator, item) => {
+				return (Number(accumulator) + Number(item.total())).toFixed(2);
+			}, 0);
+			setTotalPrice(totalAmount);
+		}
+	}, [storeCart, cartItems]);
 
 	return (
 		<>

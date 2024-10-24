@@ -38,9 +38,8 @@ export const ProductsProps = ({
 				inCart: false,
 			};
 		}
-		setCartItems(storeCart.length);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [product, storeCart, cartItems, checkItem]);
+	}, [product, storeCart, checkItem]);
 
 	return (
 		<div className="bg-white rounded-[20px] shadow-lg p-1.5 lg:p-4 flex justify-center items-center flex-col cursor-pointer">
