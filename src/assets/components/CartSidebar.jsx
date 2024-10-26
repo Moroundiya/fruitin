@@ -51,7 +51,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 							Cart is empty, please go to shop and add item(s)
 						</p>
 					) : (
-						storeCart?.map((prod, i) => {
+						storeCart.map((prod, i) => {
 							return (
 								<CartSlideoutItem
 									key={i}

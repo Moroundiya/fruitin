@@ -136,7 +136,7 @@ export const CheckoutItems = () => {
 									</tr>
 								</thead>
 								<tbody className="block lg:table-row-group space-y-16 lg:space-y-0">
-									{storeCart?.map((item, i) => {
+									{storeCart.map((item, i) => {
 										return (
 											<tr
 												key={i}
