@@ -51,7 +51,7 @@ const router = createBrowserRouter([
 function App() {
 	const retrievedList = JSON.parse(localStorage.getItem("products"));
 	const newCart =
-		retrievedList.map((item) => ({
+		retrievedList?.map((item) => ({
 			...item,
 			total: eval("(" + item.total + ")"),
 		})) || [];
