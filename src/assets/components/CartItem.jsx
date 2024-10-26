@@ -12,7 +12,7 @@ export const CartItem = () => {
 
 	const increaseQuantity = (val) => {
 		setStoreCart(
-			storeCart.map((item) => {
+			storeCart?.map((item) => {
 				if (item.name == val) {
 					return { ...item, quantity: item.quantity + 1 };
 				}
@@ -22,7 +22,7 @@ export const CartItem = () => {
 	};
 	const reduceQuantity = (val) => {
 		setStoreCart(
-			storeCart.map((item) => {
+			storeCart?.map((item) => {
 				if (item.name == val) {
 					return {
 						...item,
@@ -81,7 +81,7 @@ export const CartItem = () => {
 								</tr>
 							</thead>
 							<tbody className="block lg:table-row-group space-y-16 lg:space-y-0">
-								{storeCart.map((item, i) => {
+								{storeCart?.map((item, i) => {
 									return (
 										<CartSingleItem
 											key={i}
