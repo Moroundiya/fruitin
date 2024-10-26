@@ -54,9 +54,6 @@ export const AboutUs = () => {
 			x: 0,
 			opacity: 1,
 			scale: 1,
-			transition: {
-				// bounce: 0.7,
-			},
 		},
 	};
 
