@@ -9,13 +9,13 @@ import { motion } from "framer-motion";
 
 export const AboutUs = () => {
 	const bounceDown = {
-		hidden: { opacity: 0, y: -40 },
+		hidden: { opacity: 0, y: -60 },
 		visible: {
 			opacity: 1,
 			y: 0,
 			transition: {
 				delay: 0.4,
-				duration: 1,
+				duration: 2,
 				type: "spring",
 				bounce: 0.7,
 			},
@@ -28,7 +28,7 @@ export const AboutUs = () => {
 			y: 0,
 			transition: {
 				delay: 0.4,
-				duration: 1,
+				duration: 2,
 				type: "spring",
 				bounce: 0.7,
 			},
@@ -57,13 +57,50 @@ export const AboutUs = () => {
 		},
 	};
 
+	const slideRight = {
+		hidden: { opacity: 0, x: -70 },
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				delay: 0.5,
+				duration: 2,
+				type: "spring",
+				bounce: 0.7,
+			},
+		},
+	};
+	const slideLeft = {
+		hidden: { opacity: 0, x: 70 },
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				delay: 0.5,
+				duration: 2,
+				type: "spring",
+				bounce: 0.7,
+			},
+		},
+	};
+
 	return (
 		<div className="w-full min-h-fit flex flex-col-reverse font-lexend pt-10 pb-5 bg-aboutBg bg-center bg-contain bg-no-repeat lg:flex-row lg:px-12 xl:w-4/5 lg:py-14 lg:mx-auto">
 			<div className="bg-orangeUnderlajy bg-center bg-cover hidden lg:flex bg-no-repeat h-1/2 justify-center lg:justify-start items-center py-8 lg:w-1/2">
-				<img
+				<motion.img
 					src={aboutBg}
 					className="lg:w-4/5"
 					alt=""
+					initial={{ scale: 0, opacity: 0 }}
+					whileInView={{
+						scale: 1,
+						opacity: 1,
+						transition: {
+							duration: 2,
+							bounce: 0.4,
+							type: "spring",
+						},
+					}}
 				/>
 			</div>
 			<div className="px-3 lg:w-1/2 flex flex-col justify-center">
@@ -81,15 +118,23 @@ export const AboutUs = () => {
 						About Us Company
 					</p>
 				</motion.div>
-				<h1 className="mt-2 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5">
+				<motion.h1
+					className="mt-2 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5"
+					variants={slideRight}
+					initial="hidden"
+					whileInView="visible">
 					Organic Integrity Durable Impact Frutin's Story
-				</h1>
-				<p className="text-md leading-[1.5] my-4 text-[#54595F] lg:my-6 lg:leading-[1.6]">
+				</motion.h1>
+				<motion.p
+					className="text-md leading-[1.5] my-4 text-[#54595F] lg:my-6 lg:leading-[1.6]"
+					variants={slideLeft}
+					initial="hidden"
+					whileInView="visible">
 					Some studies suggest that organic foods may have higher levels of
 					certain nutrients and antioxidants compared to conventionally grown
 					foods. However, this can vary depending on factors like soil quality
 					and growing conditions.
-				</p>
+				</motion.p>
 
 				<motion.ul
 					className="text-black font-semiold space-y-2 xl:columns-2"

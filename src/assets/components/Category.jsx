@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { category } from "../data/category";
 import { CategoryProps } from "../props/CategoryProps";
+import { motion } from "framer-motion";
 
 export const Category = () => {
 	const slideRef = useRef();
@@ -25,9 +26,54 @@ export const Category = () => {
 		});
 	};
 
+	const bounceDown = {
+		hidden: { opacity: 0, y: -60 },
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				delay: 0.4,
+				duration: 2,
+				type: "spring",
+				bounce: 0.7,
+			},
+		},
+	};
+
+	const bounceUp = {
+		hidden: { opacity: 0, y: 70 },
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				delay: 0.4,
+				duration: 2,
+				type: "spring",
+				bounce: 0.7,
+			},
+		},
+	};
+
+	// const parentVariant = {
+	// 	hidden: { opacity: 0 },
+	// 	visible: {
+	// 		opacity: 1,
+	// 		transition: {
+	// 			duration: 1,
+	// 			delayChildren: 0.2,
+	// 			staggerChildren: 0.25,
+	// 			type: "spring",
+	// 		},
+	// 	},
+	// };
+
 	return (
 		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend py-10 lg:px-12 lg:pb-16 lg:bg-transparent xl:mx-auto xl:px-0">
-			<div className="flex items-center justify-center lg:justify-start">
+			<motion.div
+				className="flex items-center justify-center lg:justify-start"
+				variants={bounceDown}
+				initial="hidden"
+				whileInView="visible">
 				<img
 					src={titleIcon}
 					className="h-5"
@@ -36,10 +82,14 @@ export const Category = () => {
 				<p className="font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl">
 					Food Category
 				</p>
-			</div>
-			<h1 className="mt-2 mb-3 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5">
+			</motion.div>
+			<motion.h1
+				className="mt-2 mb-3 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5"
+				variants={bounceUp}
+				initial="hidden"
+				whileInView="visible">
 				What We’re Offering
-			</h1>
+			</motion.h1>
 
 			<Swiper
 				slidesPerView={5}

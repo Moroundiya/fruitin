@@ -3,9 +3,27 @@
 import React from "react";
 import cardBg from "../images/card-bg.png";
 import circleBg from "../images/circle-bg.png";
+import { motion } from "framer-motion";
 export const CategoryProps = ({ img, desc, title }) => {
+	const childrenVariants = {
+		hidden: { y: 100, opacity: 0, scale: 0 },
+		visible: {
+			y: 0,
+			opacity: 1,
+			scale: 1,
+			tranition: {
+				type: "spring",
+				bounce: 0.7,
+				duration: 0.2,
+			},
+		},
+	};
 	return (
-		<div className="bg-[#F5F7EB] shadow-md relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out">
+		<motion.div
+			className="bg-[#F5F7EB] shadow-md relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out"
+			variants={childrenVariants}
+			initial="hidden"
+			whileInView="visible">
 			<img
 				src={cardBg}
 				className="w-full h-full absolute left-0 top-0"
@@ -29,6 +47,6 @@ export const CategoryProps = ({ img, desc, title }) => {
 			<p className="text-[1.1rem] lg:text-[1.18rem] font-semibold text-black group-hover:text-white transition-all duration-700 ease-in-out">
 				{title}
 			</p>
-		</div>
+		</motion.div>
 	);
 };
