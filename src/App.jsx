@@ -54,7 +54,7 @@ function App() {
 		retrievedList.map((item) => ({
 			...item,
 			total: eval("(" + item.total + ")"),
-		})) || "[]";
+		})) || [];
 
 	const [productList, setProductList] = useState(allproducts);
 	const [storeCart, setStoreCart] = useState(newCart);
@@ -81,7 +81,7 @@ function App() {
 			}, 0);
 			setTotalPrice(totalAmount);
 		}
-	}, [storeCart, cartItems]);
+	}, [storeCart, cartItems, paymentMethod]);
 
 	return (
 		<>

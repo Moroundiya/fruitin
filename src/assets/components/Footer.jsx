@@ -265,6 +265,11 @@ export const Footer = () => {
 							className="h-5 lg:h-auto"
 						/>
 					</div>
+					<a
+						href="https://wa.me/qr/4J43PIRULNA5G1"
+						className="text-[0.95rem] lg:text-md mt-5 lg:mt-0">
+						Designed by Moroundiya 😎
+					</a>
 				</div>
 			</div>
 		</footer>

@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import titleIcon from "../images/title_icon.svg";
 import productBg1 from "../images/vector_shape_1.png";
 import productBg2 from "../images/vector_shape_2.png";
-import cart3 from "../images/cart3.jpg";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { ProductContext } from "../../App";
 import { useNavigate } from "react-router";
@@ -27,7 +26,7 @@ export const CheckoutItems = () => {
 
 	useEffect(() => {
 		// console.log("method is " + paymentMethod);
-	}, [username, paymentMethod, address, email, number]);
+	}, [username, address, email, number]);
 
 	return (
 		<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
@@ -161,9 +160,9 @@ export const CheckoutItems = () => {
 													</div>
 												</td>
 												<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
-													${item.total()}  
+													${item.total()}
 												</td>
-											</tr> 
+											</tr>
 										);
 									})}
 								</tbody>
@@ -217,8 +216,8 @@ export const CheckoutItems = () => {
 
 									<p
 										className={`ms-7 text-[#a1b1bc] bg-[#ecf0f1]  border-[#d8d8d8] font-light  text-sm lg:w-fit transition-all ease-in-out duration-500 overflow-hidden max-h-0 px-2 ${
-											paymentMethod == "bank"
-												? "max-h-[100px] py-2 border my-2"
+											paymentMethod == "Direct Bank Transfer"
+												? "max-h-[120px] lg:max-h-[100px] py-2 border my-2"
 												: " max-h-0 border-none"
 										}`}>
 										Make your payment directly into our bank account. Please use
@@ -246,7 +245,7 @@ export const CheckoutItems = () => {
 									</div>
 									<p
 										className={`ms-7 text-[#a1b1bc] bg-[#ecf0f1] border overflow-hidden max-h-0 border-[#d8d8d8] font-light px-2 text-sm lg:w-fit transition-all ease-in-out duration-500 ${
-											paymentMethod == "cheque"
+											paymentMethod == "Cheque Payment"
 												? "max-h-[100px] py-2 border my-2"
 												: " max-h-0 border-none"
 										}`}>
@@ -274,7 +273,7 @@ export const CheckoutItems = () => {
 									</div>
 									<p
 										className={`ms-7 text-[#a1b1bc] bg-[#ecf0f1] border overflow-hidden max-h-0 border-[#d8d8d8] font-light px-2 text-sm lg:w-fit transition-all ease-in-out duration-500 ${
-											paymentMethod == "card"
+											paymentMethod == "Credit Card"
 												? "max-h-[100px] py-2 border my-2"
 												: " max-h-0 border-none"
 										}`}>
@@ -301,7 +300,7 @@ export const CheckoutItems = () => {
 									</div>
 									<p
 										className={`${
-											paymentMethod == "paypal"
+											paymentMethod == "Paypal"
 												? "max-h-[100px] py-2 border my-2"
 												: " max-h-0 border-none"
 										} ms-7 text-[#a1b1bc] bg-[#ecf0f1] border overflow-hidden max-h-0 border-[#d8d8d8] font-light px-2 text-sm lg:w-fit transition-all ease-in-out duration-500`}>
