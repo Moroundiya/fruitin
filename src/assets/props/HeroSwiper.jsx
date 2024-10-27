@@ -27,22 +27,22 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 	// 		opacity: 0,
 	// 	},
 	// };
-  const titleVariant = {
-		hidden: { opacity: 0, x: -40 },
-		visible: {
-			opacity: 1,
-			x: 0,
-			transition: {
-				delay: 0.5,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-    };
+//   const titleVariant = {
+// 		hidden: { opacity: 0, x: -40 },
+// 		visible: {
+// 			opacity: 1,
+// 			x: 0,
+// 			transition: {
+// 				delay: 0.5,
+// 				duration: 2,
+// 				type: "spring",
+// 				bounce: 0.7,
+// 			},
+// 		},
+//     };
     
 	return (
-		<motion.div key={title2} className="w-full xl:w-5/5 2xl:4/5 mx-auto mt-5 sm:mt-20 md:mt-28 lg:mt-[170px] flex flex-col items-center relative pb-5">
+		<motion.div className="w-full xl:w-5/5 2xl:4/5 mx-auto mt-5 sm:mt-20 md:mt-28 lg:mt-[170px] flex flex-col items-center relative pb-5">
 			<img
 				src={heroShape1}
 				className="h-9 absolute top-[46%] left-11 md:left-28 md:top-[40%] lg:hidden xl:block xl:top-[70%] xl:-left-10 2xl:-left-20 2xl:top-[75%]  "
@@ -73,19 +73,21 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 						/>
 						<motion.p
 							className="font-lobster text-[#FF9C00] ms-2 text-xl sm:text-2xl"
-							key={title1}
-							initial={{ opacity: 0, y: 30 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ type: "spring", duration: 2 }}>
+							// key={title1}
+							// initial={{ opacity: 0, y: 30 }}
+							// animate={{ opacity: 1, y: 0 }}
+							// transition={{ type: "spring", duration: 2 }}
+						>
 							100% Quality Foods
 						</motion.p>
 					</div>
 					<motion.p
 						className="text-white flex flex-col items-center text-[2.8rem] text-center px-3 leading-tight sm:px-0 mx-auto font-bold my-6 sm:mx-auto sm:text-6xl sm:leading-[1.1] lg:text-[4.3rem] xl:text-7xl lg:w-full xl:mt-8 xl:mb-14 2xl:mb-10 xl:leading-[1.2] 2xl:leading-[1.1] 2xl:text-[5.4rem]"
-						variants={titleVariant}
-						initial="hidden"
-						animate="visible"
-						key={title2}>
+						// variants={titleVariant}
+						// initial="hidden"
+						// animate="visible"
+						// key={title2}
+					>
 						<span>{title1}</span>
 						<span>{title2}</span>
 					</motion.p>
@@ -107,10 +109,10 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 						alt=""
 					/>
 					<motion.img
-						key={img}
-						initial={{ opacity: 0, y: 30 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ type: "spring", duration: 2 }}
+						// key={img}
+						// initial={{ opacity: 0, y: 30 }}
+						// animate={{ opacity: 1, y: 0 }}
+						// transition={{ type: "spring", duration: 2 }}
 						src={img}
 						className="w-full fruit-img"
 						alt=""
