@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import titleIcon from "../images/title_icon.svg";
 import rotateImg from "../images/choose-rotate.png";
