@@ -83,7 +83,7 @@ export const WhyChooseUs = () => {
 		},
 	};
 	return (
-		<div className="w-full min-h-fit justify-center px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 mt-24 lg:mt-3 font-lexend 2xl:mt-16 lg:mx-auto relative pb-16">
+		<div className="w-full min-h-fit justify-center overflow-x-clip px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 mt-24 lg:mt-3 font-lexend 2xl:mt-16 lg:mx-auto relative pb-16">
 			<motion.div
 				className="lg:hidden w-full flex flex-col justify-center items-center absolute top-0 left-0 -z-10 overflow-x-clip"
 				initial={{ scale: 0, opacity: 0 }}

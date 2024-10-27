@@ -68,7 +68,7 @@ export const Category = () => {
 	// };
 
 	return (
-		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend py-10 lg:px-12 lg:pb-16 lg:bg-transparent xl:mx-auto xl:px-0">
+		<div className="w-full min-h-fit flex overflow-x-hidden flex-col justify-center items-center font-lexend py-10 lg:px-12 lg:pb-16 lg:bg-transparent xl:mx-auto xl:px-0">
 			<motion.div
 				className="flex items-center justify-center lg:justify-start"
 				variants={bounceDown}
