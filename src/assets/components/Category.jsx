@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 import titleIcon from "../images/title_icon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,11 +7,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
-
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { category } from "../data/category";
 import { CategoryProps } from "../props/CategoryProps";
 import { motion } from "framer-motion";
+import { ProductContext } from "../../App";
 
 export const Category = () => {
 	const slideRef = useRef();
@@ -25,47 +25,7 @@ export const Category = () => {
 			isLast: swiper.isEnd,
 		});
 	};
-
-	const bounceDown = {
-		hidden: { opacity: 0, y: -60 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				delay: 0.4,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
-
-	const bounceUp = {
-		hidden: { opacity: 0, y: 70 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				delay: 0.4,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
-
-	// const parentVariant = {
-	// 	hidden: { opacity: 0 },
-	// 	visible: {
-	// 		opacity: 1,
-	// 		transition: {
-	// 			duration: 1,
-	// 			delayChildren: 0.2,
-	// 			staggerChildren: 0.25,
-	// 			type: "spring",
-	// 		},
-	// 	},
-	// };
+	const { bounceDown, bounceUp } = useContext(ProductContext);
 
 	return (
 		<div className="w-full min-h-fit flex overflow-x-hidden flex-col justify-center items-center font-lexend py-10 lg:px-12 lg:pb-16 lg:bg-transparent xl:mx-auto xl:px-0">

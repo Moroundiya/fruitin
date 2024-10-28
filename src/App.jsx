@@ -83,6 +83,96 @@ function App() {
 		}
 	}, [storeCart, cartItems, paymentMethod]);
 
+	const bounceDown = {
+		hidden: { opacity: 0, y: -60 },
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				delay: 0.4,
+				duration: 2,
+				type: "spring",
+				bounce: 0.7,
+			},
+		},
+	};
+	const bounceUp = {
+		hidden: { opacity: 0, y: 70 },
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				delay: 0.4,
+				duration: 2,
+				type: "spring",
+				bounce: 0.7,
+			},
+		},
+	};
+
+	const parentVariant = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				duration: 1,
+				delayChildren: 0.2,
+				staggerChildren: 0.25,
+				type: "spring",
+			},
+		},
+	};
+
+	const childrenVariants = {
+		hidden: { x: 100, opacity: 0, scale: 0 },
+		visible: {
+			x: 0,
+			opacity: 1,
+			scale: 1,
+		},
+	};
+
+	const slideRight = {
+		hidden: { opacity: 0, x: -70 },
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				delay: 0.5,
+				duration: 2,
+				type: "spring",
+				bounce: 0.7,
+			},
+		},
+	};
+	const slideLeft = {
+		hidden: { opacity: 0, x: 70 },
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				delay: 0.5,
+				duration: 2,
+				type: "spring",
+				bounce: 0.7,
+			},
+		},
+	};
+
+
+	const zoomUp = {
+		hidden: { scale: 0, opacity: 0 },
+		visible: {
+			scale: 1,
+			opacity: 1,
+			transition: {
+				duration: 2,
+				bounce: 0.4,
+				type: "spring",
+			},
+		}
+	}
+
 	return (
 		<>
 			<ProductContext.Provider
@@ -105,6 +195,13 @@ function App() {
 					setNumber,
 					email,
 					setEmail,
+					bounceDown,
+					slideRight,
+					slideLeft,
+					childrenVariants,
+					parentVariant,
+					bounceUp,
+					zoomUp,
 				}}>
 				<RouterProvider router={router} />
 			</ProductContext.Provider>

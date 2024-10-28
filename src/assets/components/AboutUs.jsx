@@ -1,88 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import aboutBg from "../images/about_img.png";
 import titleIcon from "../images/title_icon.svg";
 import bullet from "../images/bullet.svg";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { ProductContext } from "../../App";
 
 export const AboutUs = () => {
-	const bounceDown = {
-		hidden: { opacity: 0, y: -60 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				delay: 0.4,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
-	const bounceUp = {
-		hidden: { opacity: 0, y: 70 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				delay: 0.4,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
-
-	const parentVariant = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				duration: 1,
-				delayChildren: 0.2,
-				staggerChildren: 0.25,
-				type: "spring",
-			},
-		},
-	};
-
-	const childrenVariants = {
-		hidden: { x: 100, opacity: 0, scale: 0 },
-		visible: {
-			x: 0,
-			opacity: 1,
-			scale: 1,
-		},
-	};
-
-	const slideRight = {
-		hidden: { opacity: 0, x: -70 },
-		visible: {
-			opacity: 1,
-			x: 0,
-			transition: {
-				delay: 0.5,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
-	const slideLeft = {
-		hidden: { opacity: 0, x: 70 },
-		visible: {
-			opacity: 1,
-			x: 0,
-			transition: {
-				delay: 0.5,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
+	const {
+		bounceDown,
+		slideRight,
+		slideLeft,
+		childrenVariants,
+		parentVariant,
+		bounceUp,
+		zoomUp,
+	} = useContext(ProductContext);
 
 	return (
 		<motion.div className="w-full overflow-hidden box-border min-h-fit flex flex-col-reverse font-lexend pt-10 pb-5 bg-aboutBg bg-center bg-contain bg-no-repeat lg:flex-row lg:px-12 xl:w-4/5 lg:py-14 lg:mx-auto">
@@ -91,16 +26,9 @@ export const AboutUs = () => {
 					src={aboutBg}
 					className="lg:w-4/5"
 					alt=""
-					initial={{ scale: 0, opacity: 0 }}
-					whileInView={{
-						scale: 1,
-						opacity: 1,
-						transition: {
-							duration: 2,
-							bounce: 0.4,
-							type: "spring",
-						},
-					}}
+					variants={zoomUp}
+					initial="hidden"
+					whileInView="visible"
 				/>
 			</div>
 			<div className="px-3 lg:w-1/2 flex flex-col justify-center">

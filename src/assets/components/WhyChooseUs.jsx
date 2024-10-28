@@ -1,88 +1,19 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import titleIcon from "../images/title_icon.svg";
 import rotateImg from "../images/choose-rotate.png";
 import chooseImg from "../images/why-choose-us.png";
 import { chooseus } from "./../data/chooseus";
 import { ChooseUs } from "../props/ChooseUs";
 import { motion } from "framer-motion";
-
+import { ProductContext } from "../../App";
 export const WhyChooseUs = () => {
-	const bounceDown = {
-		hidden: { opacity: 0, y: -60 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				delay: 0.4,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
-	const bounceUp = {
-		hidden: { opacity: 0, y: 70 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				delay: 0.4,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
-
-	const parentVariant = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				duration: 1,
-				delayChildren: 0.2,
-				staggerChildren: 0.25,
-				type: "spring",
-			},
-		},
-	};
-
-	const childrenVariants = {
-		hidden: { x: 100, opacity: 0, scale: 0 },
-		visible: {
-			x: 0,
-			opacity: 1,
-			scale: 1,
-		},
-	};
-
-	const slideRight = {
-		hidden: { opacity: 0, x: -70 },
-		visible: {
-			opacity: 1,
-			x: 0,
-			transition: {
-				delay: 0.5,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
-	const slideLeft = {
-		hidden: { opacity: 0, x: 70 },
-		visible: {
-			opacity: 1,
-			x: 0,
-			transition: {
-				delay: 0.5,
-				duration: 2,
-				type: "spring",
-				bounce: 0.7,
-			},
-		},
-	};
+	const {
+		bounceDown,
+		slideRight,
+		slideLeft,
+		parentVariant,
+	} = useContext(ProductContext);
 	return (
 		<div className="w-full min-h-fit justify-center overflow-x-clip px-3 items-center lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 mt-24 lg:mt-3 font-lexend 2xl:mt-16 lg:mx-auto relative pb-16">
 			<motion.div
