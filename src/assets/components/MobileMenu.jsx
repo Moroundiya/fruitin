@@ -48,6 +48,7 @@ export const MobileMenu = ({ showMenu, setShowMenu }) => {
 							duration: 2,
 							type: "spring",
 							bounce: 0.7,
+							delay: 0.2,
 						},
 					}}
 				/>
