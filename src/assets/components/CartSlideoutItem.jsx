@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
-
+import { motion } from "framer-motion";
+import { ProductContext } from "../../App";
 
 export const CartSlideoutItem = ({ img, name, price, index, remProd }) => {
+	const { childrenVariants } = useContext(ProductContext);
 	return (
-		<div className="py-3 border-b flex w-full">
+		<motion.div
+			className="py-3 border-b flex w-full"
+			variants={childrenVariants}>
 			<div className="flex justify-between items-center w-full">
 				<div className="flex items-center">
 					<img
@@ -23,6 +27,6 @@ export const CartSlideoutItem = ({ img, name, price, index, remProd }) => {
 					onClick={() => remProd(index)}
 				/>
 			</div>
-		</div>
+		</motion.div>
 	);
 };

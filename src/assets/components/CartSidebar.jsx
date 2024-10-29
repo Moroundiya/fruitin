@@ -4,6 +4,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../../App";
 import { CartSlideoutItem } from "./CartSlideoutItem";
+import { motion } from "framer-motion";
 
 export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 	if (showCart || showMenu) {
@@ -12,7 +13,17 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 		document.body.style.overflow = "auto";
 	}
 
-	const { storeCart, setStoreCart } = useContext(ProductContext);
+	const {
+		storeCart,
+		setStoreCart,
+		bounceDown,
+		slideRight,
+		slideLeft,
+		childrenVariants,
+		parentVariant,
+		bounceUp,
+		zoomUp,
+	} = useContext(ProductContext);
 
 	const remProd = (val) => {
 		const newStore = storeCart.filter((item) => {
@@ -20,7 +31,6 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 		});
 		setStoreCart(newStore);
 	};
-
 	return (
 		<div
 			className={`w-full h-full bg-[#000b00c9] fixed z-50 top-0 transition-all ease-in-out overflow-hidden ${
@@ -34,22 +44,51 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 						? "left-0 opacity-100 delay-100 duration-[1s]"
 						: "left-full opacity-0 duration-[0.8s]"
 				} `}>
-				<Icon
-					icon="material-symbols-light:cancel-outline-rounded"
-					className="absolute right-5 top-5 text-4xl cursor-pointer text-red-700"
-					onClick={() => setShowCart(false)}
-				/>
-				<p className="text-xl font-bold pt-14 lg:text-[1.45rem]">
+				<motion.span
+					initial={{ scale: 0, opacity: 0 }}
+					whileInView={{
+						scale: 1,
+						opacity: 1,
+						transition: {
+							type: "spring",
+							duration: 1,
+							bounce: 0.7,
+							delay: 0.6,
+						},
+					}}>
+					<Icon
+						icon="material-symbols-light:cancel-outline-rounded"
+						className="absolute right-5 top-5 text-4xl cursor-pointer text-red-700"
+						onClick={() => setShowCart(false)}
+					/>
+				</motion.span>
+				<motion.p
+					className="text-xl font-bold pt-14 lg:text-[1.45rem]"
+					variants={slideRight}
+					initial="hidden"
+					whileInView="visible">
 					Shopping Cart
-				</p>
-				<div className="w-full h-[2px] mt-2 bg-[#D9D9D9] rounded-3xl overflow-hidden">
+				</motion.p>
+				<motion.div
+					className="w-full h-[2px] mt-2 bg-[#D9D9D9] rounded-3xl overflow-hidden"
+					variants={slideLeft}
+					initial="hidden"
+					whileInView="visible">
 					<div className="h-full w-[50px] bg-[#017D03]"></div>
-				</div>
-				<div className="mt-8 mb-5 border-t h-[70%] md:h-[700px] lg:h-[70%] overflow-y-auto">
+				</motion.div>
+				<motion.div
+					className="mt-8 mb-5 border-t h-[70%] md:h-[700px] lg:h-[70%] overflow-y-auto overflow-x-hidden"
+					variants={parentVariant}
+					initial="hidden"
+					whileInView="visible">
 					{storeCart[0] == undefined ? (
-						<p className="my-10 text-sm text-gray-500">
+						<motion.p
+							className="my-10 text-sm text-gray-500"
+							variants={zoomUp}
+							initial="hidden"
+							whileInView="visible">
 							Cart is empty, please go to shop and add item(s)
-						</p>
+						</motion.p>
 					) : (
 						storeCart.map((prod, i) => {
 							return (
@@ -62,7 +101,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 							);
 						})
 					)}
-				</div>
+				</motion.div>
 				<div className="w-full flex justify-end">
 					<Link
 						to="/cart"

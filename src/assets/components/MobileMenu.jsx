@@ -31,11 +31,16 @@ export const MobileMenu = ({ showMenu, setShowMenu }) => {
 						? "right-0 opacity-100 delay-100 duration-[1s]"
 						: "right-full opacity-0 duration-[0.8s]"
 				} `}>
-				<Icon
-					icon="material-symbols-light:cancel-outline-rounded"
-					className="absolute right-5 top-5 text-4xl cursor-pointer text-white"
-					onClick={() => setShowMenu(false)}
-				/>
+				<motion.span
+					variants={zoomUp}
+					initial="hidden"
+					whileInView="visible">
+					<Icon
+						icon="material-symbols-light:cancel-outline-rounded"
+						className="absolute right-5 top-5 text-4xl cursor-pointer text-white"
+						onClick={() => setShowMenu(false)}
+					/>
+				</motion.span>
 				<motion.img
 					src={footerLogo2}
 					alt=""
