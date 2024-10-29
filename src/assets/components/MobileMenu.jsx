@@ -109,13 +109,37 @@ export const MobileMenu = ({ showMenu, setShowMenu }) => {
 				</AnimatePresence>
 
 				<div className="text-white text-2xl flex space-x-5 w-full justify-center items-center absolute bottom-24 left-0">
-					<Icon icon="ic:baseline-facebook" />
-					<Icon icon="mdi:twitter" />
-					<Icon icon="hugeicons:instagram" />
-					<Icon icon="ic:baseline-whatsapp" />
+					<motion.span
+						variants={slideRight}
+						initial="hidden"
+						whileInView="visible">
+						<Icon icon="ic:baseline-facebook" />
+					</motion.span>
+					<motion.span
+						variants={bounceDown}
+						initial="hidden"
+						whileInView="visible">
+						<Icon icon="mdi:twitter" />
+					</motion.span>
+					<motion.span
+						variants={bounceUp}
+						initial="hidden"
+						whileInView="visible">
+						<Icon icon="hugeicons:instagram" />
+					</motion.span>
+					<motion.span
+						variants={slideLeft}
+						initial="hidden"
+						whileInView="visible">
+						<Icon icon="ic:baseline-whatsapp" />
+					</motion.span>
 				</div>
 
-				<div className="w-full absolute bottom-10 left-0">
+				<motion.div
+					className="w-full absolute bottom-10 left-0"
+					variants={zoomUp}
+					initial="hidden"
+					whileInView="visible">
 					<p className="flex flex-col justify-center items-center leading-[1.2] text-sm opacity-40 text-white">
 						<p className="flex items-center">
 							{" "}
@@ -128,7 +152,7 @@ export const MobileMenu = ({ showMenu, setShowMenu }) => {
 						</p>
 						<p> All Rights Reserved.</p>
 					</p>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
