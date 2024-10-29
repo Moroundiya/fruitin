@@ -59,6 +59,7 @@ export const Navbar = () => {
 							type: "spring",
 							duration: 2,
 							bounce: 0.6,
+							delay: 0.6,
 						},
 					}}>
 					<Icon
@@ -100,6 +101,7 @@ export const Navbar = () => {
 							type: "spring",
 							duration: 2,
 							bounce: 0.5,
+							delay: 0.6,
 						},
 					}}>
 					<Link
