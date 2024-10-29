@@ -84,7 +84,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 					{storeCart[0] == undefined ? (
 						<motion.p
 							className="my-10 text-sm text-gray-500"
-							variants={zoomUp}
+							variants={bounceUp}
 							initial="hidden"
 							whileInView="visible">
 							Cart is empty, please go to shop and add item(s)
@@ -102,7 +102,11 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 						})
 					)}
 				</motion.div>
-				<div className="w-full flex justify-end">
+				<motion.div
+					className="w-full flex justify-end"
+					variants={slideLeft}
+					initial="hidden"
+					whileInView="visible">
 					<Link
 						to="/cart"
 						className={`w-fit justify-center items-center ${
@@ -116,7 +120,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 							className="text-white text-xl ms-1 pe-0"
 						/>
 					</Link>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
