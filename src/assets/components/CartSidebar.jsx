@@ -39,7 +39,7 @@ export const CartSidebar = ({ setShowCart, showCart, showMenu }) => {
 					: "left-full opacity-0 delay-300 duration-[1s]"
 			} flex justify-end font-lexend`}>
 			<div
-				className={`w-10/12 lg:w-[440px] h-full bg-white px-5 lg:px-7 pb-5 relative transition-all ease-in-out   ${
+				className={`w-10/12 lg:w-[440px] h-full bg-white px-5 lg:px-7 pb-5 relative transition-all ease-in-out overflow-x-hidden   ${
 					showCart
 						? "left-0 opacity-100 delay-100 duration-[1s]"
 						: "left-full opacity-0 duration-[0.8s]"

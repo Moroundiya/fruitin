@@ -45,7 +45,7 @@ export const Products = () => {
 	} = useContext(ProductContext);
 
 	return (
-		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:py-16 xl:py-20 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative overflow-x-hidden">
+		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:py-16 xl:py-20 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative overflow-x-clip">
 			<img
 				src={productBg1}
 				className="absolute top-0 left-0 -z-0"
