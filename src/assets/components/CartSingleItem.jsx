@@ -12,7 +12,7 @@ export const CartSingleItem = ({
 	overall,
 }) => {
 	return (
-		<tr className="text-center border border-b border-[#11100f] font-light block w-full lg:table-row">
+		<tr className="text-center border border-b border-[#FF9C00] font-light block w-full lg:table-row">
 			<td className="w-full lg:w-auto flex justify-end items-center px-5 lg:px-0 lg:table-cell border-b border-[#FF9C00] lg:border-b-0 before:content-['Image'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold">
 				<img
 					src={img}
@@ -43,7 +43,7 @@ export const CartSingleItem = ({
 					</button>
 				</div>
 			</td>
-			<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
+			<td className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell relative lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold ">
 				${item.total()}
 			</td>
 		</tr>
