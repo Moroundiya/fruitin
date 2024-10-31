@@ -22,7 +22,7 @@ export const HowItWorks = ({ bgcolor }) => {
 
 	return (
 		<div
-			className={`w-full min-h-fit flex flex-col overflow-x-hidden justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:pb-16 lg:pt-12 xl:pt-20 xl:10 bg-${bgcolor} xl:mx-auto xl:px-0 relative`}>
+			className={`w-full min-h-fit flex flex-col overflow-x-hidden overflow-y-clip justify-center items-center font-lexend mt-0 py-10 lg:px-12 lg:pb-16 lg:pt-12 xl:pt-20 xl:10 bg-${bgcolor} xl:mx-auto xl:px-0 relative`}>
 			<img
 				src={productBg1}
 				className="absolute top-0 left-0 -z-0 xl:h-full"
