@@ -56,7 +56,7 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 						src={heroArrow}
 						className="absolute bottom-1 right-0 h-[32px] sm:right-24 md:right-40 lg:hidden xl:block lg:h-14 lg:-right-5 lg:bottom-20 xl:h-12 xl:bottom-0 xl:right-16 2xl:h-20 2xl:-bottom-5 2xl:right-0"
 						alt=""
-						variants={slideRight}
+						variants={slideLeft}
 						initial="hidden"
 						whileInView="visible"
 					/>

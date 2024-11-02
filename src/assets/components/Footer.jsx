@@ -7,7 +7,7 @@ import footerLogo from "../images/logo-footer.svg";
 import paymentMethod from "../images/payment-method.png";
 import { Icon } from "@iconify/react";
 import titleIcon from "../images/title_icon.svg";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ProductContext } from "../../App";
 
 export const Footer = () => {
@@ -20,6 +20,29 @@ export const Footer = () => {
 		bounceUp,
 		zoomUp,
 	} = useContext(ProductContext);
+
+	const footerParent = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				delay: 0.5,
+				duration: 1,
+				delayChildren: 0.2,
+				staggerChildren: 0.25,
+				type: "spring",
+			},
+		},
+	};
+
+	const footerChildren = {
+		hidden: { x: 100, opacity: 0, scale: 0 },
+		visible: {
+			x: 0,
+			opacity: 1,
+			scale: 1,
+		},
+	};
 	return (
 		<footer className=" bg-[#002D00] h-auto pt-12 lg:pt-20 relative font-lexend overflow-x-hidden">
 			<img
@@ -141,118 +164,109 @@ export const Footer = () => {
 							/>
 							<p className="text-xl lg:text-[1.38rem]">Categories</p>
 						</motion.div>
-						<AnimatePresence>
-							<motion.ul
-								className="space-y-2.5 lg:space-y-3.5"
-								variants={parentVariant}
-								initial="hidden"
-								whileInView="visible"
-								exit="hidden">
-								<motion.li
-									className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]"
-									variants={childrenVariants}>
-									<Icon
-										icon="tabler:arrow-right"
-										className="text-xl"
-									/>
-									<span>Fresh Vegetable</span>
-								</motion.li>
+						<motion.ul
+							className="space-y-2.5 lg:space-y-3.5"
+							variants={footerParent}
+							initial="hidden"
+							whileInView="visible">
+							<motion.li
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]"
+								variants={footerChildren}>
+								<Icon
+									icon="tabler:arrow-right"
+									className="text-xl"
+								/>
+								<span>Fresh Vegetable</span>
+							</motion.li>
 
-								<motion.li
-									variants={childrenVariants}
-									className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
-									<Icon
-										icon="tabler:arrow-right"
-										className="text-xl"
-									/>
-									<span>Natural Fruits</span>
-								</motion.li>
-								<motion.li
-									variants={childrenVariants}
-									className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
-									<Icon
-										icon="tabler:arrow-right"
-										className="text-xl"
-									/>
-									<span>Dairy Products</span>
-								</motion.li>
-								<motion.li
-									variants={childrenVariants}
-									className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
-									<Icon
-										icon="tabler:arrow-right"
-										className="text-xl"
-									/>
-									<span>Tea & Coffee</span>
-								</motion.li>
-								<motion.li
-									variants={childrenVariants}
-									className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
-									<Icon
-										icon="tabler:arrow-right"
-										className="text-xl"
-									/>
-									<span>Meat and Fish</span>
-								</motion.li>
-							</motion.ul>
-						</AnimatePresence>
+							<motion.li
+								variants={footerChildren}
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+								<Icon
+									icon="tabler:arrow-right"
+									className="text-xl"
+								/>
+								<span>Natural Fruits</span>
+							</motion.li>
+							<motion.li
+								variants={footerChildren}
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+								<Icon
+									icon="tabler:arrow-right"
+									className="text-xl"
+								/>
+								<span>Dairy Products</span>
+							</motion.li>
+							<motion.li
+								variants={footerChildren}
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+								<Icon
+									icon="tabler:arrow-right"
+									className="text-xl"
+								/>
+								<span>Tea & Coffee</span>
+							</motion.li>
+							<motion.li
+								variants={footerChildren}
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+								<Icon
+									icon="tabler:arrow-right"
+									className="text-xl"
+								/>
+								<span>Meat and Fish</span>
+							</motion.li>
+						</motion.ul>
 					</div>
 					<div className="lg:w-1/4">
-						<div className="flex h-[50px] mb-5 lg:mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg">
+						<motion.div
+							className="flex h-[50px] mb-5 lg:mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg"
+							variants={slideRight}
+							initial="hidden"
+							whileInView="visible">
 							<img
 								src={titleIcon}
 								className=""
 								alt=""
 							/>
 							<p className="text-xl lg:text-[1.38rem]">Quick Links</p>
-						</div>
-						<div className="space-y-2.5 lg:space-y-3.5">
-							<a
-								href="#"
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+						</motion.div>
+						<ul className="space-y-2.5 lg:space-y-3.5">
+							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>About Us</span>
-							</a>
-							<a
-								href="#"
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+							</li>
+							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>Portfolio</span>
-							</a>
-							<a
-								href="#"
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+							</li>
+							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>Help & FAQs</span>
-							</a>
-							<a
-								href="#"
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+							</li>
+							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>Blog</span>
-							</a>
-							<a
-								href="#"
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+							</li>
+							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>Contact Us</span>
-							</a>
-						</div>
+							</li>
+						</ul>
 					</div>
 					<div className="lg:w-1/4">
 						<div className="flex h-[50px] mb-5 lg:mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg">
