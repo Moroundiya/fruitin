@@ -127,7 +127,7 @@ export const Footer = () => {
 							initial="hidden"
 							whileInView="visible">
 							<motion.div
-								className="text-white bg-[#123C12] w-fit p-3 cursor-pointer rounded-lg text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#017D03]"
+								className="text-white bg-[#123C12] w-fit p-3 cursor-pointer rounded-lg text-xl hover:transition-all hover:duration-[0.6s] hover:ease-in-out hover:bg-[#017D03]"
 								variants={childrenVariants}>
 								<Icon
 									icon="ri:facebook-fill"
@@ -135,17 +135,17 @@ export const Footer = () => {
 								/>
 							</motion.div>
 							<motion.div
-								className="text-white bg-[#123C12] w-fit p-3 cursor-pointer rounded-lg text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#017D03]"
+								className="text-white bg-[#123C12] w-fit p-3 cursor-pointer rounded-lg text-xl hover:transition-all hover:duration-[0.6s] hover:ease-in-out hover:bg-[#017D03]"
 								variants={childrenVariants}>
 								<Icon icon="mdi:twitter" />
 							</motion.div>
 							<motion.div
-								className="text-white bg-[#123C12] w-fit p-3 cursor-pointer rounded-lg text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#017D03]"
+								className="text-white bg-[#123C12] w-fit p-3 cursor-pointer rounded-lg text-xl hover:transition-all hover:duration-[0.6s] hover:ease-in-out hover:bg-[#017D03]"
 								variants={childrenVariants}>
 								<Icon icon="mdi:linkedin" />
 							</motion.div>
 							<motion.div
-								className="text-white bg-[#123C12] w-fit p-3 cursor-pointer rounded-lg text-xl transition-all duration-[0.6s] ease-in-out hover:bg-[#017D03]"
+								className="text-white bg-[#123C12] w-fit p-3 cursor-pointer rounded-lg text-xl hover:transition-all hover:duration-[0.6s] hover:ease-in-out hover:bg-[#017D03]"
 								variants={childrenVariants}>
 								<Icon icon="ic:baseline-whatsapp" />
 							</motion.div>
@@ -166,12 +166,12 @@ export const Footer = () => {
 						</motion.div>
 						<motion.ul
 							className="space-y-2.5 lg:space-y-3.5"
-							variants={footerParent}
+							variants={parentVariant}
 							initial="hidden"
 							whileInView="visible">
 							<motion.li
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]"
-								variants={footerChildren}>
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]"
+								variants={childrenVariants}>
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
@@ -180,8 +180,8 @@ export const Footer = () => {
 							</motion.li>
 
 							<motion.li
-								variants={footerChildren}
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+								variants={childrenVariants}
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]">
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
@@ -189,8 +189,8 @@ export const Footer = () => {
 								<span>Natural Fruits</span>
 							</motion.li>
 							<motion.li
-								variants={footerChildren}
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+								variants={childrenVariants}
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]">
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
@@ -198,8 +198,8 @@ export const Footer = () => {
 								<span>Dairy Products</span>
 							</motion.li>
 							<motion.li
-								variants={footerChildren}
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+								variants={childrenVariants}
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]">
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
@@ -207,8 +207,8 @@ export const Footer = () => {
 								<span>Tea & Coffee</span>
 							</motion.li>
 							<motion.li
-								variants={footerChildren}
-								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+								variants={childrenVariants}
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]">
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
@@ -230,95 +230,121 @@ export const Footer = () => {
 							/>
 							<p className="text-xl lg:text-[1.38rem]">Quick Links</p>
 						</motion.div>
-						<ul className="space-y-2.5 lg:space-y-3.5">
-							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+						<motion.div
+							className="space-y-2.5 lg:space-y-3.5"
+							variants={parentVariant}
+							initial="hidden"
+							whileInView="visible">
+							<motion.li
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]"
+								variants={childrenVariants}>
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>About Us</span>
-							</li>
-							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+							</motion.li>
+							<motion.li
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]"
+								variants={childrenVariants}>
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>Portfolio</span>
-							</li>
-							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+							</motion.li>
+							<motion.li
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]"
+								variants={childrenVariants}>
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>Help & FAQs</span>
-							</li>
-							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+							</motion.li>
+							<motion.li
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]"
+								variants={childrenVariants}>
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>Blog</span>
-							</li>
-							<li className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 transition-all ease-in-out duration-500 cursor-pointer hover:text-[#FF9C00]">
+							</motion.li>
+							<motion.li
+								className="text-[#B5B5B5] text-[1rem] font-light flex items-center space-x-1.5 cursor-pointer hover:text-[#FF9C00]"
+								variants={childrenVariants}>
 								<Icon
 									icon="tabler:arrow-right"
 									className="text-xl"
 								/>
 								<span>Contact Us</span>
-							</li>
-						</ul>
+							</motion.li>
+						</motion.div>
 					</div>
 					<div className="lg:w-1/4">
-						<div className="flex h-[50px] mb-5 lg:mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg">
+						<motion.div
+							className="flex h-[50px] mb-5 lg:mb-10 items-center space-x-2 text-white relative  after:content-[''] after:w-[106px] after:h-[3px] after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-[#017D03] after:to-transparent after:rounded-lg"
+							variants={slideRight}
+							initial="hidden"
+							whileInView="visible">
 							<img
 								src={titleIcon}
 								className=""
 								alt=""
 							/>
 							<p className="text-xl lg:text-[1.38rem]">Contact Us</p>
-						</div>
-						<div className="space-y-4">
-							<div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
+						</motion.div>
+						<motion.div
+							className="space-y-4"
+							variants={parentVariant}
+							initial="hidden"
+							whileInView="visible">
+							<motion.div
+								className="flex items-center space-x-3 text-[#B5B5B5] font-light"
+								variants={childrenVariants}>
 								<div className="bg-[#123C12] text-[#FF9C00] rounded-lg p-2">
 									<Icon
 										icon="mdi:location"
 										className="text-lg"
 									/>
 								</div>
-								<span className="leading-[1.7]">
-									8502 Preston Rd. Inglewood, <br />
-									Maine 98380
-								</span>
-							</div>
-							<div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
+								<span className="leading-[1.7]">Lagos, Nigeria.</span>
+							</motion.div>
+							<motion.div
+								className="flex items-center space-x-3 text-[#B5B5B5] font-light"
+								variants={childrenVariants}>
 								<div className="bg-[#123C12] text-[#FF9C00] rounded-lg p-2">
 									<Icon
 										icon="ion:call-sharp"
 										className="text-lg"
 									/>
 								</div>
-								<span className="leading-[1.7]">
-									+(163)-2654-3564 <br />
-									+(163)-2654-5432
-								</span>
-							</div>
-							<div className="flex items-center space-x-3 text-[#B5B5B5] font-light">
+								<span className="leading-[1.7]">+(234)-8166-527-649</span>
+							</motion.div>
+							<motion.div
+								className="flex items-center space-x-3 text-[#B5B5B5] font-light"
+								variants={childrenVariants}>
 								<div className="bg-[#123C12] text-[#FF9C00] rounded-lg p-2">
 									<Icon
 										icon="fluent:mail-20-filled"
 										className="text-lg"
 									/>
 								</div>
-								<span className="leading-[1.7]">help24/7@frutin.com</span>
-							</div>
-						</div>
+								<span className="leading-[1.7]">quadridiya@gmail.com</span>
+							</motion.div>
+						</motion.div>
 					</div>
 				</div>
 			</div>
 
 			<div className="w-full lg:h-[100px] py-6 lg:py-0 px-3 xl:px-0 bg-subFooterBg bg-top bg-no-repeat bg-cover relative z-30 font-lexend text-white font-light flex flex-col justify-center items-center">
 				<div className="w-full min-h-fit flex flex-col lg:flex-row justify-between px-3 items-center mt-4 lg:mt-7 lg:px-12 xl:px-0 xl:w-11/12 2xl:w-4/5 lg:mx-auto">
-					<p className="flex flex-col justify-center lg:justify-start items-center mb-3.5 leading-[1.2] text-[0.95rem] lg:text-md lg:mb-0">
+					<motion.p
+						className="flex flex-col justify-center lg:justify-start items-center mb-3.5 leading-[1.2] text-[0.95rem] lg:text-md lg:mb-0"
+						variants={slideRight}
+						initial="hidden"
+						whileInView="visible">
 						<p className="flex items-center">
 							{" "}
 							Copyright{" "}
@@ -329,19 +355,28 @@ export const Footer = () => {
 							2024 Frutin.{" "}
 						</p>
 						<p> All Rights Reserved.</p>
-					</p>
-					<div>
+					</motion.p>
+					<motion.div
+						variants={zoomUp}
+						initial="hidden"
+						whileInView="visible">
 						<img
 							src={paymentMethod}
 							alt=""
 							className="h-5 lg:h-auto"
 						/>
-					</div>
-					<a
-						href="https://wa.me/qr/4J43PIRULNA5G1"
-						className="text-[0.95rem] lg:text-md mt-5 lg:mt-0">
-						Designed by Moroundiya 😎
-					</a>
+					</motion.div>
+
+					<motion.span
+						variants={slideLeft}
+						initial="hidden"
+						whileInView="visible">
+						<a
+							href="https://wa.me/qr/4J43PIRULNA5G1"
+							className="text-[0.95rem] lg:text-md mt-5 lg:mt-0">
+							Designed by Moroundiya 😎
+						</a>
+					</motion.span>
 				</div>
 			</div>
 		</footer>
