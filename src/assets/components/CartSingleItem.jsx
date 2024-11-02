@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React from "react";
 export const CartSingleItem = ({
