@@ -14,8 +14,6 @@ import { HeroSwiper } from "../props/HeroSwiper";
 export const Header = () => {
 	return (
 		<>
-			<Navbar />
-
 			<Swiper
 				onTouchMove={(e) => e.preventDefault()}
 				direction={"vertical"}

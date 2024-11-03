@@ -10,6 +10,7 @@ import { HowItWorks } from "../components/HowItWorks";
 import { Faq } from "../components/Faq";
 import { Testimonial } from "../components/Testimonial";
 import { Footer } from "../components/Footer";
+import { Navbar } from "../components/Navbar";
 
 export const Homepage = () => {
 	useEffect(() => {
@@ -17,6 +18,7 @@ export const Homepage = () => {
 	}, []);
 	return (
 		<>
+			<Navbar />
 			<Header />
 			<AboutUs />
 			<Category />

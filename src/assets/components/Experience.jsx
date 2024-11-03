@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 
 import VisibilitySensor from "react-visibility-sensor";
 import CountUp from "react-countup";
@@ -10,29 +10,52 @@ import titleIcon from "../images/title_icon.svg";
 import aboutUsBg from "../images/about_us_bg.png";
 import featureImg1 from "../images/about_feature_1.svg";
 import featureImg2 from "../images/about_feature_2.svg";
-
+import { motion } from "framer-motion";
+import { ProductContext } from "../../App";
 export const Experience = () => {
+	const {
+		bounceDown,
+		slideRight,
+		slideLeft,
+		childrenVariants,
+		parentVariant,
+		bounceUp,
+		zoomUp,
+	} = useContext(ProductContext);
 	return (
 		<div className="mt-[100px] lg:mt-[170px] xl:mt-[120px] mb-10 lg:mb-12">
 			<div className=" w-full min-h-fit flex flex-col font-lexend pt-10 bg-no-repeat lg:flex-row lg:px-12 xl:w-4/5 lg:pt-14 lg:mx-auto relative">
-				<img
+				<motion.img
 					src={aboutUsBg}
 					alt=""
 					className="absolute top-0 animate-moveAni"
+					variants={slideRight}
+					initial="hidden"
+					whileInView="visible"
 				/>
-				<div className="px-3 lg:px-0 lg:w-1/2 relative flex justify-center items-center h-[400px] md:h-[500px] lg:h-auto ">
-					<img
+				<div className="px-3 lg:px-0 lg:w-1/2 relative flex justify-center overflow-x-clip items-center h-[400px] md:h-[500px] lg:h-auto ">
+					<motion.img
 						src={aboutImg1}
 						className="rounded-xl w-3/5 md:w-[280px] lg:w-[260px] xl:w-3/6 lg:-ms-10"
 						alt=""
+						variants={slideRight}
+						initial="hidden"
+						whileInView="visible"
 					/>
-					<img
+					<motion.img
 						src={aboutImg2}
 						className="rounded-xl w-3/5 md:w-[280px] lg:w-[260px] xl:w-3/6 -mt-[220px] -ms-[80px]"
 						alt=""
+						variants={slideLeft}
+						initial="hidden"
+						whileInView="visible"
 					/>
 
-					<div className="flex flex-col justify-center items-center bg-white shadow-md px-4 py-4 lg:px-8 lg:py-5 rounded-xl absolute bottom-[40px] right-[60px] md:bottom-[70px] md:right-[230px] lg:bottom-[30px] lg:right-[60px]">
+					<motion.div
+						className="flex flex-col justify-center items-center bg-white shadow-md px-4 py-4 lg:px-8 lg:py-5 rounded-xl absolute bottom-[40px] right-[60px] md:bottom-[70px] md:right-[230px] lg:bottom-[30px] lg:right-[60px]"
+						variants={bounceUp}
+						initial="hidden"
+						whileInView="visible">
 						<p className="text-4xl lg:text-4xl xl:text-6xl lg:mb-2 font-bold text-[#017D03] mb-2">
 							<VisibilitySensor>
 								{({ isVisible }) => (
@@ -48,10 +71,14 @@ export const Experience = () => {
 						<p className="text-sm lg:text-lg uppercase font-bold ">
 							Years <br /> Experience
 						</p>
-					</div>
+					</motion.div>
 				</div>
 				<div className="px-3 lg:w-1/2 flex flex-col justify-center">
-					<div className="flex items-center justify-center lg:justify-start">
+					<motion.div
+						className="flex items-center justify-center lg:justify-start"
+						variants={bounceDown}
+						initial="hidden"
+						whileInView="visible">
 						<img
 							src={titleIcon}
 							className="h-5"
@@ -60,10 +87,14 @@ export const Experience = () => {
 						<p className="font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl">
 							About Us Company
 						</p>
-					</div>
-					<h1 className="mt-2 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5">
+					</motion.div>
+					<motion.h1
+						className="mt-2 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5"
+						variants={bounceUp}
+						initial="hidden"
+						whileInView="visible">
 						Eating Right Start With Organic Food
-					</h1>
+					</motion.h1>
 					<p className="text-md leading-[1.5] my-4 text-[#54595F] lg:my-6 lg:leading-[1.6]">
 						Organic foods are produced through a farming system that avoids the
 						use of synthetic pesticides, herbicides, genetically modified
