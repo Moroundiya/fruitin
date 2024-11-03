@@ -363,7 +363,7 @@ export const Footer = () => {
 						<img
 							src={paymentMethod}
 							alt=""
-							className="h-5 lg:h-auto"
+							className="h-5 lg:h-auto mb-3 lg:mb-0"
 						/>
 					</motion.div>
 
@@ -373,7 +373,7 @@ export const Footer = () => {
 						whileInView="visible">
 						<a
 							href="https://wa.me/qr/4J43PIRULNA5G1"
-							className="text-[0.95rem] lg:text-md mt-5 lg:mt-0">
+							className="text-[0.95rem] lg:text-md lg:mt-0">
 							Designed by Moroundiya 😎
 						</a>
 					</motion.span>

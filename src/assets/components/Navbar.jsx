@@ -121,15 +121,15 @@ export const Navbar = () => {
 							}`}
 						/>
 					</Link>
-					<a
-						href="#"
+					<Link
+						to="/shop"
 						className='bg-[#FF9C00] w-fit justify-center items-center ms-4 text-center hidden lg:flex text-sm py-2 ps-4 pe-2.5 rounded-full text-white mx-auto 2xl:text-md z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>
 						SHOP NOW
 						<Icon
 							icon="solar:double-alt-arrow-right-linear"
 							className="text-white text-2xl pe-0"
 						/>
-					</a>
+					</Link>
 				</motion.div>
 			</nav>
 		</>
