@@ -20,29 +20,6 @@ export const Footer = () => {
 		bounceUp,
 		zoomUp,
 	} = useContext(ProductContext);
-
-	const footerParent = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				delay: 0.5,
-				duration: 1,
-				delayChildren: 0.2,
-				staggerChildren: 0.25,
-				type: "spring",
-			},
-		},
-	};
-
-	const footerChildren = {
-		hidden: { x: 100, opacity: 0, scale: 0 },
-		visible: {
-			x: 0,
-			opacity: 1,
-			scale: 1,
-		},
-	};
 	return (
 		<footer className=" bg-[#002D00] h-auto pt-12 lg:pt-20 relative font-lexend overflow-x-hidden">
 			<img
