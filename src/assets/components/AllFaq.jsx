@@ -14,19 +14,9 @@ export const AllFaq = () => {
 		setOpen(open == num ? null : num);
 	};
 
-	const {
-		bounceDown,
-		slideRight,
-		slideLeft,
-		childrenVariants,
-		parentVariant,
-		bounceUp,
-		zoomUp,
-	} = useContext(ProductContext);
+	const { bounceDown, parentVariant, bounceUp } = useContext(ProductContext);
 
-	useEffect(() => {
-		// console.log(open);
-	}, [open]);
+	useEffect(() => {}, [open]);
 	return (
 		<div className="w-full min-h-fit flex flex-col justify-center items-center font-lexend mt-0 py-16 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative">
 			<img
