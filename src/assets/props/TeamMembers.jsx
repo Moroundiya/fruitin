@@ -1,12 +1,25 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import { Icon } from "@iconify/react";
 import teamCardBg from "../images/team_card_bg.png";
+import { motion } from "framer-motion";
+import { ProductContext } from "../../App";
 
 export const TeamMembers = ({ img, name, desc }) => {
+	const {
+		bounceDown,
+		slideRight,
+		slideLeft,
+		childrenVariants,
+		parentVariant,
+		bounceUp,
+		zoomUp,
+	} = useContext(ProductContext);
 	return (
-		<div className="flex justify-center items-center relative cursor-pointer group">
+		<motion.div
+			className="flex justify-center items-center relative cursor-pointer group"
+			variants={childrenVariants}>
 			<img
 				src={teamCardBg}
 				alt=""
@@ -43,6 +56,6 @@ export const TeamMembers = ({ img, name, desc }) => {
 					/>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
