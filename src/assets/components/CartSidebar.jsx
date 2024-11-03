@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React, { useContext, useEffect } from "react";

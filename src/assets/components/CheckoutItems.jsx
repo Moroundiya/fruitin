@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import titleIcon from "../images/title_icon.svg";
 import productBg1 from "../images/vector_shape_1.png";

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { useContext } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
