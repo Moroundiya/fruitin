@@ -143,18 +143,32 @@ export const ContactInfo = () => {
 				</motion.div>
 
 				<div className="flex flex-col items-center">
-					<p className="text-[#FF9C00] font-lobster lg:text-lg">
+					<motion.p
+						className="text-[#FF9C00] font-lobster lg:text-lg"
+						variants={bounceDown}
+						initial="hidden"
+						whileInView="visible">
 						Write a Message
-					</p>
-					<h1 className=" text-center text-2xl lg:text-3xl font-bold w-9/12 lg:w-2/5 mx-auto 2xl:text-[2.5rem] 2xl:leading-[1.15] mt-2">
+					</motion.p>
+					<motion.h1
+						className=" text-center text-2xl lg:text-3xl font-bold w-9/12 lg:w-2/5 mx-auto 2xl:text-[2.5rem] 2xl:leading-[1.15] mt-2"
+						variants={bounceUp}
+						initial="hidden"
+						whileInView="visible">
 						We’re always here to help you
-					</h1>
+					</motion.h1>
 
 					<form
 						action=""
 						className="lg:mt-10 py-10 w-full lg:w-3/5 relative z-20">
-						<div className="grid md:grid-cols-2 gap-x-10 gap-y-5">
-							<div className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]">
+						<motion.div
+							className="grid md:grid-cols-2 gap-x-10 gap-y-5"
+							variants={parentVariant}
+							initial="hidden"
+							whileInView="visible">
+							<motion.div
+								className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]"
+								variants={childrenVariants}>
 								<Icon
 									icon="basil:user-outline"
 									className="text-3xl text-[#FF9C00]"
@@ -164,9 +178,11 @@ export const ContactInfo = () => {
 									placeholder="Your Name"
 									className="w-full h-full bg-transparent outline-none border-none ms-1 placeholder:font-light"
 								/>
-							</div>
+							</motion.div>
 
-							<div className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]">
+							<motion.div
+								className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]"
+								variants={childrenVariants}>
 								<Icon
 									icon="ic:outline-email"
 									className="text-2xl text-[#FF9C00]"
@@ -176,8 +192,10 @@ export const ContactInfo = () => {
 									placeholder="Email Address"
 									className="w-full h-full bg-transparent outline-none border-none ms-2 placeholder:font-light"
 								/>
-							</div>
-							<div className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]">
+							</motion.div>
+							<motion.div
+								className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]"
+								variants={childrenVariants}>
 								<Icon
 									icon="solar:phone-outline"
 									className="text-2xl text-[#FF9C00]"
@@ -187,9 +205,11 @@ export const ContactInfo = () => {
 									placeholder="Phone Number"
 									className="w-full h-full bg-transparent outline-none border-none ms-2 placeholder:font-light"
 								/>
-							</div>
+							</motion.div>
 
-							<div className="w-full rounded-lg flex h-11 items-center px-1.5 py-2 bg-[#a1a19a4c]">
+							<motion.div
+								className="w-full rounded-lg flex h-11 items-center px-1.5 py-2 bg-[#a1a19a4c]"
+								variants={childrenVariants}>
 								<select
 									placeholder="Subject"
 									className="w-full h-full font-light
@@ -205,22 +225,28 @@ export const ContactInfo = () => {
 									<option value="Fresh Fruits">Fresh Fruits</option>
 									<option value="Fresh Vegetable">Fresh Vegetable</option>
 								</select>
-							</div>
-						</div>
+							</motion.div>
+						</motion.div>
 
-						<textarea
-							name=""
-							id=""
-							className="w-full resize-none rounded-lg p-3 bg-[#a1a19a4c] h-40 mt-5 outline-none border-none mb-8 placeholder:font-light"
-							placeholder="Write a message"></textarea>
+						<motion.div variants={bounceDown}>
+							<textarea
+								name=""
+								id=""
+								className="w-full resize-none rounded-lg p-3 bg-[#a1a19a4c] h-40 mt-5 outline-none border-none mb-8 placeholder:font-light"
+								placeholder="Write a message"></textarea>
+						</motion.div>
 
-						<div className="w-full flex justify-center items-center mb-3 lg:mb-10">
+						<motion.div
+							className="w-full flex justify-center items-center mb-3 lg:mb-10"
+							variants={bounceUp}
+							initial="hidden"
+							whileInView="visible">
 							<a
 								href="#"
 								className='bg-[#017D03] text-sm text-center py-3 px-6 rounded-full text-white lg:text-[1rem] z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
 								Send a message
 							</a>
-						</div>
+						</motion.div>
 					</form>
 				</div>
 			</div>
