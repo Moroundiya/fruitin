@@ -56,11 +56,7 @@ export const CartSingleItem = ({
 				variants={slideRight}
 				initial="hidden"
 				whileInView="visible">
-				<motion.div
-					className="flex justify-center items-center space-x-4 "
-					variants={slideLeft}
-					initial="hidden"
-					whileInView="visible">
+				<div className="flex justify-center items-center space-x-4 ">
 					<button
 						onClick={() => reduceQuantity(index)}
 						className="border px-1.5 py-0.5 border-gray-300 font-semibold rounded-sm hover:bg-[#017D03] hover:text-white transition-all ease-in-out duration-300">
@@ -74,7 +70,7 @@ export const CartSingleItem = ({
 						className="border px-1.5 py-0.5 border-gray-300 font-semibold rounded-sm hover:bg-[#017D03] hover:text-white transition-all ease-in-out duration-300">
 						<Icon icon="iconoir:plus" />
 					</button>
-				</motion.div>
+				</div>
 			</motion.td>
 			<motion.td
 				className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell relative lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold "
