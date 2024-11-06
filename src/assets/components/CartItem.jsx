@@ -54,7 +54,7 @@ export const CartItem = () => {
 	}, [storeCart]);
 
 	return (
-		<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative overflow-x-hidden">
+		<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative overflow-x-hidden overflow-y-clip">
 			<img
 				src={productBg1}
 				className="absolute top-0 left-0 pointer-events-none"
@@ -147,19 +147,35 @@ export const CartItem = () => {
 								</motion.p>
 								<table className="table-auto w-full mt-2 lg:mt-5">
 									<tr className="">
-										<td className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]">
+										<motion.td
+											className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]"
+											variants={slideRight}
+											initial="hidden"
+											whileInView="visible">
 											Cart Subtotal
-										</td>
-										<td className="border border-[#FF9C00] w-1/2 font-light p-3">
+										</motion.td>
+										<motion.td
+											className="border border-[#FF9C00] w-1/2 font-light p-3"
+											variants={slideLeft}
+											initial="hidden"
+											whileInView="visible">
 											${totalPrice}
-										</td>
+										</motion.td>
 									</tr>
 									<tr className="">
-										<td className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]">
+										<motion.td
+											className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]"
+											variants={slideRight}
+											initial="hidden"
+											whileInView="visible">
 											Shipping and Handling
-										</td>
-										<td className="border border-[#FF9C00] w-1/2 font-light px-3 py-4">
-											<div className="flex items-center mb-2 lg:mb-3">
+										</motion.td>
+										<motion.td
+											className="border border-[#FF9C00] w-1/2 font-light px-3 py-4"
+											variants={slideLeft}
+											initial="hidden"
+											whileInView="visible">
+											<motion.div className="flex items-center mb-2 lg:mb-3">
 												<input
 													id="default-radio-1"
 													type="radio"
@@ -173,7 +189,7 @@ export const CartItem = () => {
 													className="ms-2 font-normal text-black cursor-pointer">
 													Free Shipping
 												</label>
-											</div>
+											</motion.div>
 											<div className="flex items-center">
 												<input
 													defaultChecked=""
@@ -190,15 +206,23 @@ export const CartItem = () => {
 													Shipping Fee
 												</label>
 											</div>
-										</td>
+										</motion.td>
 									</tr>
 									<tr className="">
-										<td className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]">
+										<motion.td
+											className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]"
+											variants={slideRight}
+											initial="hidden"
+											whileInView="visible">
 											Total Order
-										</td>
-										<td className="border border-[#FF9C00] w-1/2 font-light p-3">
+										</motion.td>
+										<motion.td
+											className="border border-[#FF9C00] w-1/2 font-light p-3"
+											variants={slideLeft}
+											initial="hidden"
+											whileInView="visible">
 											${totalPrice}
-										</td>
+										</motion.td>
 									</tr>
 								</table>
 
