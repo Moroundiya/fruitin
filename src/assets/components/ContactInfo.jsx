@@ -55,7 +55,7 @@ export const ContactInfo = () => {
 			<div className="px-3 lg:mt-5 w-full xl:w-11/12 2xl:w-4/5 mx-auto">
 				<motion.iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.7918493964808!2d-118.8001664244788!3d34.15166707311974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469bfddbf69%3A0xf2bcd5e5a88069fe!2s5700%20Lindero%20Canyon%20Rd%2C%20Westlake%20Village%2C%20CA%2091362%2C%20USA!5e0!3m2!1sen!2sng!4v1726868529348!5m2!1sen!2sng"
-					className="w-full grayscale-[100%]"
+					className="w-full grayscale-[100%] pointer-events-none"
 					height={450}
 					style={{ border: 0 }}
 					allowFullScreen=""

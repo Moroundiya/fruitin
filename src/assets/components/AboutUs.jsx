@@ -43,7 +43,7 @@ export const AboutUs = () => {
 						alt=""
 					/>
 					<p className="font-lobster text-[#FF9C00] ms-2 text-lg sm:text-xl">
-						About Us Company
+						About Our Company 
 					</p>
 				</motion.div>
 				<motion.h1
