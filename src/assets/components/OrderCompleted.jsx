@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../../App";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
@@ -18,12 +18,17 @@ export const OrderCompleted = () => {
 		slideLeft,
 		childrenVariants,
 		parentVariant,
-		bounceUp,
 		zoomUp,
+		setStoreCart,
+		bounceUp,
 	} = useContext(ProductContext);
-
 	const orderdate = new Date().toLocaleDateString();
 	const orderID = Math.floor(100000 + Math.random() * 900000);
+
+	const emptyCart = () => {
+		setStoreCart([]);
+	};
+	useEffect(() => {}, [storeCart]);
 
 	return (
 		<div className="w-full min-h-fit flex flex-col justify-center items-center px-4 pb-32 font-lexend mt-0 py-16 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative top-10 lg:top-[72px] overflow-x-clip">
@@ -258,6 +263,22 @@ export const OrderCompleted = () => {
 					</motion.p>
 				</div>
 			</div>
+
+			<motion.div
+				className="w-full flex justify-center items-center  mb-3 lg:mb-10"
+				variants={bounceUp}
+				initial="hidden"
+				whileInView="visible">
+				<div
+					href="#"
+					className='bg-[#017D03] text-sm text-center flex justify-center items-center py-3 px-6 rounded-full text-white lg:text-[1rem] z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
+					<span>Shop Again</span>
+					<Icon
+						icon="icons8:shopping-cart"
+						className="text-2xl lg:text-3xl"
+					/>
+				</div>
+			</motion.div>
 		</div>
 	);
 };
