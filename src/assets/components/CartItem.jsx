@@ -50,7 +50,6 @@ export const CartItem = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		// console.log(totalAmount);
 	}, [storeCart]);
 
 	return (
