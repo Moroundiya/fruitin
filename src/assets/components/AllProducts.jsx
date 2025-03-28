@@ -23,7 +23,6 @@ export const AllProducts = () => {
 	const [addItem, setAddItem] = useState(false);
 
 	const addToCart = (prod) => {
-		// productList[index] = { ...productList[index], isCart: true };
 	};
 	const [activeCategory, setActiveCategory] = useState("all");
 	const [products, setProducts] = useState(productList);
