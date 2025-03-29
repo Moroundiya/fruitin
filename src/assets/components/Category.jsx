@@ -54,7 +54,6 @@ export const Category = () => {
 			<Swiper
 				slidesPerView={5}
 				spaceBetween={20}
-				// navigation={true}
 				ref={slideRef}
 				loop={true}
 				speed={500}
