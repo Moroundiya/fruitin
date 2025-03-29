@@ -25,7 +25,6 @@ export const Header = () => {
 				className=""
 				id="heroSwiper"
 				effect="fade"
-				// loop="true"
 				speed={1200}
 				fadeEffect={{
 					crossFade: false,
