@@ -34,7 +34,6 @@ export const CheckoutItems = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		// console.log("method is " + paymentMethod);
 	}, [username, address, email, number]);
 	return (
 		<div className="w-full min-h-full font-lexend mt-0 py-16 px-3 lg:px-12 bg-[#F5F7EB] xl:mx-auto xl:px-0 relative overflow-x-hidden overflow-y-clip">
