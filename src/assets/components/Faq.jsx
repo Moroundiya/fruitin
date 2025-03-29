@@ -11,7 +11,6 @@ export const Faq = () => {
 	const [showAnswer, setShowAnswser] = useState(null);
 
 	useEffect(() => {
-		// console.log(showAnswer)
 	}, [showAnswer]);
 
 	const singleAccordion = (num) => {
