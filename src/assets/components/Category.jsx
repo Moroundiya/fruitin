@@ -53,7 +53,6 @@ export const Category = () => {
 
 			<Swiper
 				slidesPerView={5}
-				// centeredSlides={true}
 				spaceBetween={20}
 				// navigation={true}
 				ref={slideRef}
