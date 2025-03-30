@@ -139,7 +139,6 @@ export const MobileMenu = ({ showMenu, setShowMenu }) => {
 						<Icon icon="ic:baseline-whatsapp" />
 					</motion.span>
 				</div>
-
 				<motion.div
 					className="w-full absolute bottom-10 left-0"
 					variants={zoomUp}
