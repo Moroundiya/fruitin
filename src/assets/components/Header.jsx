@@ -38,7 +38,6 @@ export const Header = () => {
 							key={i}
 							className="w-full flex justify-center items-center bg-heroBg bg-cover bg-center bg-no-repeat">
 							<HeroSwiper
-								// key={i}
 								{...item}
 							/>
 						</SwiperSlide>
