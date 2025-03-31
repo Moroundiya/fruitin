@@ -5,7 +5,6 @@ import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../../App";
 import { motion } from "framer-motion";
-// import { allproducts } from "../data/allproducts";
 
 export const ProductsProps = ({
 	price,
