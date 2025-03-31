@@ -21,7 +21,6 @@ export const ProductsProps = ({
 	const { storeCart, setStoreCart, setCartItems, cartItems, zoomUp } =
 		useContext(ProductContext);
 	const [checkItem, setCheckItem] = useState(false);
-
 	const addCart = (val, ident) => {
 		setStoreCart((storeCart) => [...storeCart, val]);
 	};
