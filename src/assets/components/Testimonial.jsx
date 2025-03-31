@@ -95,7 +95,6 @@ export const Testimonial = () => {
 					/>
 					<div className="">
 						<Swiper
-							// navigation={true}
 							modules={[Navigation, Autoplay]}
 							ref={slideReviewRef}
 							loop={true}
