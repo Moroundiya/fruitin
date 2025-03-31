@@ -82,7 +82,6 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 						<span>{title1}</span>
 						<span>{title2}</span>
 					</motion.p>
-
 					<motion.div
 						variants={bounceUp}
 						initial="hidden"
