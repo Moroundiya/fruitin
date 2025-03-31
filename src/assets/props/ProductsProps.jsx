@@ -24,7 +24,6 @@ export const ProductsProps = ({
 
 	const addCart = (val, ident) => {
 		setStoreCart((storeCart) => [...storeCart, val]);
-		// console.log(product[ident])
 	};
 	useEffect(() => {
 		if (storeCart.some((val) => val.name === identify)) {
