@@ -37,7 +37,7 @@ export const HowItWorks = ({ bgcolor }) => {
 				className="flex items-center justify-center lg:justify-start"
 				variants={bounceDown}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<img
 					src={titleIcon}
 					className="h-5"
@@ -51,7 +51,7 @@ export const HowItWorks = ({ bgcolor }) => {
 				className="mt-2 w-4/5 mb-10 text-center text-2xl lg:text-3xl font-bold lg:w-full mx-auto 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-12 lg:mt-5"
 				variants={bounceUp}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<h1 className="text-center">How We Work It?</h1>
 			</motion.div>
 
