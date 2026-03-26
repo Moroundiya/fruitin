@@ -55,7 +55,7 @@ export const WhyChooseUs = () => {
 						className="flex items-center justify-center lg:justify-start"
 						variants={bounceDown}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<img
 							src={titleIcon}
 							className="h-5"
@@ -69,14 +69,14 @@ export const WhyChooseUs = () => {
 						className="mt-3 mb-4 text-center text-2xl lg:text-3xl lg:leading-[1.2] font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-5 lg:mt-5 xl:w-5/6 mx-auto xl:mx-0"
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						Nourish Your Body with Pure Organic Goodness!
 					</motion.h1>
 					<motion.p
 						className="text-md leading-[1.5] text-[#54595F] lg:leading-[1.6] lg:w-5/6 mx-auto text-center xl:mx-0 xl:text-left"
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						Governments have regulations in place to ensure that products
 						labeled as organic meet specific standards. Regular inspections and
 						audits are conducted to maintain the integrity of the organic label.
@@ -112,7 +112,7 @@ export const WhyChooseUs = () => {
 						className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 justify-center items-center gap-x-6 gap-y-7 rounded-xl w-full lg-w-fit"
 						variants={parentVariant}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						{chooseus.map((item, i) => (
 							<ChooseUs
 								key={i}
