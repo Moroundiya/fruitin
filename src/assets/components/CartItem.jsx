@@ -70,7 +70,7 @@ export const CartItem = () => {
 						className="flex items-center justify-center lg:justify-start"
 						variants={bounceDown}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<img
 							src={titleIcon}
 							className="h-5"
@@ -85,7 +85,7 @@ export const CartItem = () => {
 							className="text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] text-center"
 							variants={bounceUp}
 							initial="hidden"
-							whileInView="visible">
+							whileInView="visible" viewport={{ once: true }}>
 							Cart Details
 						</motion.h1>
 						<table className="table-auto mt-14 w-full border-none">
@@ -94,7 +94,7 @@ export const CartItem = () => {
 									className="bg-[#017D03] text-white hidden lg:table-row space-y-10"
 									variants={bounceDown}
 									initial="hidden"
-									whileInView="visible">
+									whileInView="visible" viewport={{ once: true }}>
 									<th className="block lg:table-cell p-2.5 lg:p-5">Image</th>
 									<th className="block lg:table-cell ">Product Name</th>
 									<th className="block lg:table-cell">Price</th>
@@ -123,7 +123,7 @@ export const CartItem = () => {
 							className="w-full flex justify-end items-center my-5"
 							variants={slideLeft}
 							initial="hidden"
-							whileInView="visible">
+							whileInView="visible" viewport={{ once: true }}>
 							<Link
 								to="/shop"
 								className='bg-[#FF9C00] text-sm text-center capitalize py-3 px-6 rounded-full text-white lg:text-[1rem] z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#017D03] after:scale-y-0 after:hover:scale-y-[1]'>
@@ -141,7 +141,7 @@ export const CartItem = () => {
 									className="text-xl lg:text-3xl font-semibold"
 									variants={bounceDown}
 									initial="hidden"
-									whileInView="visible">
+									whileInView="visible" viewport={{ once: true }}>
 									Cart Totals
 								</motion.p>
 								<table className="table-auto w-full mt-2 lg:mt-5">
@@ -150,14 +150,14 @@ export const CartItem = () => {
 											className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]"
 											variants={slideRight}
 											initial="hidden"
-											whileInView="visible">
+											whileInView="visible" viewport={{ once: true }}>
 											Cart Subtotal
 										</motion.td>
 										<motion.td
 											className="border border-[#FF9C00] w-1/2 font-light p-3"
 											variants={slideLeft}
 											initial="hidden"
-											whileInView="visible">
+											whileInView="visible" viewport={{ once: true }}>
 											${totalPrice}
 										</motion.td>
 									</tr>
@@ -166,14 +166,14 @@ export const CartItem = () => {
 											className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]"
 											variants={slideRight}
 											initial="hidden"
-											whileInView="visible">
+											whileInView="visible" viewport={{ once: true }}>
 											Shipping and Handling
 										</motion.td>
 										<motion.td
 											className="border border-[#FF9C00] w-1/2 font-light px-3 py-4"
 											variants={slideLeft}
 											initial="hidden"
-											whileInView="visible">
+											whileInView="visible" viewport={{ once: true }}>
 											<motion.div className="flex items-center mb-2 lg:mb-3">
 												<input
 													id="default-radio-1"
@@ -212,14 +212,14 @@ export const CartItem = () => {
 											className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]"
 											variants={slideRight}
 											initial="hidden"
-											whileInView="visible">
+											whileInView="visible" viewport={{ once: true }}>
 											Total Order
 										</motion.td>
 										<motion.td
 											className="border border-[#FF9C00] w-1/2 font-light p-3"
 											variants={slideLeft}
 											initial="hidden"
-											whileInView="visible">
+											whileInView="visible" viewport={{ once: true }}>
 											${totalPrice}
 										</motion.td>
 									</tr>
@@ -229,7 +229,7 @@ export const CartItem = () => {
 									className="w-full flex justify-start items-center mt-5 mb-16"
 									variants={slideRight}
 									initial="hidden"
-									whileInView="visible">
+									whileInView="visible" viewport={{ once: true }}>
 									<button
 										type="submit"
 										className='bg-[#017D03] text-sm text-center capitalize py-3 px-6 rounded-full text-white lg:text-[1rem] z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
