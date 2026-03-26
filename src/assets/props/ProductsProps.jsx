@@ -44,7 +44,7 @@ export const ProductsProps = ({
 			className="bg-white rounded-[20px] shadow-lg p-1.5 lg:p-4 flex justify-center items-center flex-col cursor-pointer"
 			variants={zoomUp}
 			initial="hidden"
-			whileInView="visible"
+			whileInView="visible" viewport={{ once: true }}
 			key={img}>
 			<div className='w-full bg-[#F7F7F7] rounded-[20px] flex justify-center items-center overflow-hidden relative cursor-pointer group after:content-[""] after:w-full after:h-full after:bg-[d#017d0346] after:absolute after:top-0 after:left-0'>
 				<p className="bg-[#017D03] text-white px-2.5 lg:px-4 rounded-md py-0.5 text-[10px] lg:text-[13px] absolute top-3 left-3 font-light">
