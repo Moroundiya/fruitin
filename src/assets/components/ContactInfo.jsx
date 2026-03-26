@@ -34,7 +34,7 @@ export const ContactInfo = () => {
 				className="flex items-center justify-center lg:justify-start"
 				variants={bounceDown}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<img
 					src={titleIcon}
 					className="h-5"
@@ -48,7 +48,7 @@ export const ContactInfo = () => {
 				className="mt-2 w-4/5 mb-3 text-center text-2xl lg:text-3xl font-bold lg:w-full mx-auto  2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5"
 				variants={bounceUp}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<h1 className="text-center lg:w-1/3 mx-auto">Contact Information</h1>
 			</motion.div>
 
@@ -63,14 +63,14 @@ export const ContactInfo = () => {
 					referrerPolicy="no-referrer-when-downgrade"
 					variants={zoomUp}
 					initial="hidden"
-					whileInView="visible"
+					whileInView="visible" viewport={{ once: true }}
 				/>
 
 				<motion.div
 					className="w-full my-10 grid md:grid-cols-2 xl:grid-cols-4 gap-y-5 xl:gap-y-0 border-b-2 pb-10"
 					variants={parentVariant}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<motion.div
 						className="flex items-center lg:justify-center"
 						variants={childrenVariants}>
@@ -115,7 +115,7 @@ export const ContactInfo = () => {
 						className="flex space-x-2 lg:justify-center items-center mt-2 lg:mt-0"
 						variants={parentVariant}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<motion.div
 							className="text-white bg-[#017D03] w-10 h-10  flex justify-center items-center cursor-pointer rounded-full text-lg lg:text-xl hover:bg-[#123C12]"
 							variants={childrenVariants}>
@@ -147,14 +147,14 @@ export const ContactInfo = () => {
 						className="text-[#FF9C00] font-lobster lg:text-lg"
 						variants={bounceDown}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						Write a Message
 					</motion.p>
 					<motion.h1
 						className=" text-center text-2xl lg:text-3xl font-bold w-9/12 lg:w-2/5 mx-auto 2xl:text-[2.5rem] 2xl:leading-[1.15] mt-2"
 						variants={bounceUp}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						We’re always here to help you
 					</motion.h1>
 
@@ -165,7 +165,7 @@ export const ContactInfo = () => {
 							className="grid md:grid-cols-2 gap-x-10 gap-y-5"
 							variants={parentVariant}
 							initial="hidden"
-							whileInView="visible">
+							whileInView="visible" viewport={{ once: true }}>
 							<motion.div
 								className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]"
 								variants={childrenVariants}>
@@ -240,7 +240,7 @@ export const ContactInfo = () => {
 							className="w-full flex justify-center items-center mb-3 lg:mb-10"
 							variants={bounceUp}
 							initial="hidden"
-							whileInView="visible">
+							whileInView="visible" viewport={{ once: true }}>
 							<a
 								href="#"
 								className='bg-[#017D03] text-sm text-center py-3 px-6 rounded-full text-white lg:text-[1rem] z-40 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
