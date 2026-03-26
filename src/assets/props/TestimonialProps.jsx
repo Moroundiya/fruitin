@@ -19,7 +19,7 @@ export const TestimonialProps = ({ name, review, img, desc }) => {
 				className="italic text-md text-[#54595F] mb-7 lg:mb-12 leading-[1.8] lg:leading-[1.8] lg:text-xl"
 				variants={slideRight}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				{review}
 			</motion.p>
 			<div className="flex items-center">
@@ -29,14 +29,14 @@ export const TestimonialProps = ({ name, review, img, desc }) => {
 					alt=""
 					variants={zoomUp}
 					initial="hidden"
-					whileInView="visible"
+					whileInView="visible" viewport={{ once: true }}
 				/>
 				<div className="ms-3">
 					<motion.p
 						className="text-black text-lg lg:text-2xl font-semibold"
 						variants={bounceDown}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						{name}
 					</motion.p>
 					<motion.p
