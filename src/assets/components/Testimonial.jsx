@@ -47,7 +47,7 @@ export const Testimonial = () => {
 				className="flex items-center justify-center lg:justify-start"
 				variants={bounceDown}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<img
 					src={titleIcon}
 					className="h-5"
@@ -61,7 +61,7 @@ export const Testimonial = () => {
 				className="mt-2 mb-5 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mb-8 lg:mt-5"
 				variants={bounceUp}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				Our Customer Feedback
 			</motion.h1>
 
@@ -73,7 +73,7 @@ export const Testimonial = () => {
 						alt=""
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible"
+						whileInView="visible" viewport={{ once: true }}
 					/>
 				</div>
 				<div className="w-[90px]">
@@ -91,7 +91,7 @@ export const Testimonial = () => {
 						alt=""
 						variants={zoomUp}
 						initial="hidden"
-						whileInView="visible"
+						whileInView="visible" viewport={{ once: true }}
 					/>
 					<div className="">
 						<Swiper
@@ -152,7 +152,7 @@ export const Testimonial = () => {
 								onClick={() => slideReviewRef.current.swiper.slideNext()}
 								variants={slideLeft}
 								initial="hidden"
-								whileInView="visible">
+								whileInView="visible" viewport={{ once: true }}>
 								<Icon
 									icon="ion:arrow-forward"
 									className="text-white rounded-full text-[1.3rem] lg:text-2xl"
