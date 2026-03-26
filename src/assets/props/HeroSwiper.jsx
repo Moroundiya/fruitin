@@ -32,7 +32,7 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 				alt=""
 				variants={zoomUp}
 				initial="hidden"
-				whileInView="visible"
+				whileInView="visible" viewport={{ once: true }}
 			/>
 			<motion.img
 				src={heroShape2}
@@ -40,7 +40,7 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 				className="h-12 absolute top-32 right-3 md:right-[15%] lg:right-[55%] xl:right-[60%] lg:top-[30%] lg:hidden xl:block 2xl:top-[5%]"
 				variants={zoomUp}
 				initial="hidden"
-				whileInView="visible"
+				whileInView="visible" viewport={{ once: true }}
 			/>
 			<motion.img
 				src={heroShape3}
@@ -48,7 +48,7 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 				className="h-10 absolute top-[85px] left-6 md:left-[12%] lg:top-36 lg:left-24 xl:left-10 xl:top-[60%] lg:hidden xl:block"
 				variants={zoomUp}
 				initial="hidden"
-				whileInView="visible"
+				whileInView="visible" viewport={{ once: true }}
 			/>
 			<div className="lg:flex justify-center items-center">
 				<div className="font-lexend mb-14 mt-[140px] lg:mt-0 relative lg:flex lg:justify-center lg:items-center lg:flex-col lg:w-1/2">
@@ -58,13 +58,13 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 						alt=""
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible"
+						whileInView="visible" viewport={{ once: true }}
 					/>
 					<motion.div
 						className="flex items-center justify-center"
 						variants={bounceDown}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<img
 							src={titleIcon}
 							className="h-5 lg:h-6"
@@ -78,14 +78,14 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 						className="text-white flex flex-col items-center text-[2.8rem] text-center px-3 leading-tight sm:px-0 mx-auto font-bold my-6 sm:mx-auto sm:text-6xl sm:leading-[1.1] lg:text-[4.3rem] xl:text-7xl lg:w-full xl:mt-8 xl:mb-14 2xl:mb-10 xl:leading-[1.2] 2xl:leading-[1.1] 2xl:text-[5.4rem]"
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<span>{title1}</span>
 						<span>{title2}</span>
 					</motion.p>
 					<motion.div
 						variants={bounceUp}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<Link
 							to="/shop"
 							className='bg-[#017D03] w-fit flex justify-center items-center text-[0.95rem] text-center py-2.5 ps-5 pe-3 rounded-full text-white mx-auto lg:text-lg lg:ps-7 lg:pe-5 z-30 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
@@ -109,7 +109,7 @@ export const HeroSwiper = ({ title1, title2, img }) => {
 						alt=""
 						variants={zoomUp}
 						initial="hidden"
-						whileInView="visible"
+						whileInView="visible" viewport={{ once: true }}
 					/>
 				</div>
 			</div>
