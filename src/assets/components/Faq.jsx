@@ -28,14 +28,14 @@ export const Faq = () => {
 						className='h-fit relative p-7 before:content-[""] before:border-2 before:rounded-full  before:border-[#017D03] before:border-dashed before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-10'
 						variants={zoomUp}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<motion.img
 							src={faqImgRound}
 							className="rounded-full relative z-30"
 							alt=""
 							variants={zoomUp}
 							initial="hidden"
-							whileInView="visible"
+							whileInView="visible" viewport={{ once: true }}
 						/>
 					</motion.div>
 				</div>
@@ -45,7 +45,7 @@ export const Faq = () => {
 							className="flex items-center justify-center lg:justify-start"
 							variants={bounceDown}
 							initial="hidden"
-							whileInView="visible">
+							whileInView="visible" viewport={{ once: true }}>
 							<img
 								src={titleIcon}
 								className="h-5"
@@ -59,14 +59,14 @@ export const Faq = () => {
 							className="mt-2 mb-3 text-center text-2xl lg:text-3xl lg:leading-[1.2] capitalize font-bold 2xl:text-[2.5rem] 2xl:leading-[1.2] lg:text-left lg:mb-8 lg:mt-5"
 							variants={bounceUp}
 							initial="hidden"
-							whileInView="visible">
+							whileInView="visible" viewport={{ once: true }}>
 							Frequently Asked If You Have any Questions?
 						</motion.h1>
 						<motion.div
 							className="mt-8 lg:mt-0 space-y-4 lg:space-y-5"
 							variants={parentVariant}
 							initial="hidden"
-							whileInView="visible">
+							whileInView="visible" viewport={{ once: true }}>
 							{faq.map((item, i) => (
 								<Question
 									key={i}
