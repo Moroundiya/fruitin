@@ -34,28 +34,28 @@ export const CartSingleItem = ({
 					alt=""
 					variants={zoomUp}
 					initial="hidden"
-					whileInView="visible"
+					whileInView="visible" viewport={{ once: true }}
 				/>
 			</td>
 			<motion.td
 				className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Product_Name'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold "
 				variants={slideRight}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				{name}
 			</motion.td>
 			<motion.td
 				className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Price'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold "
 				variants={slideRight}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				${price}
 			</motion.td>
 			<motion.td
 				className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Quantity'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold "
 				variants={slideRight}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<div className="flex justify-center items-center space-x-4 ">
 					<button
 						onClick={() => reduceQuantity(index)}
@@ -76,7 +76,7 @@ export const CartSingleItem = ({
 				className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell relative lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold "
 				variants={slideRight}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				${item.total()}
 			</motion.td>
 		</tr>
