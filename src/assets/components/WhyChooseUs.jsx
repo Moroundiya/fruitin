@@ -27,7 +27,7 @@ export const WhyChooseUs = () => {
 						bounce: 0.4,
 						type: "spring",
 					},
-				}}>
+				}} viewport={{ once: true }}>
 				<img
 					src={rotateImg}
 					className="w-4/5 -top-20 right-7 absolute sm:w-2/4 sm:left-1/4 animate-spin-slow"
@@ -47,7 +47,7 @@ export const WhyChooseUs = () => {
 						bounce: 0.4,
 						type: "spring",
 					},
-				}}
+				}} viewport={{ once: true }}
 			/>
 			<div className="flex flex-col lg:flex-row">
 				<div className="xl:w-1/2 mt-12 lg:mt-0 flex flex-col justify-center items-center xl:justify-start xl:items-start ">
@@ -93,7 +93,7 @@ export const WhyChooseUs = () => {
 							bounce: 0.4,
 							type: "spring",
 						},
-					}}>
+					}} viewport={{ once: true }}>
 					<img
 						src={rotateImg}
 						className="absolute lg:w-3/5 xl:top-0 lg:right-8 xl:right-12 2xl:-top-20 animate-spin-slow"
