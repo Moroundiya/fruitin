@@ -53,7 +53,7 @@ export const CheckoutItems = () => {
 						className="flex items-center justify-center lg:justify-start"
 						variants={bounceDown}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<img
 							src={titleIcon}
 							className="h-5"
@@ -68,7 +68,7 @@ export const CheckoutItems = () => {
 							className="text-2xl lg:text-4xl font-bold 2xl:leading-[1.15] text-center"
 							variants={bounceUp}
 							initial="hidden"
-							whileInView="visible">
+							whileInView="visible" viewport={{ once: true }}>
 							Billing Details
 						</motion.h1>
 
@@ -82,7 +82,7 @@ export const CheckoutItems = () => {
 									className="grid md:grid-cols-2 gap-x-10 gap-y-5"
 									variants={parentVariant}
 									initial="hidden"
-									whileInView="visible">
+									whileInView="visible" viewport={{ once: true }}>
 									<motion.div
 										className="w-full rounded-lg flex items-center h-11 px-2.5 py-2 bg-[#a1a19a4c]"
 										variants={childrenVariants}>
@@ -153,7 +153,7 @@ export const CheckoutItems = () => {
 								className="text-2xl lg:text-3xl mt-5 font-bold 2xl:leading-[1.15] text-center"
 								variants={bounceUp}
 								initial="hidden"
-								whileInView="visible">
+								whileInView="visible" viewport={{ once: true }}>
 								Your Order:
 							</motion.h1>
 							<table className="table-auto mt-5 w-full border-none">
@@ -162,7 +162,7 @@ export const CheckoutItems = () => {
 										className="bg-[#017D03] text-white hidden lg:table-row space-y-10"
 										variants={bounceDown}
 										initial="hidden"
-										whileInView="visible">
+										whileInView="visible" viewport={{ once: true }}>
 										<th className="block lg:table-cell p-2.5 lg:p-5">Image</th>
 										<th className="block lg:table-cell ">Product Name</th>
 										<th className="block lg:table-cell">Price</th>
@@ -183,28 +183,28 @@ export const CheckoutItems = () => {
 														alt=""
 														variants={zoomUp}
 														initial="hidden"
-														whileInView="visible"
+														whileInView="visible" viewport={{ once: true }}
 													/>
 												</td>
 												<motion.td
 													className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Product_Name'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold "
 													variants={slideRight}
 													initial="hidden"
-													whileInView="visible">
+													whileInView="visible" viewport={{ once: true }}>
 													{item.name}
 												</motion.td>
 												<motion.td
 													className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Price'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold "
 													variants={slideRight}
 													initial="hidden"
-													whileInView="visible">
+													whileInView="visible" viewport={{ once: true }}>
 													${item.price}
 												</motion.td>
 												<motion.td
 													className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell border-b relative border-[#FF9C00] lg:border-b-0 before:content-['Quantity'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold"
 													variants={slideRight}
 													initial="hidden"
-													whileInView="visible">
+													whileInView="visible" viewport={{ once: true }}>
 													<div className="flex justify-center items-center space-x-4 ">
 														<p className="">{item.quantity}</p>
 													</div>
@@ -213,7 +213,7 @@ export const CheckoutItems = () => {
 													className="w-full lg:w-auto flex justify-end items-center px-3 py-3 lg:py-0 lg:px-0 lg:table-cell relative lg:border-b-0 before:content-['Total'] before:lg:hidden before:absolute before:left-3 before:text-black before:font-bold "
 													variants={slideRight}
 													initial="hidden"
-													whileInView="visible">
+													whileInView="visible" viewport={{ once: true }}>
 													${item.total()}
 												</motion.td>
 											</tr>
@@ -228,14 +228,14 @@ export const CheckoutItems = () => {
 										className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]"
 										variants={slideRight}
 										initial="hidden"
-										whileInView="visible">
+										whileInView="visible" viewport={{ once: true }}>
 										Subtotal
 									</motion.td>
 									<motion.td
 										className="border border-[#FF9C00] w-1/2 font-light p-3"
 										variants={slideLeft}
 										initial="hidden"
-										whileInView="visible">
+										whileInView="visible" viewport={{ once: true }}>
 										${totalPrice}
 									</motion.td>
 								</tr>
@@ -244,14 +244,14 @@ export const CheckoutItems = () => {
 										className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]"
 										variants={slideRight}
 										initial="hidden"
-										whileInView="visible">
+										whileInView="visible" viewport={{ once: true }}>
 										Shipping Fee
 									</motion.td>
 									<motion.td
 										className="border border-[#FF9C00] w-1/2 font-light px-3 py-4"
 										variants={slideLeft}
 										initial="hidden"
-										whileInView="visible">
+										whileInView="visible" viewport={{ once: true }}>
 										FREE
 									</motion.td>
 								</tr>
@@ -260,14 +260,14 @@ export const CheckoutItems = () => {
 										className="border border-[#FF9C00] w-1/3 font-semibold p-3 bg-[#7681811a]"
 										variants={slideRight}
 										initial="hidden"
-										whileInView="visible">
+										whileInView="visible" viewport={{ once: true }}>
 										Total Order
 									</motion.td>
 									<motion.td
 										className="border border-[#FF9C00] w-1/2 p-3 text-xl font-semibold text-[#017D03]"
 										variants={slideLeft}
 										initial="hidden"
-										whileInView="visible">
+										whileInView="visible" viewport={{ once: true }}>
 										${totalPrice}
 									</motion.td>
 								</tr>
@@ -277,7 +277,7 @@ export const CheckoutItems = () => {
 								className="mt-8 w-full mb-20"
 								variants={parentVariant}
 								initial="hidden"
-								whileInView="visible">
+								whileInView="visible" viewport={{ once: true }}>
 								<motion.div
 									className="flex mb-2 lg:mb-3 flex-col"
 									variants={childrenVariants}>
@@ -402,7 +402,7 @@ export const CheckoutItems = () => {
 									className="w-full flex justify-start items-center my-8"
 									variants={slideRight}
 									initial="hidden"
-									whileInView="visible">
+									whileInView="visible" viewport={{ once: true }}>
 									<button
 										type="submit"
 										className='bg-[#017D03] text-sm text-center capitalize py-3 px-6 rounded-full text-white lg:text-[1rem] z-50 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom  after:content-[" "] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
