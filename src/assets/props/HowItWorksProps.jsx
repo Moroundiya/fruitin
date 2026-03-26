@@ -30,7 +30,7 @@ export const HowItWorksProps = ({
 					className="clip bg-white flex justify-center items-center cursor-pointer group"
 					variants={slideRight}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<img
 						src={img1}
 						alt=""
@@ -43,28 +43,28 @@ export const HowItWorksProps = ({
 					alt=""
 					variants={zoomUp}
 					initial="hidden"
-					whileInView="visible"
+					whileInView="visible" viewport={{ once: true }}
 				/>
 			</div>
 			<motion.p
 				className="text-[#54595F] uppercase"
 				variants={slideLeft}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				{step}
 			</motion.p>
 			<motion.p
 				className="my-2 text-[1.3rem] lg:text-[1.55rem] font-semibold"
 				variants={zoomUp}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				{title}
 			</motion.p>
 			<motion.p
 				className="text-[#54595F] font-normal text-[0.95rem]"
 				variants={slideRight}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				{desc}
 			</motion.p>
 		</div>
