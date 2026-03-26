@@ -36,7 +36,7 @@ export const OrderCompleted = () => {
 			<motion.div
 				variants={zoomUp}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<Icon
 					icon="icon-park-solid:check-one"
 					className="text-[#017D03] text-7xl lg:text-8xl mt-5 lg:mt-10"
@@ -47,13 +47,13 @@ export const OrderCompleted = () => {
 					className="text-[#767676] text-[1rem] font-semibold"
 					variants={slideRight}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					Dear {username},
 				</motion.span>
 				<motion.span
 					variants={zoomUp}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					Your order is completed!
 				</motion.span>
 			</p>
@@ -61,7 +61,7 @@ export const OrderCompleted = () => {
 				className="text-[#767676] text-sm text-center"
 				variants={slideLeft}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				Thank you. Your order has been received and ready to be shipped.
 			</motion.p>
 
@@ -69,7 +69,7 @@ export const OrderCompleted = () => {
 				className="border-2 border-dashed border-[#FF9C00] px-5 py-7 lg:px-10 my-10 w-full lg:w-3/5 grid grid-cols-2 lg:grid-cols-4 gap-y-5 lg:gap-y-0"
 				variants={parentVariant}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<motion.div
 					className="flex flex-col justify-center space-y-1"
 					variants={childrenVariants}>
@@ -100,7 +100,7 @@ export const OrderCompleted = () => {
 					className="text-sm text-[#767676]"
 					variants={bounceDown}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					Order Details
 				</motion.p>
 
@@ -108,13 +108,13 @@ export const OrderCompleted = () => {
 					<motion.p
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						PRODUCT
 					</motion.p>
 					<motion.p
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						SUBTOTAL
 					</motion.p>
 				</div>
@@ -122,7 +122,7 @@ export const OrderCompleted = () => {
 					className="space-y-2 my-3 border-y border-[#767676c0] text-[#767676] text-sm py-3"
 					variants={parentVariant}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					{storeCart.map((item, i) => {
 						return (
 							<motion.div
@@ -141,13 +141,13 @@ export const OrderCompleted = () => {
 					<motion.p
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						SUBTOTAL
 					</motion.p>
 					<motion.p
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						${totalPrice}
 					</motion.p>
 				</div>
@@ -155,13 +155,13 @@ export const OrderCompleted = () => {
 					<motion.p
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						SHIPPING
 					</motion.p>
 					<motion.p
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						FREE
 					</motion.p>
 				</div>
@@ -169,13 +169,13 @@ export const OrderCompleted = () => {
 					<motion.p
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						VAT
 					</motion.p>
 					<motion.p
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						$0.00
 					</motion.p>
 				</div>
@@ -183,13 +183,13 @@ export const OrderCompleted = () => {
 					<motion.p
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						TOTAL
 					</motion.p>
 					<motion.p
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						${totalPrice}
 					</motion.p>
 				</div>
@@ -199,21 +199,21 @@ export const OrderCompleted = () => {
 					className="text-sm text-[#767676]"
 					variants={bounceDown}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					Contact Details
 				</motion.p>
 				<div className="flex justify-between items-center mt-5 text-sm">
 					<motion.p
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						Name
 					</motion.p>
 					<motion.p
 						className="capitalize"
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						{username}
 					</motion.p>
 				</div>
@@ -221,14 +221,14 @@ export const OrderCompleted = () => {
 					<motion.p
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						Email
 					</motion.p>
 					<motion.p
 						className="capitalize"
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						{" "}
 						{email}
 					</motion.p>
@@ -237,14 +237,14 @@ export const OrderCompleted = () => {
 					<motion.p
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						Mobile Number
 					</motion.p>
 					<motion.p
 						className="capitalize"
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						{number}
 					</motion.p>
 				</div>
@@ -252,14 +252,14 @@ export const OrderCompleted = () => {
 					<motion.p
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						Address:
 					</motion.p>
 					<motion.p
 						className="capitalize w-1/2 text-right"
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						{address}
 					</motion.p>
 				</div>
@@ -269,7 +269,7 @@ export const OrderCompleted = () => {
 				className="w-full flex justify-center items-center mb-3 lg:mb-10"
 				variants={bounceUp}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<Link
 					to="/"
 					onClick={emptyCart}
