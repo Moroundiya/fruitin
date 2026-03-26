@@ -28,7 +28,7 @@ export const AboutUs = () => {
 					alt=""
 					variants={zoomUp}
 					initial="hidden"
-					whileInView="visible"
+					whileInView="visible" viewport={{ once: true }}
 				/>
 			</div>
 			<div className="px-3 lg:w-1/2 flex flex-col justify-center">
@@ -36,7 +36,7 @@ export const AboutUs = () => {
 					className="flex items-center justify-center lg:justify-start"
 					variants={bounceDown}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<img
 						src={titleIcon}
 						className="h-5"
@@ -50,14 +50,14 @@ export const AboutUs = () => {
 					className="mt-2 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5"
 					variants={slideRight}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					Organic Integrity Durable Impact Frutin's Story
 				</motion.h1>
 				<motion.p
 					className="text-md leading-[1.5] my-4 text-[#54595F] lg:my-6 lg:leading-[1.6]"
 					variants={slideLeft}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					Some studies suggest that organic foods may have higher levels of
 					certain nutrients and antioxidants compared to conventionally grown
 					foods. However, this can vary depending on factors like soil quality
@@ -68,7 +68,7 @@ export const AboutUs = () => {
 					className="text-black font-semiold space-y-2 xl:columns-2"
 					variants={parentVariant}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<motion.li
 						className="flex items-center space-x-2"
 						variants={childrenVariants}>
@@ -124,7 +124,7 @@ export const AboutUs = () => {
 				<motion.div
 					variants={bounceUp}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<a
 						href="#"
 						className='bg-[#017D03] w-fit flex justify-center items-center text-[0.8rem] text-center py-2.5 ps-5 pe-3 rounded-full text-white mx-auto mt-10 lg:mx-0 lg:text-[0.95rem] lg:ps-7 lg:pe-5 z-30 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
