@@ -23,7 +23,7 @@ export const CategoryProps = ({ img, desc, title }) => {
 			className="bg-[#F5F7EB] shadow-md relative rounded-lg flex justify-center items-center flex-col pt-10 pb-14 cursor-pointer hover:bg-[#017D03] hover:text-white group transition-all duration-700 ease-in-out"
 			variants={childrenVariants}
 			initial="hidden"
-			whileInView="visible">
+			whileInView="visible" viewport={{ once: true }}>
 			<img
 				src={cardBg}
 				className="w-full h-full absolute left-0 top-0"
