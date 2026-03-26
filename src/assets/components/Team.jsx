@@ -22,7 +22,7 @@ export const Team = () => {
 				className="flex items-center justify-center lg:justify-start"
 				variants={bounceDown}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<img
 					src={titleIcon}
 					className="h-5"
@@ -36,7 +36,7 @@ export const Team = () => {
 				className="flex flex-col justify-center items-center leading-[1.2] mt-2 mb-3 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.18] lg:text-left lg:mb-8 lg:mt-5"
 				variants={bounceUp}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				<span>We Have Awesome Team</span>
 				<span>Here to Help You!</span>
 			</motion.h1>
@@ -45,7 +45,7 @@ export const Team = () => {
 				className="w-full min-h-fit py-5 px-3 mt-4 lg:mt-7 xl:w-11/12 xl:px-0 2xl:w-4/5 grid justify-center items-center sm:grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-14 lg:gap-x-10 overflow-clip"
 				variants={parentVariant}
 				initial="hidden"
-				whileInView="visible">
+				whileInView="visible" viewport={{ once: true }}>
 				{team.map((item, i) => {
 					return (
 						<TeamMembers
