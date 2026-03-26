@@ -32,7 +32,7 @@ export const TeamMembers = ({ img, name, desc }) => {
 				className="absolute rounded-full border-4 border-white pointer-events-none w-[72%] shadow-2xl"
 				variants={zoomUp}
 				initial="hidden"
-				whileInView="visible"
+				whileInView="visible" viewport={{ once: true }}
 			/>
 
 			<div className="bg-[#F5F7EB] flex flex-col justify-center items-center absolute bottom-0 px-10 py-3 lg:px-5 xl:px-10 rounded-xl shadow-md">
@@ -40,21 +40,21 @@ export const TeamMembers = ({ img, name, desc }) => {
 					className="text-[#017D03] text-sm"
 					variants={bounceDown}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					{desc}
 				</motion.p>
 				<motion.p
 					className="text-lg xl:text-xl 2xl:text-[1.4rem] font-semibold pt-1 pb-2.5"
 					variants={bounceUp}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					{name}
 				</motion.p>
 				<motion.div
 					className="text-[#54595F] flex items-center justify-center space-x-4 text-md lg:text-xl"
 					variants={parentVariant}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<motion.span variants={childrenVariants}>
 						<Icon
 							icon="dashicons:facebook-alt"
