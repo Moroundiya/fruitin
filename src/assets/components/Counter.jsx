@@ -21,7 +21,7 @@ export const Counter = ({ counterbg, className }) => {
 					className="flex flex-col items-center justify-center border-b border-r xl:border-b-0 border-[#ffffff66] xl:flex-row xl:justify-start py-6 xl:py-0"
 					variants={slideRight}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<div className="">
 						<img
 							src={counter1}
@@ -49,7 +49,7 @@ export const Counter = ({ counterbg, className }) => {
 					className="flex flex-col items-center justify-center border-b xl:border-b-0 border-[#ffffff66] xl:flex-row py-6 xl:py-0"
 					variants={slideLeft}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<div className="">
 						<img
 							src={counter2}
@@ -77,7 +77,7 @@ export const Counter = ({ counterbg, className }) => {
 					className="flex flex-col items-center justify-center border-r  border-[#ffffff66] xl:flex-row py-6 xl:py-0"
 					variants={slideLeft}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<div className="">
 						<img
 							src={counter3}
@@ -105,7 +105,7 @@ export const Counter = ({ counterbg, className }) => {
 					className="flex flex-col items-center justify-center  border-[#ffffff66] xl:flex-row py-6 xl:py-0"
 					variants={slideRight}
 					initial="hidden"
-					whileInView="visible">
+					whileInView="visible" viewport={{ once: true }}>
 					<div className="">
 						<img
 							src={counter4}
