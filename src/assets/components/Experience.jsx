@@ -31,7 +31,7 @@ export const Experience = () => {
 					className="absolute top-0 animate-moveAni"
 					variants={slideRight}
 					initial="hidden"
-					whileInView="visible"
+					whileInView="visible" viewport={{ once: true }}
 				/>
 				<div className="px-3 lg:px-0 lg:w-1/2 relative flex justify-center overflow-x-clip items-center h-[400px] md:h-[500px] lg:h-auto ">
 					<motion.img
@@ -40,7 +40,7 @@ export const Experience = () => {
 						alt=""
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible"
+						whileInView="visible" viewport={{ once: true }}
 					/>
 					<motion.img
 						src={aboutImg2}
@@ -48,14 +48,14 @@ export const Experience = () => {
 						alt=""
 						variants={slideRight}
 						initial="hidden"
-						whileInView="visible"
+						whileInView="visible" viewport={{ once: true }}
 					/>
 
 					<motion.div
 						className="flex flex-col justify-center items-center bg-white shadow-md px-4 py-4 lg:px-8 lg:py-5 rounded-xl absolute bottom-[40px] right-[60px] md:bottom-[70px] md:right-[230px] lg:bottom-[30px] lg:right-[60px]"
 						variants={bounceUp}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<p className="text-4xl lg:text-4xl xl:text-6xl lg:mb-2 font-bold text-[#017D03] mb-2">
 							<VisibilitySensor>
 								{({ isVisible }) => (
@@ -78,7 +78,7 @@ export const Experience = () => {
 						className="flex items-center justify-center lg:justify-start"
 						variants={bounceDown}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<img
 							src={titleIcon}
 							className="h-5"
@@ -92,14 +92,14 @@ export const Experience = () => {
 						className="mt-2 text-center text-2xl lg:text-3xl font-bold 2xl:text-[2.5rem] 2xl:leading-[1.15] lg:text-left lg:mt-5"
 						variants={bounceUp}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						Eating Right Start With Organic Food
 					</motion.h1>
 					<motion.p
 						className="text-md leading-[1.5] my-4 text-[#54595F] lg:my-6 lg:leading-[1.6]"
 						variants={slideLeft}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						Organic foods are produced through a farming system that avoids the
 						use of synthetic pesticides, herbicides, genetically modified
 						organism (GMOs), and artificial fertilizers. Instead, organic
@@ -110,7 +110,7 @@ export const Experience = () => {
 						className="text-black text-[15px] lg:text-[1.05rem] font-semiold mx-auto lg:mx-0 w-fit mt-5 space-y-5 lg:space-y-0 lg:mt-0 lg:space-x-5 lg:flex justify-center lg:justify-between items-center"
 						variants={parentVariant}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<motion.li
 							className="flex items-center space-x-3 font-semibold bg-[#F5F7EB] py-2 ps-4 pe-10 rounded-xl"
 							variants={childrenVariants}>
@@ -142,12 +142,12 @@ export const Experience = () => {
 						className="border-b border-[#D9D9D9] pb-8 lg:pb-10"
 						variants={bounceDown}
 						initial="hidden"
-						whileInView="visible"></motion.div>
+						whileInView="visible" viewport={{ once: true }}></motion.div>
 
 					<motion.span
 						variants={bounceUp}
 						initial="hidden"
-						whileInView="visible">
+						whileInView="visible" viewport={{ once: true }}>
 						<a
 							href="#"
 							className='bg-[#017D03] w-fit flex justify-center items-center text-[0.8rem] text-center py-3 ps-5 pe-3 rounded-full text-white mx-auto mt-8 lg:mt-10 lg:mx-0 lg:py-4 lg:text-[0.95rem] lg:ps-7 lg:pe-5 z-30 hover:text-white overflow-hidden relative transition-all duration-700 after:transition-all after:duration-700 after:origin-bottom after:content-[""] after:absolute after:top-0 after:left-0 after:-z-10 after:w-full after:h-full after:bg-[#FF9C00] after:scale-y-0 after:hover:scale-y-[1]'>
